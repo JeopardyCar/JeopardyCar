@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>751A2E43-7C79-4871-8C97-F4A56007E181</string>
+	<key>IDESourceControlProjectName</key>
+	<string>program5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>045610FB-31C2-47F3-9F95-FF94F568F69F</key>
+		<string>https://github.com/JeopardyCar/JeopardyCar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>program6/program5.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>045610FB-31C2-47F3-9F95-FF94F568F69F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JeopardyCar/JeopardyCar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>045610FB-31C2-47F3-9F95-FF94F568F69F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>045610FB-31C2-47F3-9F95-FF94F568F69F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JeopardyCar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

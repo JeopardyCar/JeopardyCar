@@ -459,17 +459,17 @@ int main(int argc, char ** argv)
 	printusers();
 	
 	/* check that there are sufficient arguments */
-	unsigned int w;
-	unsigned int h;
-	if (argc < 3) {
-		w = 6;
-		h = 6;
-		fprintf(stderr, "The width and height can be specified as command line arguments. Defaulting to %i %i\n", w, h);
-	}
-	else {
-		w = atoi(argv[1]);
-		h = atoi(argv[2]);
-	}
+	unsigned int w=6;
+	unsigned int h=6;
+//	if (argc < 3) {
+//		w = 6;
+//		h = 6;
+//		fprintf(stderr, "The width and height can be specified as command line arguments. Defaulting to %i %i\n", w, h);
+//	}
+//	else {
+//		w = atoi(argv[1]);
+//		h = atoi(argv[2]);
+//	}
 	
 	Program4 prog(w, h);
 	

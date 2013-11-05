@@ -10,15 +10,15 @@
 		A0072ADE0F1D0EC500B4A594 /* sfml-system.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
 		A0072ADF0F1D0EC500B4A594 /* sfml-window.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
 		A0072AE00F1D0EC500B4A594 /* sfml-graphics.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
-		A01FB6CE0F07CFF2000AAC7B /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
-		A01FB6CF0F07CFF2000AAC7B /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
-		A01FB6D00F07CFF2000AAC7B /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
 		AF1F767D145CA56D00AA1A8A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1F767C145CA56D00AA1A8A /* OpenGL.framework */; };
 		AF75F26D17E36AC9008CB713 /* program5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF75F26C17E36AC9008CB713 /* program5.cpp */; };
 		AF75F32117E37252008CB713 /* simple.vert in Sources */ = {isa = PBXBuildFile; fileRef = AF75F31F17E37252008CB713 /* simple.vert */; };
 		AF9A206B146DAEB9001B57C2 /* glew.c in Sources */ = {isa = PBXBuildFile; fileRef = AF9A2067146DAEB8001B57C2 /* glew.c */; };
 		AFAA3CD917ECAA97008AC49C /* simple.frag in Sources */ = {isa = PBXBuildFile; fileRef = AFAA3CD817ECAA97008AC49C /* simple.frag */; };
 		AFB5FC1517FD1CBA00350926 /* Maze.h in Sources */ = {isa = PBXBuildFile; fileRef = AFB5FC1417FD1CBA00350926 /* Maze.h */; };
+		CD1DEDDE18287567002A7C13 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
+		CD1DEDDF18287567002A7C13 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
+		CD1DEDE018287567002A7C13 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,9 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01FB6CE0F07CFF2000AAC7B /* sfml-graphics.framework in Frameworks */,
-				A01FB6CF0F07CFF2000AAC7B /* sfml-system.framework in Frameworks */,
-				A01FB6D00F07CFF2000AAC7B /* sfml-window.framework in Frameworks */,
+				CD1DEDDE18287567002A7C13 /* sfml-graphics.framework in Frameworks */,
+				CD1DEDDF18287567002A7C13 /* sfml-system.framework in Frameworks */,
+				CD1DEDE018287567002A7C13 /* sfml-window.framework in Frameworks */,
 				AF1F767D145CA56D00AA1A8A /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +174,8 @@
 /* Begin PBXProject section */
 		A01FB69C0F07CF63000AAC7B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = A01FB69F0F07CF63000AAC7B /* Build configuration list for PBXProject "program5" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
@@ -241,6 +243,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Debug;
 		};
@@ -249,6 +252,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Release;
 		};
@@ -257,6 +261,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Library/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -264,6 +272,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PREBINDING = NO;
 				PRODUCT_NAME = program5;
 			};
@@ -275,11 +284,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Library/Frameworks;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PREBINDING = NO;
 				PRODUCT_NAME = program5;
 				ZERO_LINK = NO;

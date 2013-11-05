@@ -1,6 +1,6 @@
 
 //#version 130
-in vec4 smoothColor;
+varying vec4 smoothColor;
 
 /*
 void main()
@@ -10,9 +10,9 @@ void main()
 }
 */
 
-in vec3 fColor;
-in float d;
-in float s;
+varying vec3 fColor;
+varying float d;
+varying float s;
 void main()
 {
 	vec4 origColor  = vec4(smoothColor.xyz,1);
