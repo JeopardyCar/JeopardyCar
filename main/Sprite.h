@@ -19,6 +19,20 @@ public:
     Sprite(){
         velocity = glm::vec3(0);
         baseTrans= glm::mat4(1);
+        acc = glm::vec3(0);
+    }
+    
+    
+    Sprite(Model * model, GLuint shaderProg){
+        velocity = glm::vec3(0);
+        baseTrans= glm::mat4(1);
+        acc = glm::vec3(0);
+        this->model=model;
+        this->shaderProg = shaderProg;
+        //setup slot
+        positionSlot = glGetAttribLocation(shaderProg, "pos");
+        matSlot = glGetUniformLocation(shaderProg, "M");
+        setupBuffer();
     }
     
     

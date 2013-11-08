@@ -75,6 +75,10 @@ public:
         return acc;
     }
     
+    std::vector<VectorV> getNormals(){
+        return me.normals;
+    }
+    
 protected:
     GLuint shaderProg;
     GLuint positionBuffer;

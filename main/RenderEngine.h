@@ -189,7 +189,6 @@ public:
         setCameraTransform("down", 10);
         setCameraTransform("left", 10);
         setCameraTransform("turn_right", 90);
-        
 	}
     
     

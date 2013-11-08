@@ -26,6 +26,12 @@ public:
         modelbox = Cube();
     }
     
+    BoxSprite(GLuint shaderProg)
+    {
+        modelbox =Cube();
+        Sprite::init(&modelbox, shaderProg);
+    }
+    
     void init(GLuint shaderProg){
         Sprite::init(&modelbox, shaderProg);
     }
