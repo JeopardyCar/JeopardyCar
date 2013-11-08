@@ -134,7 +134,7 @@ public:
 		//cleanup
 		glBindVertexArray(0);
 		glUseProgram(0);
-		checkGLError("display");
+		//checkGLError("display");
 	}
 	
 	void reshape(int const & newWidth, int const & newHeight)

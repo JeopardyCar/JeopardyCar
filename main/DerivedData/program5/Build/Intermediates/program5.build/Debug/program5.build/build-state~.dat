@@ -1,0 +1,432 @@
+Tprogram5
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/Info.plist
+cCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/glew/glew.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/obj_parser.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/string_extra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/list.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64
+cPhaseScriptExecution Run\ Script /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005243E79F00000000000000AA
+t1380181919
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052680947000000000000044C
+t1382549831
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005268094700000000000001DB
+t1382549831
+s475
+
+N/Library/Frameworks/sfml-graphics.framework/sfml-graphics
+c000000004BBA050600000000004FCC40
+t1270482182
+s5229632
+
+N/Library/Frameworks/sfml-system.framework/sfml-system
+c000000004BBA050700000000001C45D8
+t1270482183
+s1852888
+
+N/Library/Frameworks/sfml-window.framework/sfml-window
+c000000004BBA050700000000001FC530
+t1270482183
+s2082096
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000005266F063000000000002C960
+t1382477923
+s182624
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o
+t1383896082
+s1141544
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o
+t1383896081
+s15320
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o
+t1383896081
+s35572
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList
+c00000000527C94110000000000000346
+t1383896081
+s838
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o
+t1383896082
+s540992
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o
+t1383896081
+s3336
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh
+c00000000527C941100000000000000BA
+t1383896081
+s186
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist
+t2
+s0
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5
+t2
+s0
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Info.plist
+c00000000526DE8F1000000000000027A
+t1382934769
+s634
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.c
+c00000000526DE8F100000000000E1631
+t1382934769
+s923185
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.cpp
+c000000005277E1910000000000001634
+t1383588241
+s5684
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.cpp
+c000000005277E19100000000000046B0
+t1383588241
+s18096
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.cpp
+c000000005277E191000000000000010C
+t1383588241
+s268
+
+N/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp
+c00000000527C28F90000000000002027
+t1383868665
+s8231
+
+CBuild AST from /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/glew/glew.c
+r0
+
+CBuild AST from /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/list.cpp
+r0
+
+CBuild AST from /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/obj_parser.cpp
+r0
+
+CBuild AST from /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/string_extra.cpp
+r0
+
+CBuild AST from /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/program5.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies50188c91cb2cb841^df369391cb2cb841^-795"warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Maze.h' of type sourcecode.c.h for architecture x86_64warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_645(21%IDEActivityLogMessage2@163"Warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64-405588881#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@160"Warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64-405588881#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@160"Warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64-405588881#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@146"Warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Maze.h' of type sourcecode.c.h for architecture x86_64-405588881#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@161"Warning: no rule to process file '/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_64-405588881#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"96981FEB-B79A-49E5-9EFF-62EEA4CB57E7-
+
+CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/glew/glew.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s405588881.578575
+e405588882.128721
+r1
+xCompileC
+xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.c
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.c186"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o glew/glew.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler58399491cb2cb841^49f62092cb2cb841^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/glew/glew.c0000000000000000^3174"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o glew/glew.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.d --serialize-diagnostics /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.dia -c /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/glew/glew.c -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o36"CEF09350-05DD-4FE4-8BD4-8BF7B74553DC-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/list.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s405588881.581335
+e405588881.620796
+r1
+xCompileC
+xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.cpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.cpp196"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o obj_loader/list.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler8ae39491cb2cb841^c0ec9e91cb2cb841^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/obj_loader/list.cpp0000000000000000^3321"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o obj_loader/list.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.d --serialize-diagnostics /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.dia -c /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/list.cpp -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o36"6BD55930-DED1-44F4-850A-15A85836FBBB-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/obj_parser.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s405588881.579355
+e405588881.638346
+r1
+xCompileC
+xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.cpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/FilePath.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.cpp208"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o obj_loader/obj_parser.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler24b59491cb2cb841^8b6ca391cb2cb841^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/obj_loader/obj_parser.cpp0000000000000000^3357"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o obj_loader/obj_parser.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.d --serialize-diagnostics /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.dia -c /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/obj_parser.cpp -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o36"C7B12A77-4735-4F51-938A-9E832DFC4900-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s405588881.578929
+e405588882.350279
+r1
+xCompileC
+xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glew/glew.h
+d/Library/Frameworks/SFML.framework/Headers/Window.hpp
+d/Library/Frameworks/SFML.framework/Headers/System.hpp
+d/Library/Frameworks/SFML.framework/Headers/Config.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Clock.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Lock.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/NonCopyable.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Mutex.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Unix/Mutex.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Randomizer.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Sleep.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Thread.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Unix/Thread.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Unicode.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Unicode.inl
+d/Library/Frameworks/SFML.framework/Headers/System/Vector2.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Vector2.inl
+d/Library/Frameworks/SFML.framework/Headers/System/Vector3.hpp
+d/Library/Frameworks/SFML.framework/Headers/System/Vector3.inl
+d/Library/Frameworks/SFML.framework/Headers/Window/Context.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/Event.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/Input.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/WindowListener.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/VideoMode.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/Window.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/WindowHandle.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/WindowSettings.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/WindowStyle.hpp
+d/Library/Frameworks/SFML.framework/Headers/Window/OpenGL.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/ShaderManager.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/GLHelper.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/RenderEngine.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/glm.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/_fixes.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/setup.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/_detail.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/_vectorize.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_half.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_half.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_float.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_int.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_gentype.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_size.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec1.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/_swizzle.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/_swizzle_func.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec1.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec2.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec2.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec3.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec3.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec4.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_vec4.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x2.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x2.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x3.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x3.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x4.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat2x4.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x2.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x2.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x3.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x3.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x4.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat3x4.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x2.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x2.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x3.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x3.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x4.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/type_mat4x4.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_trigonometric.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_trigonometric.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_exponential.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_exponential.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_common.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_common.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_packing.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_packing.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_geometric.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_geometric.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_matrix.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_matrix.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_vector_relational.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_vector_relational.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_integer.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_integer.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_noise.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/core/func_noise.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/gtc/matrix_transform.hpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/glm/gtc/matrix_transform.inl
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/MazeModel.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Maze.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/MazeModel3D.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Cube.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Model.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/BoxSprite.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Sprite.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/BoxSprite2.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Cube2.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/MazeSprite.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Utilities.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Geometry.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/SpriteMesh.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Mesh.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/OBJMeshConvert.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/obj_parser.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/list.h
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/TrackBall.h
+oIn file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp:13:
+oIn file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/RenderEngine.h:14:
+o/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Geometry.h:27:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
+o                        mesh = objConvert.loadOBJ("Model/road1.obj");
+o                                                  ^
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp193"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler31979491cb2cb841^32ad5992cb2cb841^-513"In file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp:13:In file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/RenderEngine.h:14:/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Geometry.h:27:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                        mesh = objConvert.loadOBJ("Model/road1.obj");                                                  ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@56"Conversion from string literal to 'char *' is deprecated-405588882#18446744073709551615#0#2(2@96"In file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.cpp:13:-405588882#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/program5.cpp0000000000000000^12#9#12#9#406#0#21"Apple LLVM 5.0 Notice--2@98"In file included from /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/RenderEngine.h:14:-405588882#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@81"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/RenderEngine.h0000000000000000^13#9#13#9#301#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@77"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/Geometry.h0000000000000000^26#29#26#29#501#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@79"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/program5.cpp0000000000000000^3323"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.d --serialize-diagnostics /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.dia -c /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/program5.cpp -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o36"78064C11-2772-43CF-A6E0-B4686F6153D8-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/string_extra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s405588881.580846
+e405588881.599305
+r1
+xCompileC
+xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.cpp
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/obj_loader/string_extra.cpp212"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o obj_loader/string_extra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler4bcb9491cb2cb841^726c9991cb2cb841^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/obj_loader/string_extra.cpp0000000000000000^3369"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o obj_loader/string_extra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.d --serialize-diagnostics /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.dia -c /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/string_extra.cpp -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o36"B87BC54D-3ECD-4961-9BA8-76D11FBEF863-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CLd /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64
+s405588882.351171
+e405588882.396645
+r1
+xLd
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5
+xnormal
+xx86_64
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/obj_parser.o
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o
+d/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/list.o
+d/Library/Frameworks/sfml-graphics.framework/sfml-graphics
+d/Library/Frameworks/sfml-system.framework/sfml-system
+d/Library/Frameworks/sfml-window.framework/sfml-window
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Link /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program595"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_648cf55992cb2cb841^a48b6592cb2cb841^---0#0#1#--1321"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -filelist /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList -mmacosx-version-min=10.8 -framework sfml-graphics -framework sfml-system -framework sfml-window -framework OpenGL -Xlinker -dependency_info -Xlinker /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5_dependency_info.dat -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program536"DF3C2DF1-D0F2-4BC0-9DEF-6E97197E0141-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CPBXCp /Library/Frameworks/sfml-graphics.framework DerivedData/program5/Build/Products/Debug/program5.app/Contents/Frameworks/sfml-graphics.framework
+r0
+
+CPBXCp /Library/Frameworks/sfml-system.framework DerivedData/program5/Build/Products/Debug/program5.app/Contents/Frameworks/sfml-system.framework
+r0
+
+CPBXCp /Library/Frameworks/sfml-window.framework DerivedData/program5/Build/Products/Debug/program5.app/Contents/Frameworks/sfml-window.framework
+r0
+
+CPhaseScriptExecution Run\ Script /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh
+s405588882.397749
+e405588882.415061
+r0
+xPhaseScriptExecution
+xRun Script
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh
+o/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh: line 5: [: /Users/tornado718/Desktop/RHIT/My: binary operator expected
+ousage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file
+o       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directory
+ousage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file
+o       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directory
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'144"PhaseScriptExecution Run\ Script DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh05696692cb2cb841^35436a92cb2cb841^-609"/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh: line 5: [: /Users/tornado718/Desktop/RHIT/My: binary operator expectedusage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directoryusage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directoryCommand /bin/sh failed with exit code 646(21%IDEActivityLogMessage2@242"/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh: line 5: [: /Users/tornado718/Desktop/RHIT/My: binary operator expected-405588882#0#242#-0#-----2@77"usage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file-405588882#242#77#-0#-----2@86"       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directory-405588882#319#86#-0#-----2@77"usage: cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file target_file-405588882#405#77#-0#-----2@86"       cp [-R [-H | -L | -P]] [-f | -i | -n] [-apvX] source_file ... target_directory-405588882#482#86#-0#-----2@40"Command /bin/sh failed with exit code 64-405588882#18446744073709551615#0#-2#--29"Shell Script Invocation Error--0#0#1#--22021"PhaseScriptExecution Run\ Script DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER tornado718    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv ALWAYS_USE_SEPARATE_HEADERMAPS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS x86_64    setenv ARCHS_STANDARD x86_64    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv ARCHS_STANDARD_INCLUDING_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products"    setenv BUILD_ROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products"    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug"    setenv CACHE_ROOT /var/folders/yb/sqr1x2595ps0m1dfb54_ts980000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode    setenv CCHROOT /var/folders/yb/sqr1x2595ps0m1dfb54_ts980000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/JavaClasses"    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app"    setenv CODE_SIGNING_ALLOWED YES    setenv COLOR_DIAGNOSTICS NO    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/yb/sqr1x2595ps0m1dfb54_ts980000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug"    setenv CONFIGURATION_TEMP_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug"    setenv CONTENTS_FOLDER_PATH program5.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CREATE_INFOPLIST_SECTION_IN_BINARY NO    setenv CURRENT_ARCH x86_64    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEFAULT_KEXT_INSTALL_PATH /Library/Extensions    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources"    setenv DERIVED_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources"    setenv DERIVED_SOURCES_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources"    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH program5.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/program5.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME program5.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug"    setenv EMBEDDED_PROFILE_NAME embedded.provisionprofile    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH program5.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH program5.app/Contents/MacOS    setenv EXECUTABLE_NAME program5    setenv EXECUTABLE_PATH program5.app/Contents/MacOS/program5    setenv FILE_LIST "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects/LinkFileList"    setenv FIXED_FILES_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/FixedFiles"    setenv FRAMEWORKS_FOLDER_PATH program5.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug /Library/Frameworks"    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME program5.app    setenv GCC3_VERSION 3.3    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_MODEL_TUNING G5    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/include  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH program5.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH program5.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/program5.dst/Users/tornado718/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER tornado718    setenv INSTALL_PATH /Users/tornado718/Applications    setenv INSTALL_ROOT /tmp/program5.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH program5.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_DEPENDENCY_INFO_FILE "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5_dependency_info.dat"    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-LinkMap-normal-x86_64.txt"    setenv LD_NO_PIE NO    setenv LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER YES    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_KEXT_INSTALL_PATH /Library/Extensions    setenv LIBRARY_SEARCH_PATHS "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_x86_64 "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList"    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH program5.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.8    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 13A603    setenv MAC_OS_X_VERSION_ACTUAL 1090    setenv MAC_OS_X_VERSION_MAJOR 1090    setenv MAC_OS_X_VERSION_MINOR 0900    setenv MODULE_CACHE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/ModuleCache"    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects"    setenv OBJECT_FILE_DIR_normal "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal"    setenv OBJROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates"    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH program5.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS "c c++"    setenv PKGINFO_FILE_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/PkgInfo"    setenv PKGINFO_PATH program5.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 5A2053    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH program5.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/PrefixHeaders"    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH program5.app/Contents/PrivateHeaders    setenv PRODUCT_NAME program5    setenv PRODUCT_SETTINGS_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Info.plist"    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT program5    setenv PROJECT_DERIVED_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/DerivedSources"    setenv PROJECT_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv PROJECT_FILE_PATH "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/program5.xcodeproj"    setenv PROJECT_NAME program5    setenv PROJECT_TEMP_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build"    setenv PROJECT_TEMP_ROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates"    setenv PUBLIC_HEADERS_FOLDER_PATH program5.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/ResourceManagerResources"    setenv REZ_OBJECTS_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/ResourceManagerResources/Objects"    setenv REZ_SEARCH_PATHS "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug "    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH program5.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk    setenv SDK_NAME macosx10.9    setenv SDK_PRODUCT_BUILD_VERSION 13A595    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/DerivedSources"    setenv SHARED_FRAMEWORKS_FOLDER_PATH program5.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/PrecompiledHeaders"    setenv SHARED_SUPPORT_FOLDER_PATH program5.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv SRCROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products"    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_KEXT_INSTALL_PATH /System/Library/Extensions    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME program5    setenv TARGET_BUILD_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug"    setenv TARGET_NAME program5    setenv TARGET_TEMP_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build"    setenv TEMP_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build"    setenv TEMP_FILES_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build"    setenv TEMP_FILE_DIR "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build"    setenv TEMP_ROOT "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates"    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH program5.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER tornado718    setenv USER_APPS_DIR /Users/tornado718/Applications    setenv USER_LIBRARY_DIR /Users/tornado718/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH program5.app/Contents/version.plist    setenv VERSION_INFO_BUILDER tornado718    setenv VERSION_INFO_FILE program5_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:program5  PROJECT:program5-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME program5.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 5A2053    setenv XCODE_VERSION_ACTUAL 0501    setenv XCODE_VERSION_MAJOR 0500    setenv XCODE_VERSION_MINOR 0500    setenv XPCSERVICES_FOLDER_PATH program5.app/Contents/XPCServices    setenv YACC yacc    setenv arch x86_64    setenv variant normal    /bin/sh -c \"/Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Script-AF75F31817E37130008CB713.sh\"36"BE3E0C93-F3BA-481E-AE45-F5816971CA10-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CProcessInfoPlistFile /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/Info.plist
+s405588881.575784
+e405588881.577945
+r1
+xProcessInfoPlistFile
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist
+x/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Process /Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5/Info.plist106"ProcessInfoPlistFile DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist Info.plist58709391cb2cb841^8a779491cb2cb841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/tornado718/Desktop/RHIT/My%20courses/CG/hmw/program5/Info.plist0000000000000000^591"ProcessInfoPlistFile DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist Info.plist    cd "/Users/tornado718/Desktop/RHIT/My courses/CG/hmw/program5"    builtin-infoPlistUtility /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/Info.plist -genpkginfo /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Info.plist36"0FFEB795-2AB3-45C8-AB71-C9B04FD23B19-
+bD547B5AF-E3D8-49C7-A320-657F564A6D35
+
+CTouch /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/DerivedData/program5/Build/Products/Debug/program5.app
+r0
+
