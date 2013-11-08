@@ -19,12 +19,12 @@ using namespace std;
 class Model{
 public:
     
-    virtual GLfloat const * getPosition() const{printf("qwer\n");}
-    virtual GLuint const * getElements() const{}
-    virtual size_t getVertexCount() const{}
-    virtual size_t getPositionBytes() const{}
-    virtual size_t getElementBytes() const {}
-    virtual size_t getElementCount() const {}
+    virtual GLfloat const * getPosition() const=0;
+    virtual GLuint const * getElements() const=0;
+    virtual size_t getVertexCount() const=0;
+    virtual size_t getPositionBytes() const=0;
+    virtual size_t getElementBytes() const=0;
+    virtual size_t getElementCount() const=0;
     
     
 };

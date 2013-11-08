@@ -12,6 +12,7 @@
 #include "MazeSprite.h"
 #include "Utilities.h"
 #include "Geometry.h"
+#include "SpriteMesh.h"
 
 #define PI 3.1415926
 
@@ -163,12 +164,19 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        box123 = Geometry("Model/road1.obj");
+        box123 = Geometry("Model/road1.obj");//
         box123.init(boxShader);
+        //"Model/road1.obj",boxShader);
         box123.setV(glm::vec3(0,0,.01f));
         box123.setAccelerate(glm::vec3(0,0,0.001f));
+        
+        
+        
         box2 = BoxSprite2();
         box2.init(boxShader);
+        
+        
+        
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
         

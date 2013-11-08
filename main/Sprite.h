@@ -41,6 +41,7 @@ public:
         setupBuffer();
     }
     
+    
     void show(glm::mat4 T){
         velocity+=acc;
         baseTrans*=glm::translate(glm::mat4(1), velocity);
