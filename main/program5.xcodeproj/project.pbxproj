@@ -108,7 +108,6 @@
 		CDAECF0E182CC6630013DA12 /* Sprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
 		CDAECF0F182CC6630013DA12 /* SpriteMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteMesh.h; sourceTree = "<group>"; };
 		CDAECF10182CC6630013DA12 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		CDAECF11182CC6F70013DA12 /* Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		CDAECF13182CC76E0013DA12 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
 		CDAECF14182CC76E0013DA12 /* list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
 		CDAECF15182CC76E0013DA12 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
@@ -200,7 +199,6 @@
 				CDAECF0E182CC6630013DA12 /* Sprite.h */,
 				CDAECF0F182CC6630013DA12 /* SpriteMesh.h */,
 				CDAECF10182CC6630013DA12 /* Utilities.h */,
-				CDAECF11182CC6F70013DA12 /* Geometry.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";

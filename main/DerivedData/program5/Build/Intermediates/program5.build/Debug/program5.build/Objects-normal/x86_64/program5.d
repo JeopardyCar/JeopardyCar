@@ -104,7 +104,6 @@ dependencies: /Users/tornado718/JeopardyCar/main/program5.cpp \
   /Users/tornado718/JeopardyCar/main/Cube2.h \
   /Users/tornado718/JeopardyCar/main/MazeSprite.h \
   /Users/tornado718/JeopardyCar/main/Utilities.h \
-  /Users/tornado718/JeopardyCar/main/Geometry.h \
   /Users/tornado718/JeopardyCar/main/SpriteMesh.h \
   /Users/tornado718/JeopardyCar/main/Mesh.h \
   /Users/tornado718/JeopardyCar/main/obj_loader/OBJMeshConvert.h \

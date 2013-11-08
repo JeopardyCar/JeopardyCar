@@ -49,23 +49,13 @@ public:
         
     }
     
-    
-    
-    void init(Mesh * mesh, GLuint shaderProg){
-        this->mesh=mesh;
-        this->shaderProg = shaderProg;
-        //setup slot
-        positionSlot = glGetAttribLocation(shaderProg, "pos");
-        matSlot = glGetUniformLocation(shaderProg, "M");
-    }
-    
     void show(glm::mat4 T){
         velocity+=acc;
         baseTrans*=glm::translate(glm::mat4(1), velocity);
         T*=baseTrans;
         glUseProgram(shaderProg);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
-        mesh->draw();
+        me.draw();
         glUseProgram(0);
     }
     
