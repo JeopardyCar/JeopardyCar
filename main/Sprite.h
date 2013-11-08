@@ -42,8 +42,9 @@ public:
     }
     
     void show(glm::mat4 T){
-        T*=baseTrans;
+        velocity+=acc;
         baseTrans*=glm::translate(glm::mat4(1), velocity);
+        T*=baseTrans;
         glUseProgram(shaderProg);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
         glBindBuffer(GL_ARRAY_BUFFER, positionBuffer);
@@ -62,6 +63,14 @@ public:
         return velocity;
     }
     
+    void setAccelerate(glm::vec3 v){
+        acc =v;
+    }
+    
+    glm::vec3 getAccelerate(){
+        return acc;
+    }
+    
     
 protected:
     GLuint shaderProg;
@@ -73,6 +82,7 @@ protected:
     Model* model;
     
     glm::vec3 velocity;
+    glm::vec3 acc;
     glm::mat4 baseTrans;
     
     

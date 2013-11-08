@@ -40,13 +40,6 @@ public:
         glUseProgram(shaderProg);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
         mesh->draw();
-        /*
-        glBindBuffer(GL_ARRAY_BUFFER, positionBuffer);
-		glEnableVertexAttribArray(positionSlot);
-		glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, 0, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
-		glDrawElements(GL_TRIANGLES, (*model).getElementCount(), GL_UNSIGNED_INT, 0);
-        */
         glUseProgram(0);
     }
     
