@@ -26,7 +26,6 @@ public:
     }
     void up(float v=.01f){
         if(velocity.y>=-.3){
-            printf("%f\n",velocity.y);
             velocity.y-=v;
         }
     }

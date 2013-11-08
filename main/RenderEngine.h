@@ -60,28 +60,28 @@ public:
 	void display(Keyset keys ,bool pickingEnabled=false)
 	{
         if(keys.W){
-            
+            setCameraTransform("up", 1);
         }
         if(keys.S){
-            
+            setCameraTransform("down", 1);
         }
         if(keys.A){
-            
+            setCameraTransform("left", 1);
         }
         if(keys.D){
-            
+            setCameraTransform("right",1);
         }
         if(keys.Q){
-            
+            setCameraTransform("turn_left",3);
         }
         if(keys.E){
-            
+            setCameraTransform("turn_right", 3);
         }
         if(keys.R){
-            
+            setCameraTransform("turn_up", 3);
         }
         if(keys.F){
-            
+            setCameraTransform("turn_down", 3);
         }
         if(keys.UP){
             carGo("up");
@@ -154,7 +154,7 @@ public:
     
     
     
-    void setCameraTransform(string key, int update){
+    void setCameraTransform(string key, float update){
         float velocity = 5;
         
         if(key == "up") {

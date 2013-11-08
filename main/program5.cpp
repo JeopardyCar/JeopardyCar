@@ -173,28 +173,24 @@ private:
             
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Up)){
-                //render.carGo("up");
                 keys.UP =true;
             }
             if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Up)){
                 keys.UP= false;
             }
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Down)){
-                //render.carGo("down");
                 keys.DOWN = true;
             }
             if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Down)){
                 keys.DOWN = false;
             }
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Left)){
-                //render.carGo("left");
                 keys.LEFT = true;
             }
             if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Left)){
                 keys.LEFT= false;
             }
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Right)){
-                //`render.carGo("right");
                 keys.RIGHT = true;
             }
             if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Right)){
@@ -205,39 +201,63 @@ private:
             
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::W)){
-                render.setCameraTransform("up", 1);
+                keys.W = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::W)){
+                keys.W = false;
             }
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::S)){
-                render.setCameraTransform("down", 1);
+                keys.S = true;
             }
-            
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::S)){
+                keys.S = false;
+            }
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::A)){
-                render.setCameraTransform("left", 1);
+                keys.A = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::A)){
+                keys.A = false;
             }
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::D)){
-                render.setCameraTransform("right", 1);
+                keys.D = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::D)){
+                keys.D = false;
             }
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Q)){
-                render.setCameraTransform("turn_left", 10);
+                keys.Q = true;
+            }
+            
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Q)){
+                keys.Q = false;
             }
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::E)){
-                render.setCameraTransform("turn_right", 10);
+                keys.E = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::E)){
+                keys.E = false;
             }
             
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::R)){
-                
-                render.setCameraTransform("turn_up", 10);
+                keys.R = true;
+            }
+            
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::R)){
+                keys.R = false;
             }
             
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::F)){
-                
-                render.setCameraTransform("turn_down", 10);
+                keys.F = true;
+            }
+            
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::F)){
+                keys.F = false;
             }
            
             if (Event.Type == sf::Event::MouseButtonPressed)
