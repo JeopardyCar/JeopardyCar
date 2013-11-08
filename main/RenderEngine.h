@@ -12,8 +12,28 @@
 #include "MazeSprite.h"
 #include "Utilities.h"
 #include "SpriteMesh.h"
+#include "CarSprite.h"
+
 
 #define PI 3.1415926
+
+
+struct Keyset{
+    bool W;
+    bool S;
+    bool A;
+    bool D;
+    bool Q;
+    bool E;
+    bool R;
+    bool F;
+    
+    bool UP;
+    bool DOWN;
+    bool LEFT;
+    bool RIGHT;
+    
+};
 
 
 
@@ -37,8 +57,46 @@ public:
 		generateObjs();
 	}
     
-	void display(bool pickingEnabled=false)
+	void display(Keyset keys ,bool pickingEnabled=false)
 	{
+        if(keys.W){
+            
+        }
+        if(keys.S){
+            
+        }
+        if(keys.A){
+            
+        }
+        if(keys.D){
+            
+        }
+        if(keys.Q){
+            
+        }
+        if(keys.E){
+            
+        }
+        if(keys.R){
+            
+        }
+        if(keys.F){
+            
+        }
+        if(keys.UP){
+            carGo("up");
+        }
+        if(keys.DOWN){
+            carGo("down");
+        }
+        if(keys.LEFT){
+            carGo("left");
+        }
+        if(keys.RIGHT){
+            carGo("right");
+        }
+        
+        
         
         GLfloat currentTime;
         currentTime = clk.GetElapsedTime();
@@ -49,7 +107,7 @@ public:
         
 		glm::mat4 T =  P*C*M;
         //show objects;
-        box123.show(T);
+        car.show(T);
         box2.show(T);
         maze.show(T);
 	}
@@ -71,6 +129,30 @@ public:
         this->C = transform;
     }
     */
+    
+    
+    
+    
+    
+    
+    
+    void carGo(string key){
+        if(key=="up"){
+            car.up();
+        }else if(key == "down"){
+            car.down();
+        }else if(key == "left"){
+            car.left();
+        }else if(key == "right"){
+            car.right();
+        }
+        
+    }
+    
+    
+    
+    
+    
     
     void setCameraTransform(string key, int update){
         float velocity = 5;
@@ -163,18 +245,14 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-//        box123 = Geometry("Model/road1.obj");//
-//        box123.init(boxShader);
-        
-        box123 = SpriteMesh("Model/road1.obj",boxShader);
-        //"Model/road1.obj",boxShader);
-        box123.setV(glm::vec3(0,0,.01f));
-        box123.setAccelerate(glm::vec3(0,0,0.001f));
+        car = CarSprite(boxShader);
+        //car.setV(glm::vec3(0,0,.01f));
+        //car.setAccelerate(glm::vec3(0,0,0.001f));
         
         
         
         box2 = BoxSprite2();
-        box2.init(boxShader);
+        box2.init(shaderProg);
         
         
         
@@ -196,7 +274,7 @@ public:
     
 private:
     
-    SpriteMesh box123;
+    CarSprite car;
     BoxSprite2 box2;
     MazeSprite maze;
     
@@ -210,7 +288,7 @@ private:
     glm::mat4 M;
     glm::vec3 e, c, u;
     
-    
+    Keyset keys;
 	void setupGlew()
 	{
 		glewExperimental = GL_TRUE;

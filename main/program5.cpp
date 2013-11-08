@@ -46,7 +46,7 @@ public:
 			if(sleepTime > 0){
 				sf::Sleep(sleepTime);
             }
-			render.display();
+			render.display(keys);
 			App->Display();
 			handleEvents();
 		}
@@ -76,6 +76,7 @@ private:
     
     TrackBall trackball;
     
+    Keyset keys;
     
     
     void updateRotate(glm::ivec2 & oldPos, glm::ivec2 & newPos)
@@ -170,19 +171,52 @@ private:
 				//step++;
 			}
             
-            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Up||Event.Key.Code == sf::Key::W)){
+            
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Up)){
+                //render.carGo("up");
+                keys.UP =true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Up)){
+                keys.UP= false;
+            }
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Down)){
+                //render.carGo("down");
+                keys.DOWN = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Down)){
+                keys.DOWN = false;
+            }
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Left)){
+                //render.carGo("left");
+                keys.LEFT = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Left)){
+                keys.LEFT= false;
+            }
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Right)){
+                //`render.carGo("right");
+                keys.RIGHT = true;
+            }
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::Right)){
+                keys.RIGHT = false;
+            }
+            
+            
+            
+            
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::W)){
                 render.setCameraTransform("up", 1);
             }
             
-            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Down||Event.Key.Code == sf::Key::S)){
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::S)){
                 render.setCameraTransform("down", 1);
             }
             
-            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Left||Event.Key.Code == sf::Key::A)){
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::A)){
                 render.setCameraTransform("left", 1);
             }
             
-            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Right||Event.Key.Code == sf::Key::D)){
+            if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::D)){
                 render.setCameraTransform("right", 1);
             }
             

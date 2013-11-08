@@ -96,6 +96,7 @@
 		AFAA3CDA17ECAAA4008AC49C /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
 		AFB5FC1417FD1CBA00350926 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		AFB5FC5217FD2E0600350926 /* MazeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeModel.h; sourceTree = "<group>"; };
+		CD37B5C8182D65D100552050 /* CarSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarSprite.h; sourceTree = "<group>"; };
 		CD8CC89C1826B040006F9B78 /* boxfrag.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxfrag.frag; sourceTree = "<group>"; };
 		CD8CC89D1826B040006F9B78 /* boxshader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxshader.vert; sourceTree = "<group>"; };
 		CDAECF07182CC6630013DA12 /* BoxSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxSprite.h; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 				CDAECF0E182CC6630013DA12 /* Sprite.h */,
 				CDAECF0F182CC6630013DA12 /* SpriteMesh.h */,
 				CDAECF10182CC6630013DA12 /* Utilities.h */,
+				CD37B5C8182D65D100552050 /* CarSprite.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";

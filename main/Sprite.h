@@ -20,6 +20,7 @@ public:
         velocity = glm::vec3(0);
         baseTrans= glm::mat4(1);
         acc = glm::vec3(0);
+        initialized = false;
     }
     
     
@@ -33,6 +34,7 @@ public:
         positionSlot = glGetAttribLocation(shaderProg, "pos");
         matSlot = glGetUniformLocation(shaderProg, "M");
         setupBuffer();
+        initialized = true;
     }
     
     
@@ -53,10 +55,12 @@ public:
         positionSlot = glGetAttribLocation(shaderProg, "pos");
         matSlot = glGetUniformLocation(shaderProg, "M");
         setupBuffer();
+        initialized = true;
     }
     
     
     void show(glm::mat4 T){
+        if(initialized){
         velocity+=acc;
         baseTrans*=glm::translate(glm::mat4(1), velocity);
         T*=baseTrans;
@@ -68,6 +72,7 @@ public:
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
 		glDrawElements(GL_TRIANGLES, (*model).getElementCount(), GL_UNSIGNED_INT, 0);
         glUseProgram(0);
+        }
     }
     
     
