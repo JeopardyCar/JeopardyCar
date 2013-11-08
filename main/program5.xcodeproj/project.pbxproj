@@ -94,7 +94,6 @@
 		AFA2C248145D9DB800478DF8 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		AFAA3CD817ECAA97008AC49C /* simple.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simple.frag; sourceTree = "<group>"; };
 		AFAA3CDA17ECAAA4008AC49C /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
-		AFAA3CDB17ECAAA4008AC49C /* RenderEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderEngine.h; sourceTree = "<group>"; };
 		AFB5FC1417FD1CBA00350926 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		AFB5FC5217FD2E0600350926 /* MazeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeModel.h; sourceTree = "<group>"; };
 		CD8CC89C1826B040006F9B78 /* boxfrag.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxfrag.frag; sourceTree = "<group>"; };
@@ -201,7 +200,6 @@
 				CDAECF0E182CC6630013DA12 /* Sprite.h */,
 				CDAECF0F182CC6630013DA12 /* SpriteMesh.h */,
 				CDAECF10182CC6630013DA12 /* Utilities.h */,
-				AFAA3CDB17ECAAA4008AC49C /* RenderEngine.h */,
 				CDAECF11182CC6F70013DA12 /* Geometry.h */,
 			);
 			name = Sources;

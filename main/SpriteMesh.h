@@ -14,13 +14,14 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "Mesh.h"
-
+#include "stdio.h"
 
 class SpriteMesh{
 public:
     SpriteMesh(){
         velocity = glm::vec3(0);
         baseTrans= glm::mat4(1);
+        acc = glm::vec3(0);
     }
     
     void init(Mesh * mesh, GLuint shaderProg){
@@ -33,8 +34,9 @@ public:
     }
     
     void show(glm::mat4 T){
-        T*=baseTrans;
+        velocity+=acc;
         baseTrans*=glm::translate(glm::mat4(1), velocity);
+        T*=baseTrans;
         glUseProgram(shaderProg);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
         mesh->draw();
@@ -56,6 +58,13 @@ public:
         return velocity;
     }
     
+    void setAccelerate(glm::vec3 v){
+        acc =v;
+    }
+    
+    glm::vec3 getAccelerate(){
+        return acc;
+    }
     
 protected:
     GLuint shaderProg;
@@ -66,6 +75,7 @@ protected:
     Mesh * mesh;
     
     glm::vec3 velocity;
+    glm::vec3 acc;
     glm::mat4 baseTrans;
 };
 

@@ -21,6 +21,17 @@ public:
         baseTrans= glm::mat4(1);
     }
     
+    
+    ~Sprite()
+	{
+		if(initialized)
+		{
+			// Clean up the buffers
+			glDeleteBuffers(1, &positionBuffer);
+			glDeleteBuffers(1, &elementBuffer);
+		}
+	}
+    
     void init(Model* model, GLuint shaderProg){
         this->model=model;
         this->shaderProg = shaderProg;
@@ -58,10 +69,12 @@ protected:
     GLuint elementBuffer;
     GLint positionSlot;
     GLint matSlot;
+    bool initialized;
     Model* model;
     
     glm::vec3 velocity;
     glm::mat4 baseTrans;
+    
     
     void setupBuffer(){
         //setup position buffer for cube
@@ -74,6 +87,7 @@ protected:
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, (*model).getElementBytes(), (*model).getElements(),GL_STATIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
+        this->initialized = true;
     }
 };
 

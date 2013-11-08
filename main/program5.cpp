@@ -166,8 +166,8 @@ private:
 			
 			if(Event.Type == sf::Event::KeyPressed && Event.Key.Code == sf::Key::Space)
 			{
-				render.generateMaze(step);
-				step++;
+				//render.generateObjs(step);
+				//step++;
 			}
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Up||Event.Key.Code == sf::Key::W)){

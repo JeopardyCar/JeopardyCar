@@ -17,14 +17,18 @@
 class Geometry:public SpriteMesh{
 public:
     Geometry(){
+        
+    }
+    
+    Geometry(char * filepath){
         FILE *file = NULL;
-		file = fopen("Model/car.obj", "rb");
+		file = fopen(filepath, "rb");
 		
 		if(file)
 		{
 			fclose(file);
 			OBJMeshConvert objConvert;
-			mesh = objConvert.loadOBJ("Model/car.obj");
+			mesh = objConvert.loadOBJ(filepath);
         }else{
             printf("cant read file\n");
         }
