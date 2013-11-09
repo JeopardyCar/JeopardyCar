@@ -115,7 +115,7 @@ public:
         
 		glm::mat4 T =  P*C*M;
         //show objects;
-        car.show(P,C,M);
+        //car.show(P,C,M);
         c = car.getPos();
         
         e=c;
@@ -125,8 +125,8 @@ public:
         
         
         this->C = glm::lookAt(e, c, u);
-        box2.show(T);
-        maze.show(T);
+        //box2.show(T);
+        //maze.show(T);
 
 
 		if(gamestate == 0){//main menu
@@ -159,7 +159,7 @@ public:
 				gamestate = 0;
 				saveScore();
 			}
-			car.show(T);
+			car.show(P,C,M);
 			box2.show(T);
 			maze.show(T);
 		}
@@ -178,11 +178,9 @@ public:
 	}
     
 	bool checkCollision(){
-
+        return true;//false;
 	}
 
-		return true;//false;
-	}
 	void saveScore()
 	{
 		if(score>highscores[0])
