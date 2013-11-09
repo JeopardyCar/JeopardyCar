@@ -19,6 +19,7 @@
 		CD1DEDD81828181D002A7C13 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
 		CD1DEDD91828181D002A7C13 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
 		CD1DEDDA1828181D002A7C13 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
+		CD8B26A3182DA64300401CAF /* 1.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CD37B5C9182DA52A00552050 /* 1.obj */; };
 		CD8CC89E1826B040006F9B78 /* boxfrag.frag in Sources */ = {isa = PBXBuildFile; fileRef = CD8CC89C1826B040006F9B78 /* boxfrag.frag */; };
 		CD8CC89F1826B040006F9B78 /* boxshader.vert in Sources */ = {isa = PBXBuildFile; fileRef = CD8CC89D1826B040006F9B78 /* boxshader.vert */; };
 		CDAECF1B182CC76E0013DA12 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDAECF14182CC76E0013DA12 /* list.cpp */; };
@@ -28,10 +29,9 @@
 		CDAECF39182CCBE00013DA12 /* boxshader.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD8CC89D1826B040006F9B78 /* boxshader.vert */; };
 		CDAECF3A182CCBE00013DA12 /* simple.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFAA3CD817ECAA97008AC49C /* simple.frag */; };
 		CDAECF3B182CCBE00013DA12 /* simple.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF75F31F17E37252008CB713 /* simple.vert */; };
-		CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files */ = {isa = PBXBuildFile; fileRef = CDAECF20182CC8D80013DA12 /* 0.obj */; };
-		CDAECF3E182CCBF20013DA12 /* 1.obj in Copy Files */ = {isa = PBXBuildFile; fileRef = CDAECF21182CC8D80013DA12 /* 1.obj */; };
-		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
-		CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files */ = {isa = PBXBuildFile; fileRef = CDAECF23182CC8D80013DA12 /* road1.obj */; };
+		CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF20182CC8D80013DA12 /* 0.obj */; };
+		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
+		CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF23182CC8D80013DA12 /* road1.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,18 +61,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDAECF3C182CCBEB0013DA12 /* Copy Files */ = {
+		CDAECF3C182CCBEB0013DA12 /* Copy Files (4 items) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Model;
 			dstSubfolderSpec = 16;
 			files = (
-				CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files */,
-				CDAECF3E182CCBF20013DA12 /* 1.obj in Copy Files */,
-				CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files */,
-				CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files */,
+				CD8B26A3182DA64300401CAF /* 1.obj in Copy Files (4 items) */,
+				CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */,
+				CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */,
+				CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files (4 items) */,
 			);
-			name = "Copy Files";
+			name = "Copy Files (4 items)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -97,6 +97,7 @@
 		AFB5FC1417FD1CBA00350926 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		AFB5FC5217FD2E0600350926 /* MazeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeModel.h; sourceTree = "<group>"; };
 		CD37B5C8182D65D100552050 /* CarSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarSprite.h; sourceTree = "<group>"; };
+		CD37B5C9182DA52A00552050 /* 1.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1.obj; sourceTree = "<group>"; };
 		CD8CC89C1826B040006F9B78 /* boxfrag.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxfrag.frag; sourceTree = "<group>"; };
 		CD8CC89D1826B040006F9B78 /* boxshader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxshader.vert; sourceTree = "<group>"; };
 		CDAECF07182CC6630013DA12 /* BoxSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxSprite.h; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		CDAECF1A182CC76E0013DA12 /* string_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_extra.h; sourceTree = "<group>"; };
 		CDAECF1E182CC7CF0013DA12 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		CDAECF20182CC8D80013DA12 /* 0.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.obj; sourceTree = "<group>"; };
-		CDAECF21182CC8D80013DA12 /* 1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.obj; sourceTree = "<group>"; };
 		CDAECF22182CC8D80013DA12 /* car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.obj; sourceTree = "<group>"; };
 		CDAECF23182CC8D80013DA12 /* road1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = road1.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				CDAECF20182CC8D80013DA12 /* 0.obj */,
-				CDAECF21182CC8D80013DA12 /* 1.obj */,
+				CD37B5C9182DA52A00552050 /* 1.obj */,
 				CDAECF22182CC8D80013DA12 /* car.obj */,
 				CDAECF23182CC8D80013DA12 /* road1.obj */,
 			);
@@ -264,7 +264,7 @@
 				A01FB6A70F07CF6E000AAC7B /* Frameworks */,
 				A0072AF00F1D0EDD00B4A594 /* Copy Frameworks */,
 				CDAECF37182CCBD60013DA12 /* CopyFiles */,
-				CDAECF3C182CCBEB0013DA12 /* Copy Files */,
+				CDAECF3C182CCBEB0013DA12 /* Copy Files (4 items) */,
 			);
 			buildRules = (
 			);

@@ -98,6 +98,8 @@ public:
         
         
         
+        
+        
         GLfloat currentTime;
         currentTime = clk.GetElapsedTime();
         
@@ -107,7 +109,16 @@ public:
         
 		glm::mat4 T =  P*C*M;
         //show objects;
-        car.show(T);
+        car.show(P,C,M);
+        c = car.getPos();
+        
+        e=c;
+        e.z+=3;
+        e.y-=7*car.getDirection().x;
+        e.x-=7*car.getDirection().y;
+        
+        
+        this->C = glm::lookAt(e, c, u);
         box2.show(T);
         maze.show(T);
 	}
@@ -161,20 +172,17 @@ public:
             glm::vec3 go = (e-c)*.2f*float(update)*velocity;
             c-=go;
             e-=go;
-            
         }
         else if(key == "down") {
             glm::vec3 go = (e-c)*.2f*float(update)*velocity;
             c+=go;
             e+=go;
-            
         }
         else if(key == "left")
         {
             glm::vec3 go = glm::cross(e-c, u)*.2f*float(update)*velocity;
             c+=go;
             e+=go;
-            
         }
         else if (key == "right") {
             glm::vec3 go = glm::cross(e-c, u)*.2f*float(update)*velocity;
@@ -192,7 +200,6 @@ public:
             c4= c4*r;
             glm::vec3 c3 = glm::vec3(c4.x,c4.y,c4.z);
             e = c+c3;
-            
         }
         
         else if(key == "turn_right"){
@@ -246,6 +253,7 @@ public:
 	void generateObjs(unsigned int const & seed = 1)
 	{
         car = CarSprite(boxShader);
+        car.setPosM(glm::vec3(0,0,1));
         //car.setV(glm::vec3(0,0,.01f));
         //car.setAccelerate(glm::vec3(0,0,0.001f));
         
