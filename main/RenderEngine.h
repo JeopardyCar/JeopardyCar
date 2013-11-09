@@ -13,6 +13,8 @@
 #include "Utilities.h"
 #include "SpriteMesh.h"
 #include "CarSprite.h"
+#include <fstream>
+#include <string>
 
 
 #define PI 3.1415926
@@ -52,6 +54,10 @@ public:
     
 	void init()
 	{
+		gamestate = 0; //main menu
+		first = true;
+		loadHighScores();
+
 		setupGlew();
 		setupShader();
 		generateObjs();
@@ -106,12 +112,107 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
 		glm::mat4 T =  P*C*M;
-        //show objects;
-        car.show(T);
-        box2.show(T);
-        maze.show(T);
+
+
+		if(gamestate == 0){//main menu
+			if(first){
+				first = false;
+				printf("Press the button to continue\n");
+			}
+			//display buttons and title
+
+			//
+			int somePickingValue = 1;//whatever button the user clicks on
+			
+			if(somePickingValue == 1){ //start button
+				gamestate = 1;
+				score = 0;
+			}
+			if(somePickingValue == 2){ //highscores button
+				gamestate = 2;
+			}
+			if(somePickingValue == 3){ //exit button
+				exit(EXIT_SUCCESS);
+			}
+			
+		}
+		if(gamestate == 1){//game screen
+			score+=1; 
+			if(checkCollision())
+			{
+				//printf("crashed!");
+				gamestate = 0;
+				saveScore();
+			}
+			car.show(T);
+			box2.show(T);
+			maze.show(T);
+		}
+		if(gamestate == 2){ //highscores screen
+			//display highscores
+			for(int x=0; x<3; x++)
+			{
+				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
+			}
+
+			int somePickingValue = 1;//whatever button the user clicks on
+			if(somePickingValue == 1){ //main menu button
+				gamestate = 0;
+			}
+		}
 	}
     
+	bool checkCollision(){
+
+	}
+
+		return true;//false;
+	}
+	void saveScore()
+	{
+		if(score>highscores[0])
+		{
+			highscores[2]= highscores[1];
+			highscores[1]= highscores[0];
+			highscores[0]= score;
+		}
+		else if(score>highscores[1])
+		{
+			highscores[2]= highscores[1];
+			highscores[1]= score;
+		}
+		else if(score>highscores[2])
+		{
+			highscores[2]= score;
+		}
+		ofstream fout;
+		fout.open ("highscores.txt");
+		for(int x=0; x<3; x++)
+		{
+			fout << highscores[x];
+			fout << "\n";
+		}
+		fout.close();
+	}
+	void loadHighScores(){
+		string line ;
+		int num = 0;
+		ifstream fin ("highscores.txt");
+		if (fin.is_open())
+		{
+			while ( getline (fin,line) )
+			{
+				highscores[num] = atoi(line.c_str());
+				num++;
+				printf("HIGHSCORE - %i\n",atoi(line.c_str()));
+			}
+			fin.close();
+		}
+	}
+
+
+
+
     void setProjectionTransform(glm::mat4 const & transform)
 	{
 		this->P = transform;
@@ -184,7 +285,7 @@ public:
         
         else if(key == "turn_left"){
             const float angle = update;
-            printf("turn left\n");
+            //printf("turn left\n");
             
             glm::vec3 axis = glm::cross(e-c, glm::cross(e-c, u));
             glm::mat4 r = glm::rotate(glm::mat4(1), angle, axis);
@@ -197,7 +298,7 @@ public:
         
         else if(key == "turn_right"){
             const float angle = update;
-            printf("turn right\n");
+            //printf("turn right\n");
             
             glm::vec3 axis = glm::cross(e-c, glm::cross(e-c, u));
             glm::mat4 r = glm::rotate(glm::mat4(1), -angle, axis);
@@ -222,7 +323,7 @@ public:
         
         else if(key == "turn_down"){
             const float angle = update;
-            printf("turn down\n");
+           // printf("turn down\n");
             
             glm::vec3 axis = glm::cross(e-c, u);
             glm::mat4 r = glm::rotate(glm::mat4(1), -angle, axis);
@@ -234,7 +335,7 @@ public:
         }
         
         this->C = glm::lookAt(e, c, u);
-        printf("changed camera view!! ============\n");
+        //printf("changed camera view!! ============\n");
     }
     
     
@@ -273,7 +374,11 @@ public:
     
     
 private:
-    
+    int gamestate;
+	bool first;
+	int score;
+	int highscores[3];
+
     CarSprite car;
     BoxSprite2 box2;
     MazeSprite maze;

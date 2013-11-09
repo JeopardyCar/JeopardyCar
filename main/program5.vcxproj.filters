@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Glew">
+      <UniqueIdentifier>{82a3e07e-134a-4b25-84e7-247a8d3b6919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj_loader">
+      <UniqueIdentifier>{da92709b-25ec-4555-803f-bb034196d356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{3ae91414-89b9-47eb-bb64-4121d2a8fc7c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\alwaysRed.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\simple.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\boxfrag.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\boxshader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\simple.frag">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glew\glew.c">
+      <Filter>Glew</Filter>
+    </ClCompile>
+    <ClCompile Include="program5.cpp" />
+    <ClCompile Include="obj_loader\list.cpp">
+      <Filter>obj_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader\obj_parser.cpp">
+      <Filter>obj_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader\string_extra.cpp">
+      <Filter>obj_loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="glew\glew.h">
+      <Filter>Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\glxew.h">
+      <Filter>Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\wglew.h">
+      <Filter>Glew</Filter>
+    </ClInclude>
+    <ClInclude Include="GLHelper.h" />
+    <ClInclude Include="Maze.h" />
+    <ClInclude Include="MazeModel.h" />
+    <ClInclude Include="RenderEngine.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="BoxSprite.h" />
+    <ClInclude Include="BoxSprite2.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="Cube2.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="MazeModel3D.h" />
+    <ClInclude Include="MazeSprite.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteMesh.h" />
+    <ClInclude Include="TrackBall.h" />
+    <ClInclude Include="obj_loader\FilePath.h">
+      <Filter>obj_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader\list.h">
+      <Filter>obj_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader\obj_parser.h">
+      <Filter>obj_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader\OBJMeshConvert.h">
+      <Filter>obj_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader\string_extra.h">
+      <Filter>obj_loader</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

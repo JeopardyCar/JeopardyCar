@@ -72,14 +72,14 @@ public:
 		
 	}
 
-	GLfloat const * getPosition() const override
+	GLfloat const * getPosition() const 
 	{   printf("asdfqwer\n");
         return &positions[0]; }
 
 	GLfloat const * getColor() const
 	{ return &colors[0]; }
 	
-	GLuint const * getElements() const override
+	GLuint const * getElements() const 
 	{ return &elements[0]; }
 
 	size_t getVertexCount() const

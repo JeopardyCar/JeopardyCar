@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "program5", "program5.vcproj", "{A66C8092-7098-4ACF-A27B-876C4EE2F410}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "program5", "program5.vcxproj", "{A66C8092-7098-4ACF-A27B-876C4EE2F410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

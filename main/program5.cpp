@@ -64,7 +64,7 @@ private:
     glm::ivec2 previousPos;
     bool buttonDown[3];
     
-    
+    int gameState; //0 = main menu, 1 = game, 2 = high scores
 	glm::mat4 translateFromInput;
 	glm::mat4 rotationFromInput;
 	glm::mat4 rotationSpinStep;
@@ -260,6 +260,12 @@ private:
                 keys.F = false;
             }
            
+
+		
+
+
+
+
             if (Event.Type == sf::Event::MouseButtonPressed)
 			{
 				previousPos = glm::vec2(Event.MouseButton.X, Event.MouseButton.Y);

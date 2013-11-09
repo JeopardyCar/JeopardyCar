@@ -1,0 +1,50 @@
+﻿Build started 11/9/2013 3:26:09 PM.
+     1>Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\hallowlt\JeopardyCar\main\\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt program5.cpp
+         program5.cpp
+     1>c:\users\hallowlt\jeopardycar\main\shadermanager.h(49): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\users\hallowlt\jeopardycar\main\shadermanager.h(51): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\users\hallowlt\jeopardycar\main\shadermanager.h(156): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(25): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(34): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(186): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(238): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\cube.h(42): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\cube.h(43): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\cube.h(105): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\cube2.h(41): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\cube2.h(42): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\cube2.h(105): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\mesh.h(35): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\mesh.h(43): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\mesh.h(73): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\mesh.h(94): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(40): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(48): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(69): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(70): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\trackball.h(94): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\program5.cpp(157): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hallowlt\JeopardyCar\main\Debug\program5.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\hallowlt\JeopardyCar\main\\lib "sfml-system.lib" "sfml-window.lib" opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hallowlt\JeopardyCar\main\Debug\program5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\hallowlt\JeopardyCar\main\Debug\program5.lib" /MACHINE:X86 /SAFESEH Debug\glew.obj
+         Debug\list.obj
+         Debug\obj_parser.obj
+         Debug\string_extra.obj
+         Debug\program5.obj
+         program5.vcxproj -> C:\Users\hallowlt\JeopardyCar\main\Debug\program5.exe
+     1>Done Building Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.28
