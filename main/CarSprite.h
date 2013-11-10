@@ -22,7 +22,7 @@ public:
         direction = glm::vec3(0,-1,0);
     }
     
-    CarSprite(GLuint shaderProg):SpriteMesh("Model/0.obj", shaderProg){
+    CarSprite(GLuint shaderProg):SpriteMesh("Model/car.obj", shaderProg){
         direction = glm::vec3(0,-1,0);
         
         
