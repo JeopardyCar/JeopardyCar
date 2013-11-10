@@ -147,16 +147,8 @@ public:
 
         glm::vec3 colnorm =car.testCollision(boxmesh);
         glm::vec3 v = car.getV();
-        if(colnorm.x!=0||colnorm.y!=0||colnorm.z!=0){
-            //printf("collision normal: %f,%f,%f\n",colnorm.x, colnorm.y, colnorm.z);
-            glm::vec3 temp = glm::dot(v,colnorm)/getLen(colnorm)*colnorm/getLen(colnorm);
-            //v.x-=temp.x;
-            //v.y-=temp.y;
-            //v.z-=temp.z;
-            //printf("temp:%f,%f,%f\n", temp.x,temp.y,temp.z);
-            //car.setV(v);
-        }else{
-//            printf("not collision\n");
+        if(getLen(colnorm)!= 0){
+            car.hitAndTurn(colnorm);
         }
         
         glm::vec3 colnorm2= glm::vec3(0,0,1);

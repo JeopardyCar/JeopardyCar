@@ -132,10 +132,10 @@ public:
     void hitAndTurn(glm::vec3 norm){
         glm::vec3 dir = getDirection();
         glm::vec3 newdir;
-        newdir = dir - 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
-        printf("new dir: %f,%f,%f\n",newdir.x,newdir.y,newdir.z);
+        newdir = 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
+        newdir *=.9;
+        newdir = dir - newdir;
         setV(newdir);
-        
         baseTrans *= glm::translate(glm::mat4(1), newdir);
         
         
