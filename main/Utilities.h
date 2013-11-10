@@ -18,4 +18,8 @@ float getLen(glm::vec3 vec){
 }
 
 
+float getDis(glm::vec3 vec1, glm::vec3 vec2){
+    return getLen(vec1-vec2);
+}
+
 #endif

@@ -13,6 +13,7 @@
 #include "SpriteMesh.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
+#include "Utilities.h"
 using namespace std;
 class CarSprite: public SpriteMesh{
 public:
@@ -23,6 +24,17 @@ public:
     
     CarSprite(GLuint shaderProg):SpriteMesh("Model/0.obj", shaderProg){
         direction = glm::vec3(-1,0,0);
+        
+        
+        
+        vector<VectorV> vertices = getVertices();
+        vector<Triangle> triangles = getTriangles();
+        Triangle tri = triangles[1];
+        printf("first triangle:\n");
+        printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[0]].c[0],vertices[tri.vertexIndex[0]].c[1],vertices[tri.vertexIndex[0]].c[2]);
+        printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[1]].c[0],vertices[tri.vertexIndex[1]].c[1],vertices[tri.vertexIndex[1]].c[2]);
+        printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[2]].c[0],vertices[tri.vertexIndex[2]].c[1],vertices[tri.vertexIndex[2]].c[2]);
+
     }
     void up(float v=.01f){
         if(velocity.y>=-.3){
@@ -68,6 +80,30 @@ public:
     
     glm::vec3 getDirection(){
         return direction;
+    }
+    
+    
+    glm::vec3 testCollision(SpriteMesh sm){
+        vector<VectorV> vertices = sm.getVertices();
+        vector<Triangle> triangles = sm.getTriangles();
+        vector<VectorV> normals = sm.getNormals();
+        for(int i = 0 ;i< triangles.size();i++){
+            Triangle tri = triangles[i];
+            glm::vec3 center= glm::vec3(0);
+            center.x =vertices[tri.vertexIndex[0]].c[0]*.33+vertices[tri.vertexIndex[1]].c[0]*.33+vertices[tri.vertexIndex[2]].c[0]*.33;
+            center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
+            center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
+            
+            if(getDis(getPos(), center)<.2){
+                //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
+                
+                //setV(glm::vec3(0));
+                return glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
+            }
+
+        }
+        
+        return glm::vec3(0);
     }
 private:
     glm::vec3 direction;

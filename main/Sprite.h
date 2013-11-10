@@ -21,6 +21,8 @@ public:
         baseTrans= glm::mat4(1);
         acc = glm::vec3(0);
         initialized = false;
+        posM = glm::mat4(1);
+        pos = glm::vec3(0);
     }
     
     
@@ -59,22 +61,37 @@ public:
     }
     
     
-    void show(glm::mat4 T){
+    void show(glm::mat4 P,glm::mat4 C, glm::mat4 M){
+        glm::mat4 T = P*C*M*posM;
         if(initialized){
-        velocity+=acc;
-        baseTrans*=glm::translate(glm::mat4(1), velocity);
-        T*=baseTrans;
-        glUseProgram(shaderProg);
-        glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
-        glBindBuffer(GL_ARRAY_BUFFER, positionBuffer);
-		glEnableVertexAttribArray(positionSlot);
-		glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, 0, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
-		glDrawElements(GL_TRIANGLES, (*model).getElementCount(), GL_UNSIGNED_INT, 0);
-        glUseProgram(0);
+            velocity+=acc;
+            baseTrans*=glm::translate(glm::mat4(1), velocity);
+            T*=baseTrans;
+            P*=baseTrans;
+            C*=baseTrans;
+            M*=posM;
+            M*=baseTrans;
+            pos.x = M[3][0];
+            pos.y = M[3][1];
+            pos.z = M[3][2];
+        
+            glUseProgram(shaderProg);
+            glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
+            glBindBuffer(GL_ARRAY_BUFFER, positionBuffer);
+            glEnableVertexAttribArray(positionSlot);
+            glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, 0, 0);
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
+            glDrawElements(GL_TRIANGLES, (*model).getElementCount(), GL_UNSIGNED_INT, 0);
+            glUseProgram(0);
         }
     }
+    void setPosM(glm::vec3 m){
+        posM = glm::translate(glm::mat4(1), m);
+    }
     
+    glm::vec3 getPos(){
+        return pos;
+    }
     
     void setV(glm::vec3 v){
         velocity = v;
@@ -104,6 +121,9 @@ protected:
     glm::vec3 velocity;
     glm::vec3 acc;
     glm::mat4 baseTrans;
+    
+    glm::mat4 posM;
+    glm::vec3 pos;
     
     
     void setupBuffer(){

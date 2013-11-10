@@ -128,6 +128,22 @@ public:
         //box2.show(T);
         //maze.show(T);
 
+        glm::vec3 colnorm =car.testCollision(boxmesh);
+        glm::vec3 v = car.getV();
+        if(colnorm.x!=0||colnorm.y!=0||colnorm.z!=0){
+            printf("collision normal: %f,%f,%f\n",colnorm.x, colnorm.y, colnorm.z);
+            glm::vec3 temp = glm::dot(v,colnorm)/getLen(colnorm)*colnorm/getLen(colnorm);
+            v.x-=temp.x;
+            v.y-=temp.y;
+            v.z-=temp.z;
+            printf("temp:%f,%f,%f\n", temp.x,temp.y,temp.z);
+            car.setV(v);
+        }else{
+//            printf("not collision\n");
+        }
+        
+        
+        
 
 		if(gamestate == 0){//main menu
 			if(first){
@@ -160,8 +176,10 @@ public:
 				saveScore();
 			}
 			car.show(P,C,M);
-			box2.show(T);
+			//box2.show(P,C,M);
 			maze.show(T);
+            boxmesh.show(P,C,M);
+            
 		}
 		if(gamestate == 2){ //highscores screen
 			//display highscores
@@ -295,7 +313,6 @@ public:
         
         else if(key == "turn_left"){
             const float angle = update;
-            //printf("turn left\n");
             
             glm::vec3 axis = glm::cross(e-c, glm::cross(e-c, u));
             glm::mat4 r = glm::rotate(glm::mat4(1), angle, axis);
@@ -307,7 +324,6 @@ public:
         
         else if(key == "turn_right"){
             const float angle = update;
-            //printf("turn right\n");
             
             glm::vec3 axis = glm::cross(e-c, glm::cross(e-c, u));
             glm::mat4 r = glm::rotate(glm::mat4(1), -angle, axis);
@@ -332,7 +348,6 @@ public:
         
         else if(key == "turn_down"){
             const float angle = update;
-           // printf("turn down\n");
             
             glm::vec3 axis = glm::cross(e-c, u);
             glm::mat4 r = glm::rotate(glm::mat4(1), -angle, axis);
@@ -344,7 +359,6 @@ public:
         }
         
         this->C = glm::lookAt(e, c, u);
-        //printf("changed camera view!! ============\n");
     }
     
     
@@ -357,19 +371,15 @@ public:
 	{
         car = CarSprite(boxShader);
         car.setPosM(glm::vec3(0,0,1));
-        //car.setV(glm::vec3(0,0,.01f));
-        //car.setAccelerate(glm::vec3(0,0,0.001f));
-        
-        
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
-        
-        
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
         
+        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
+//        boxmesh.setPosM(glm::vec3(1,1,0));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);
@@ -392,6 +402,7 @@ private:
     CarSprite car;
     BoxSprite2 box2;
     MazeSprite maze;
+    SpriteMesh boxmesh;
     
     sf::Clock clk;
     

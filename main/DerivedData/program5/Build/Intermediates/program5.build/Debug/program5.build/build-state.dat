@@ -993,9 +993,9 @@ t1383936593
 s651
 
 N/Users/tornado718/JeopardyCar/main/CarSprite.h
-c00000000527E9CCF0000000000000812
-t1384029391
-s2066
+c00000000527EB0650000000000000F12
+t1384034405
+s3858
 
 N/Users/tornado718/JeopardyCar/main/Cube.h
 c00000000527C80DB000000000000088C
@@ -1003,8 +1003,8 @@ t1383891163
 s2188
 
 N/Users/tornado718/JeopardyCar/main/Cube2.h
-c00000000527E9CF000000000000008B2
-t1384029424
+c00000000527EA23600000000000008B2
+t1384030774
 s2226
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o
@@ -1025,8 +1025,8 @@ t1383896448
 s723
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o
-t1384029706
-s602824
+t1384034406
+s618800
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o
 t1383896081
@@ -1065,7 +1065,7 @@ t1383896189
 s292
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app
-t1384029599
+t1384034401
 s102
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/Frameworks/sfml-graphics.framework
@@ -1085,8 +1085,8 @@ t1383896081
 s1035
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5
-t1384029706
-s907556
+t1384034406
+s915076
 
 N/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/PkgInfo
 t1383896081
@@ -1128,9 +1128,9 @@ t1383932669
 s2134
 
 N/Users/tornado718/JeopardyCar/main/Mesh.h
-c00000000527D6CC70000000000000663
-t1383951559
-s1635
+c00000000527EA774000000000000066C
+t1384032116
+s1644
 
 N/Users/tornado718/JeopardyCar/main/Model.h
 c00000000527D27530000000000000222
@@ -1158,9 +1158,9 @@ t1383890466
 s723
 
 N/Users/tornado718/JeopardyCar/main/RenderEngine.h
-c00000000527E9E0900000000000022EF
-t1384029705
-s8943
+c00000000527EB00600000000000024B1
+t1384034310
+s9393
 
 N/Users/tornado718/JeopardyCar/main/ShaderManager.h
 c00000000526DE8F1000000000000147D
@@ -1188,14 +1188,14 @@ t1382934769
 s292
 
 N/Users/tornado718/JeopardyCar/main/Sprite.h
-c00000000527D32980000000000000BD2
-t1383936664
-s3026
+c00000000527EA1EE0000000000000DFA
+t1384030702
+s3578
 
 N/Users/tornado718/JeopardyCar/main/SpriteMesh.h
-c00000000527E9C7D0000000000000B70
-t1384029309
-s2928
+c00000000527EABA40000000000000C0C
+t1384033188
+s3084
 
 N/Users/tornado718/JeopardyCar/main/TrackBall.h
 c00000000526DE8F10000000000000903
@@ -1203,9 +1203,9 @@ t1382934769
 s2307
 
 N/Users/tornado718/JeopardyCar/main/Utilities.h
-c00000000527C719E0000000000000129
-t1383887262
-s297
+c00000000527EA2C40000000000000178
+t1384030916
+s376
 
 N/Users/tornado718/JeopardyCar/main/glew/glew.c
 c00000000526DE8F100000000000E1631
@@ -1594,7 +1594,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies98e0cc89d52eb841^fa60cd89d52eb841^-680"warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Maze.h' of type sourcecode.c.h for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_645(21%IDEActivityLogMessage2@140"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64-405722505#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@137"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64-405722505#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@137"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64-405722505#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@123"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Maze.h' of type sourcecode.c.h for architecture x86_64-405722505#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@138"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_64-405722505#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"E039D541-6658-4E8A-BFF2-5EF3AD003A83-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies990fb0e5e72eb841^f1a0b1e5e72eb841^-680"warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Maze.h' of type sourcecode.c.h for architecture x86_64warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_645(21%IDEActivityLogMessage2@140"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxshader.vert' of type sourcecode.glsl for architecture x86_64-405727205#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@137"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.vert' of type sourcecode.glsl for architecture x86_64-405727205#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@137"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/simple.frag' of type sourcecode.glsl for architecture x86_64-405727205#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@123"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Maze.h' of type sourcecode.c.h for architecture x86_64-405727205#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@138"Warning: no rule to process file '/Users/tornado718/JeopardyCar/main/Shaders/boxfrag.frag' of type sourcecode.glsl for architecture x86_64-405727205#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"5F4B7F71-4D84-4B14-9B93-9609D2A0B517-
 
 CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/glew.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/glew/glew.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s405588881.578575
@@ -1790,8 +1790,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile
 b7297C969-F576-4DB4-A552-4FCAD58DE3C0
 
 CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o /Users/tornado718/JeopardyCar/main/program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s405722505.803944
-e405722506.559275
+s405727205.693553
+e405727206.532121
 r1
 xCompileC
 xDerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o
@@ -1915,12 +1915,16 @@ d/Users/tornado718/JeopardyCar/main/CarSprite.h
 d/Users/tornado718/JeopardyCar/main/TrackBall.h
 oIn file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:
 oIn file included from /Users/tornado718/JeopardyCar/main/RenderEngine.h:15:
-o/Users/tornado718/JeopardyCar/main/CarSprite.h:24:45: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
+o/Users/tornado718/JeopardyCar/main/CarSprite.h:25:45: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
 o    CarSprite(GLuint shaderProg):SpriteMesh("Model/0.obj", shaderProg){
 o                                            ^
-o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/tornado718/JeopardyCar/main/program5.cpp193"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerd2e1cd89d52eb841^0e2c8f8ad52eb841^-441"In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:In file included from /Users/tornado718/JeopardyCar/main/RenderEngine.h:15:/Users/tornado718/JeopardyCar/main/CarSprite.h:24:45: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]    CarSprite(GLuint shaderProg):SpriteMesh("Model/0.obj", shaderProg){                                            ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@56"Conversion from string literal to 'char *' is deprecated-405722506#18446744073709551615#0#2(2@73"In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:-405722506#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@54"file:///Users/tornado718/JeopardyCar/main/program5.cpp0000000000000000^12#9#12#9#406#0#21"Apple LLVM 5.0 Notice--2@75"In file included from /Users/tornado718/JeopardyCar/main/RenderEngine.h:15:-405722506#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@56"file:///Users/tornado718/JeopardyCar/main/RenderEngine.h0000000000000000^14#9#14#9#325#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@53"file:///Users/tornado718/JeopardyCar/main/CarSprite.h0000000000000000^23#44#23#44#407#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@54"file:///Users/tornado718/JeopardyCar/main/program5.cpp0000000000000000^3010"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tornado718/JeopardyCar/main    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.d --serialize-diagnostics /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.dia -c /Users/tornado718/JeopardyCar/main/program5.cpp -o /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o36"C46B60F5-EF77-4B8D-92F8-D40FFAFC4969-
-bF846C84F-DEBD-4DDE-877D-B3F814F17050
+oIn file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:
+o/Users/tornado718/JeopardyCar/main/RenderEngine.h:381:29: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
+o        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
+o                            ^
+o2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/tornado718/JeopardyCar/main/program5.cpp193"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler2aa7b1e5e72eb841^a03888e6e72eb841^-759"In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:In file included from /Users/tornado718/JeopardyCar/main/RenderEngine.h:15:/Users/tornado718/JeopardyCar/main/CarSprite.h:25:45: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]    CarSprite(GLuint shaderProg):SpriteMesh("Model/0.obj", shaderProg){                                            ^In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:/Users/tornado718/JeopardyCar/main/RenderEngine.h:381:29: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]        boxmesh =SpriteMesh("Model/car.obj",shaderProg);                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@56"Conversion from string literal to 'char *' is deprecated-405727206#18446744073709551615#0#2(2@73"In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:-405727206#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@54"file:///Users/tornado718/JeopardyCar/main/program5.cpp0000000000000000^12#9#12#9#406#0#21"Apple LLVM 5.0 Notice--2@75"In file included from /Users/tornado718/JeopardyCar/main/RenderEngine.h:15:-405727206#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@56"file:///Users/tornado718/JeopardyCar/main/RenderEngine.h0000000000000000^14#9#14#9#325#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@53"file:///Users/tornado718/JeopardyCar/main/CarSprite.h0000000000000000^24#44#24#44#430#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-405727206#18446744073709551615#0#1(2@73"In file included from /Users/tornado718/JeopardyCar/main/program5.cpp:13:-405727206#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@54"file:///Users/tornado718/JeopardyCar/main/program5.cpp0000000000000000^12#9#12#9#406#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@56"file:///Users/tornado718/JeopardyCar/main/RenderEngine.h0000000000000000^380#28#380#28#8074#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@54"file:///Users/tornado718/JeopardyCar/main/program5.cpp0000000000000000^3010"CompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o program5.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tornado718/JeopardyCar/main    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-generated-files.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-own-target-headers.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-all-target-headers.hmap -iquote /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/program5-project-headers.hmap -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources/x86_64 -I/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/DerivedSources -F/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -MMD -MT dependencies -MF /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.d --serialize-diagnostics /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.dia -c /Users/tornado718/JeopardyCar/main/program5.cpp -o /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.o36"7BC2D108-01DB-4F3C-9BB7-5B4BB032AABA-
+bF7158B35-D9AE-48E1-BB35-A0A7364407D9
 
 CCompileC DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/string_extra.o /Users/tornado718/Desktop/RHIT/My\ courses/CG/hmw/program5/obj_loader/string_extra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s405588881.580846
@@ -1998,8 +2002,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Link /
 b7297C969-F576-4DB4-A552-4FCAD58DE3C0
 
 CLd /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64
-s405722506.560556
-e405722506.600830
+s405727206.533289
+e405727206.574037
 r1
 xLd
 x/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5
@@ -2018,8 +2022,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -2050,8 +2052,10 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Link /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program595"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64438c8f8ad52eb841^5fd1998ad52eb841^---0#0#1#--1176"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64    cd /Users/tornado718/JeopardyCar/main    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -filelist /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList -mmacosx-version-min=10.8 -framework sfml-graphics -framework sfml-system -framework sfml-window -framework OpenGL -Xlinker -dependency_info -Xlinker /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5_dependency_info.dat -o /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program536"2C698CE8-58CC-402F-85FA-87702C55C9E3-
-bF846C84F-DEBD-4DDE-877D-B3F814F17050
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Link /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program595"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64e29188e6e72eb841^45f592e6e72eb841^---0#0#1#--1176"Ld DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program5 normal x86_64    cd /Users/tornado718/JeopardyCar/main    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug -F/Library/Frameworks -filelist /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5.LinkFileList -mmacosx-version-min=10.8 -framework sfml-graphics -framework sfml-system -framework sfml-window -framework OpenGL -Xlinker -dependency_info -Xlinker /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Intermediates/program5.build/Debug/program5.build/Objects-normal/x86_64/program5_dependency_info.dat -o /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app/Contents/MacOS/program536"53875E34-230A-4730-8E08-D07C5A314CC1-
+bF7158B35-D9AE-48E1-BB35-A0A7364407D9
 
 CPBXCp /Library/Frameworks/sfml-graphics.framework DerivedData/program5/Build/Products/Debug/program5.app/Contents/Frameworks/sfml-graphics.framework
 s405588933.419921
@@ -2225,11 +2229,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Touch 
 b7297C969-F576-4DB4-A552-4FCAD58DE3C0
 
 CTouch /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app
-s405722506.602945
-e405722506.606210
+s405727206.575766
+e405727206.579016
 r1
 xTouch
 x/Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Touch /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app60"Touch DerivedData/program5/Build/Products/Debug/program5.app88669a8ad52eb841^7f319b8ad52eb841^---0#0#1#--215"Touch DerivedData/program5/Build/Products/Debug/program5.app    cd /Users/tornado718/JeopardyCar/main    /usr/bin/touch -c /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app36"CA210F40-4BB1-4B2A-B2D2-620CBB9D6910-
-bF846C84F-DEBD-4DDE-877D-B3F814F17050
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Touch /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app60"Touch DerivedData/program5/Build/Products/Debug/program5.app0d6e93e6e72eb841^3b7294e6e72eb841^---0#0#1#--215"Touch DerivedData/program5/Build/Products/Debug/program5.app    cd /Users/tornado718/JeopardyCar/main    /usr/bin/touch -c /Users/tornado718/JeopardyCar/main/DerivedData/program5/Build/Products/Debug/program5.app36"66DA7647-094D-44DF-9BB4-E2727F84DF58-
+bF7158B35-D9AE-48E1-BB35-A0A7364407D9
 

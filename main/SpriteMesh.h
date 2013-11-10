@@ -114,6 +114,15 @@ public:
         return me.normals;
     }
     
+    vector<VectorV> getVertices(){
+        return me.vertices;
+    }
+    vector<Triangle> getTriangles(){
+        return me.triangles;
+    }
+    
+    
+    
 protected:
     GLuint shaderProg;
     GLuint positionBuffer;

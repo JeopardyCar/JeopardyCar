@@ -43,7 +43,7 @@ public:
 		for(int t=0; t<triangles.size(); t++)
 		{
 			Triangle &tri = triangles[t];
-			
+            
 			for(int v=0; v<3; v++)
 			{
 				int vertexIndex = tri.vertexIndex[v];
