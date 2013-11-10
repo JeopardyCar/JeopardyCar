@@ -20,20 +20,12 @@ public:
     CarSprite()
     {
         direction = glm::vec3(0,-1,0);
+        velocity = glm::vec3(0,0,0);
     }
     
     CarSprite(GLuint shaderProg):SpriteMesh("Model/car.obj", shaderProg){
         direction = glm::vec3(0,-1,0);
-        
-        
-        
-        vector<VectorV> vertices = getVertices();
-        vector<Triangle> triangles = getTriangles();
-        Triangle tri = triangles[1];
-        //printf("first triangle:\n");
-        //printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[0]].c[0],vertices[tri.vertexIndex[0]].c[1],vertices[tri.vertexIndex[0]].c[2]);
-        //printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[1]].c[0],vertices[tri.vertexIndex[1]].c[1],vertices[tri.vertexIndex[1]].c[2]);
-        //printf("(%f,%f,%f)\n", vertices[tri.vertexIndex[2]].c[0],vertices[tri.vertexIndex[2]].c[1],vertices[tri.vertexIndex[2]].c[2]);
+        velocity = glm::vec3(0,0,0);
 
     }
     
@@ -48,18 +40,10 @@ public:
         SpriteMesh::show(P,C,M1);
     }
     void up(float v=.01f){
-        if(velocity>3){
-            
-        }else{
-            velocity+=v;
-        }
+        velocity+= direction*v;
     }
     void down(float v=.01f){
-        if(velocity>3){
-            
-        }else{
-            velocity-=v;
-        }
+        velocity-= direction*v;
     }
     
     
@@ -72,15 +56,16 @@ public:
         printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
         
+        glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
+        printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
+        vel= rot*vel;
+        velocity = glm::vec3(vel.x,vel.y,vel.z);
+        
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
-        //printf("axis: %f,%f,%f\n",axis.x,axis.y,axis.z);
-        //rot =glm::rotate(glm::mat4(1),angle,axis);
         printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
-//        targetDir = direction;
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
-        //velocity.x+=v;
+        
     }
     void right(float v=5.){
         float angle = -v;
@@ -89,11 +74,15 @@ public:
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
         
-        glm::vec4 dir = glm::vec4(direction, 1.);
+        glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
+        printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
+        vel= rot*vel;
+        velocity = glm::vec3(vel.x,vel.y,vel.z);
+        
+        glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
+        printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
-        
-        printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         //velocity.x-=v;
 //        targetDir = direction;
     }
@@ -106,10 +95,10 @@ public:
         //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
         
-        glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 1.);
+        glm::vec4 dir = glm::vec4(velocity.x,velocity.y, velocity.z, 1.);
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
-        direction = glm::vec3(dir.x,dir.y,dir.z);
+        velocity = glm::vec3(dir.x,dir.y,dir.z);
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
 //        targetDir = direction;
     }
@@ -121,37 +110,44 @@ public:
         //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
         
-        glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 1.);
+        glm::vec4 dir = glm::vec4(velocity.x,velocity.y, velocity.z, 1.);
         
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
-        direction = glm::vec3(dir.x,dir.y,dir.z);
+        velocity = glm::vec3(dir.x,dir.y,dir.z);
 //        targetDir = direction;
     }
     
     
     glm::vec3 getDirection(){
-        return direction;
+        return velocity;
     }
     
-    glm::vec3 toDirection(glm::vec3 tDir){
-        targetDir = tDir;
-    }
-    
+
     glm::vec3 getGlobalV(){
-        return glm::vec3(-getV().y*direction.x,getV().y*-direction.y,0);
+        return glm::vec3(-getV().y*velocity.x,getV().y*-velocity.y,0);
     }
     
     
     void hitAndTurn(glm::vec3 norm){
+        glm::vec3 dir = getDirection();
+        glm::vec3 newdir;
+        newdir = dir - 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
+        printf("new dir: %f,%f,%f\n",newdir.x,newdir.y,newdir.z);
+        setV(newdir);
         
+        baseTrans *= glm::translate(glm::mat4(1), newdir);
+        
+        
+        float a =getLen(dir);
+        float b =getLen(newdir);
+        float cos = (glm::dot(dir, newdir))/(a*b);
     }
     
     
-    glm::vec3 rotCar(float angle,glm::vec3 axis){
+    void rotCar(float angle,glm::vec3 axis){
         glm::mat4 rot =glm::rotate(glm::mat4(1),-angle,axis);
         baseRot=rot*baseRot;
-        
     }
     
     glm::vec3 testCollision(SpriteMesh sm){
@@ -177,7 +173,8 @@ public:
         return glm::vec3(0);
     }
 private:
-    glm::vec3 targetDir;
+    glm::vec3 direction;
+    
 };
 
 

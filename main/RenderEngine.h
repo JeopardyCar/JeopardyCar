@@ -120,14 +120,14 @@ public:
         c = car.getPos();
         e=c;
         
-        if(getLen(targetDirection-car.getDirection())>.03){
-            targetDirection = car.getDirection();
+        if(getLen(targetDirection- normalize(car.getDirection()))>.03){
+            targetDirection = normalize(car.getDirection());
         }
         
         
         if(getLen(oldDirection-targetDirection)>.03){
             glm::vec3 tmp =targetDirection-oldDirection;
-            tmp*=.05;
+            tmp*=.07;
             oldDirection += tmp;
             e.z+=3;//7*car.getDirection().z;
             e.y-=7*oldDirection.y;
@@ -159,67 +159,37 @@ public:
 //            printf("not collision\n");
         }
         
+        glm::vec3 colnorm2= glm::vec3(0,0,1);
+        if(car.getPos().z<-1){
+            car.hitAndTurn(colnorm2);
+        }
         
-        glm::vec3 colnorm1 = glm::vec3(0,1,0);
+        
+        /*
+        glm::vec3 colnorm1 = glm::vec3(0,1,.2);
         if(car.getPos().y<-6){
-            glm::vec3 dir = car.getDirection();
-            glm::vec3 newdir;
-            newdir = dir - 2*glm::dot(dir, colnorm1)/getLen(colnorm1)*colnorm1/getLen(colnorm1);
-            car.setDirection(newdir);
-            float a =getLen(dir);
-            float b =getLen(newdir);
-            printf("a:%f,b:%f\n",a,b);
-            float cos = (glm::dot(dir, newdir))/(a*b);
-            printf("cos:%f\n",cos);
-            car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
+            car.hitAndTurn(colnorm1);
         }
         
         
-        colnorm1 = glm::vec3(0,-1,0);
+        colnorm1 = glm::vec3(0,-1,.2);
         if(car.getPos().y>6){
-            glm::vec3 dir = car.getDirection();
-            glm::vec3 newdir;
-            newdir = dir - 2*glm::dot(dir, colnorm1)/getLen(colnorm1)*colnorm1/getLen(colnorm1);
-            car.setDirection(newdir);
-            float a =getLen(dir);
-            float b =getLen(newdir);
-            printf("a:%f,b:%f\n",a,b);
-            float cos = (glm::dot(dir, newdir))/(a*b);
-            printf("cos:%f\n",cos);
-            car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
+            car.hitAndTurn(colnorm1);
         }
         
-        colnorm1 = glm::vec3(1,0,0);
+        colnorm1 = glm::vec3(1,0,-.2);
         if(car.getPos().x<-6){
-            glm::vec3 dir = car.getDirection();
-            glm::vec3 newdir;
-            newdir = dir - 2*glm::dot(dir, colnorm1)/getLen(colnorm1)*colnorm1/getLen(colnorm1);
-//            car.setDirection(newdir);
-            car.setDirection(newdir);
-            float a =getLen(dir);
-            float b =getLen(newdir);
-            printf("a:%f,b:%f\n",a,b);
-            float cos = (glm::dot(dir, newdir))/(a*b);
-            printf("cos:%f\n",cos);
-            car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
+            car.hitAndTurn(colnorm1);
         }
         
         
-        colnorm1 = glm::vec3(-1,0,0);
+        colnorm1 = glm::vec3(-1,0,-.2);
         if(car.getPos().x>6){
-            glm::vec3 dir = car.getDirection();
-            glm::vec3 newdir;
-            newdir = dir - 2*glm::dot(dir, colnorm1)/getLen(colnorm1)*colnorm1/getLen(colnorm1);
-            car.setDirection(newdir);
-            float a =getLen(dir);
-            float b =getLen(newdir);
-            printf("a:%f,b:%f\n",a,b);
-            float cos = (glm::dot(dir, newdir))/(a*b);
-            printf("cos:%f\n",cos);
-            car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
+            car.hitAndTurn(colnorm1);
+           // car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
         }
         
-        
+        */
         
         
 
@@ -446,6 +416,7 @@ public:
 	{
         car = CarSprite(boxShader);
         car.setPosM(glm::vec3(0,0,1));
+        car.setAccelerate(glm::vec3(0,0,-.002));
         //car.turnUp(45);
         box2 = BoxSprite2();
         box2.init(shaderProg);

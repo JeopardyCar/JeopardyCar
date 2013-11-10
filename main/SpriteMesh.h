@@ -19,23 +19,19 @@
 class SpriteMesh{
 public:
     SpriteMesh(){
-        velocity = 0;
+        //velocity = 0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
         posM = glm::mat4(1);
         acc = glm::vec3(0);
         pos = glm::vec3(0);
         M = glm::mat4(1);
-        
     }
     
     
     
     SpriteMesh(char * meshfile, GLuint shaderProg){
-        
-        
-        
-        velocity =0;
+        //velocity =0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
         posM = glm::mat4(1);
@@ -66,10 +62,21 @@ public:
         cSlot = glGetUniformLocation(shaderProg, "C");
         
     }
-    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
+    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
-        baseTrans*=glm::translate(glm::mat4(1), velocity*direction);
+        
+        //glm::vec3 newdir = velocity+acc;
+        //velocity*= (glm::dot(velocity,acc)/getLen(velocity) + getLen(velocity))/getLen(velocity);
+        //direction = normalize(newdir);
+        
+        /*glm::vec3 truev =velocity*direction;
+        truev+=acc;
+        velocity = getLen(truev);*/
+        
+        velocity += acc;
+        
+        baseTrans*=glm::translate(glm::mat4(1), velocity);
         T*=baseTrans;
         P*=baseTrans;
         C*=baseTrans;
@@ -98,16 +105,18 @@ public:
     glm::vec3 getPos(){
         return pos;
     }
-    
+    /*
     void setV(float v){
-        velocity =v;
+        //velocity =v;
     }
+     */
     glm::vec3 getV(){
-        return glm::vec3(direction.x*velocity, direction.y*velocity,direction.y*velocity);
+        return velocity;
+//        return glm::vec3(direction.x*velocity, direction.y*velocity,direction.y*velocity);
     }
     
-    void setDirection(glm::vec3 d){
-        direction = d;
+    void setV(glm::vec3 v){
+        velocity = v;
     }
     
     void setFriction(float f){
@@ -140,7 +149,6 @@ public:
     }
     
     
-    
 protected:
     GLuint shaderProg;
     GLuint positionBuffer;
@@ -158,12 +166,12 @@ protected:
     glm::vec3 pos;
     glm::mat4 M ;
     
-    float velocity;
+    //float velocity;
     glm::vec3 acc;
     glm::mat4 baseTrans;
     glm::mat4 baseRot;
     
-    glm::vec3 direction;
+    glm::vec3 velocity;
     
     
 };
