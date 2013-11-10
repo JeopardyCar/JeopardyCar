@@ -88,5 +88,6 @@
     <ClInclude Include="obj_loader\string_extra.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
+    <ClInclude Include="WelcomeScreen.h" />
   </ItemGroup>
 </Project>
