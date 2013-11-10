@@ -32,6 +32,7 @@
 		CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF20182CC8D80013DA12 /* 0.obj */; };
 		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
 		CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF23182CC8D80013DA12 /* road1.obj */; };
+		F7FA8E69183008300095ED8A /* edge.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7FA8E68183007FA0095ED8A /* edge.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 			dstPath = Model;
 			dstSubfolderSpec = 16;
 			files = (
+				F7FA8E69183008300095ED8A /* edge.obj in Copy Files (4 items) */,
 				CD8B26A3182DA64300401CAF /* 1.obj in Copy Files (4 items) */,
 				CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */,
 				CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */,
@@ -122,6 +124,7 @@
 		CDAECF20182CC8D80013DA12 /* 0.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.obj; sourceTree = "<group>"; };
 		CDAECF22182CC8D80013DA12 /* car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.obj; sourceTree = "<group>"; };
 		CDAECF23182CC8D80013DA12 /* road1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = road1.obj; sourceTree = "<group>"; };
+		F7FA8E68183007FA0095ED8A /* edge.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,7 @@
 		CDAECF1F182CC8D80013DA12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7FA8E68183007FA0095ED8A /* edge.obj */,
 				CDAECF20182CC8D80013DA12 /* 0.obj */,
 				CD37B5C9182DA52A00552050 /* 1.obj */,
 				CDAECF22182CC8D80013DA12 /* car.obj */,
