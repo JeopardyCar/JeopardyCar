@@ -133,11 +133,11 @@ public:
         if(colnorm.x!=0||colnorm.y!=0||colnorm.z!=0){
             printf("collision normal: %f,%f,%f\n",colnorm.x, colnorm.y, colnorm.z);
             glm::vec3 temp = glm::dot(v,colnorm)/getLen(colnorm)*colnorm/getLen(colnorm);
-            v.x-=temp.x;
-            v.y-=temp.y;
-            v.z-=temp.z;
+            //v.x-=temp.x;
+            //v.y-=temp.y;
+            //v.z-=temp.z;
             printf("temp:%f,%f,%f\n", temp.x,temp.y,temp.z);
-            car.setV(v);
+            //car.setV(v);
         }else{
 //            printf("not collision\n");
         }
@@ -278,7 +278,6 @@ public:
         }else if(key == "right"){
             car.right();
         }
-        
     }
     
     
