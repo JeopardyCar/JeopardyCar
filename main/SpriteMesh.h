@@ -19,17 +19,29 @@
 class SpriteMesh{
 public:
     SpriteMesh(){
-        velocity = glm::vec3(0);
+        velocity = 0;
         baseTrans= glm::mat4(1);
+        baseRot =glm::mat4(1);
         posM = glm::mat4(1);
         acc = glm::vec3(0);
         pos = glm::vec3(0);
+        M = glm::mat4(1);
+        
     }
     
+    
+    
     SpriteMesh(char * meshfile, GLuint shaderProg){
-        velocity = glm::vec3(0);
+        
+        
+        
+        velocity =0;
         baseTrans= glm::mat4(1);
+        baseRot =glm::mat4(1);
+        posM = glm::mat4(1);
         acc = glm::vec3(0);
+        pos = glm::vec3(0);
+        M = glm::mat4(1);
         
         FILE *file = NULL;
 		file = fopen(meshfile, "rb");
@@ -54,20 +66,22 @@ public:
         cSlot = glGetUniformLocation(shaderProg, "C");
         
     }
-    
-    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
-        glm::mat4 T= P*C*M*posM;
-        velocity+=acc;
+    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
+        glm::mat4 T= P*C*M;
         
-        baseTrans*=glm::translate(glm::mat4(1), velocity);
+        baseTrans*=glm::translate(glm::mat4(1), velocity*direction);
         T*=baseTrans;
         P*=baseTrans;
         C*=baseTrans;
-        M*=posM;
-        M*=baseTrans;
-        pos.x = M[3][0];
-        pos.y = M[3][1];
-        pos.z = M[3][2];
+        
+        T*=baseRot;
+        P*=baseRot;
+        C*=baseRot;
+
+        
+        pos.x = (M*baseTrans)[3][0];
+        pos.y = (M*baseTrans)[3][1];
+        pos.z = (M*baseTrans)[3][2];
         //printf("x:%f,y:%f,z:%f\n", M[3][0],M[3][1],M[3][2]);
         glUseProgram(shaderProg);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
@@ -85,11 +99,15 @@ public:
         return pos;
     }
     
-    void setV(glm::vec3 v){
-        velocity = v;
+    void setV(float v){
+        velocity =v;
     }
     glm::vec3 getV(){
-        return velocity;
+        return glm::vec3(direction.x*velocity, direction.y*velocity,direction.y*velocity);
+    }
+    
+    void setDirection(glm::vec3 d){
+        direction = d;
     }
     
     void setFriction(float f){
@@ -138,10 +156,16 @@ protected:
     float friction;
     glm::mat4 posM;
     glm::vec3 pos;
+    glm::mat4 M ;
     
-    glm::vec3 velocity;
+    float velocity;
     glm::vec3 acc;
     glm::mat4 baseTrans;
+    glm::mat4 baseRot;
+    
+    glm::vec3 direction;
+    
+    
 };
 
 #endif
