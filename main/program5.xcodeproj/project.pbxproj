@@ -33,7 +33,6 @@
 		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
 		CDAECF40182CCBF20013DA12 /* road1.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF23182CC8D80013DA12 /* road1.obj */; };
 		F7FA8E6B183009260095ED8A /* edge.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7FA8E6A183009220095ED8A /* edge.obj */; };
-		F7FA8E7018300F840095ED8A /* RoadGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7FA8E6E18300F840095ED8A /* RoadGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,8 +125,6 @@
 		CDAECF22182CC8D80013DA12 /* car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.obj; sourceTree = "<group>"; };
 		CDAECF23182CC8D80013DA12 /* road1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = road1.obj; sourceTree = "<group>"; };
 		F7FA8E6A183009220095ED8A /* edge.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge.obj; sourceTree = "<group>"; };
-		F7FA8E6E18300F840095ED8A /* RoadGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoadGenerator.cpp; sourceTree = "<group>"; };
-		F7FA8E6F18300F840095ED8A /* RoadGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +185,6 @@
 		A01FB6B20F07CF80000AAC7B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F7FA8E6E18300F840095ED8A /* RoadGenerator.cpp */,
-				F7FA8E6F18300F840095ED8A /* RoadGenerator.h */,
 				CDAECF1E182CC7CF0013DA12 /* Mesh.h */,
 				CDAECF07182CC6630013DA12 /* BoxSprite.h */,
 				CDAECF08182CC6630013DA12 /* BoxSprite2.h */,
@@ -321,7 +316,6 @@
 				AF75F26D17E36AC9008CB713 /* program5.cpp in Sources */,
 				CDAECF1C182CC76E0013DA12 /* obj_parser.cpp in Sources */,
 				AF75F32117E37252008CB713 /* simple.vert in Sources */,
-				F7FA8E7018300F840095ED8A /* RoadGenerator.cpp in Sources */,
 				CDAECF1D182CC76E0013DA12 /* string_extra.cpp in Sources */,
 				AFAA3CD917ECAA97008AC49C /* simple.frag in Sources */,
 				CDAECF1B182CC76E0013DA12 /* list.cpp in Sources */,

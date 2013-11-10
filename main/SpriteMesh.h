@@ -99,20 +99,15 @@ public:
     }
 
     void setPosM(glm::vec3 m){
-        posM = glm::translate(glm::mat4(1), m);
+        baseTrans = glm::translate(glm::mat4(1), m);
     }
     
     glm::vec3 getPos(){
         return pos;
     }
-    /*
-    void setV(float v){
-        //velocity =v;
-    }
-     */
+
     glm::vec3 getV(){
         return velocity;
-//        return glm::vec3(direction.x*velocity, direction.y*velocity,direction.y*velocity);
     }
     
     void setV(glm::vec3 v){

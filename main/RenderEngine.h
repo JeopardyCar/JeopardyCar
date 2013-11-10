@@ -148,11 +148,12 @@ public:
         glm::vec3 colnorm =car.testCollision(boxmesh);
         glm::vec3 v = car.getV();
         if(getLen(colnorm)!= 0){
+            printf("hit box mesh");
             car.hitAndTurn(colnorm);
         }
         
         glm::vec3 colnorm2= glm::vec3(0,0,1);
-        if(car.getPos().z<-1){
+        if(car.getPos().z<0){
             car.hitAndTurn(colnorm2);
         }
         
@@ -382,7 +383,6 @@ public:
             c4= c4*r;
             glm::vec3 c3 = glm::vec3(c4.x,c4.y,c4.z);
             e = c+c3;
-            
         }
         
         else if(key == "turn_down"){
@@ -407,9 +407,8 @@ public:
 	void generateObjs(unsigned int const & seed = 1)
 	{
         car = CarSprite(boxShader);
-        car.setPosM(glm::vec3(0,0,1));
+        car.setPosM(glm::vec3(0,0,3));
         car.setAccelerate(glm::vec3(0,0,-.002));
-        //car.turnUp(45);
         box2 = BoxSprite2();
         box2.init(shaderProg);
         

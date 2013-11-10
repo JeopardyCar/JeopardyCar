@@ -39,13 +39,22 @@ public:
 //        }
         SpriteMesh::show(P,C,M1);
     }
-    void up(float v=.01f){
+    void up(float v=.005f){
+        if(getLen(velocity)>2){
+            return ;
+        }
         velocity+= direction*v;
     }
-    void down(float v=.01f){
+    void down(float v=.005f){
+        glm::vec3 vel = velocity;
+        vel.z= 0;
+        if(getLen(vel)<.01){
+            printf("no slow down\n");
+            return ;
+        }
         velocity-= direction*v;
     }
-    
+
     
     
     void left(float v=5.){
