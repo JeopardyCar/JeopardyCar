@@ -417,6 +417,7 @@ public:
         
         boxmesh =SpriteMesh("Model/car.obj",shaderProg);
 //        boxmesh.setPosM(glm::vec3(1,1,0));
+        boxmesh.setPosM(glm::vec3(0,0,-.5));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);

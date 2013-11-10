@@ -32,11 +32,6 @@ public:
     
     
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
-//        if(getDis(targetDir, direction)<.01){
-//            glm::vec3 dis =targetDir-direction;
-//            dis*=.3;
-//            direction+=dis;
-//        }
         SpriteMesh::show(P,C,M1);
     }
     void up(float v=.005f){
@@ -48,7 +43,7 @@ public:
     void down(float v=.005f){
         glm::vec3 vel = velocity;
         vel.z= 0;
-        if(getLen(vel)<.01){
+        if(getLen(vel)<.1){
             printf("no slow down\n");
             return ;
         }
@@ -92,8 +87,6 @@ public:
         printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
-        //velocity.x-=v;
-//        targetDir = direction;
     }
     
     void turnUp(float v=5.){
@@ -109,7 +102,6 @@ public:
         dir= rot*dir;
         velocity = glm::vec3(dir.x,dir.y,dir.z);
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
-//        targetDir = direction;
     }
     void turnDown(float v=5.){
         float angle = v;
@@ -124,7 +116,6 @@ public:
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         velocity = glm::vec3(dir.x,dir.y,dir.z);
-//        targetDir = direction;
     }
     
     
@@ -145,7 +136,9 @@ public:
         newdir *=.9;
         newdir = dir - newdir;
         setV(newdir);
-        baseTrans *= glm::translate(glm::mat4(1), newdir);
+        glm::vec3 move = newdir;
+        move*=1.4;
+        baseTrans *= glm::translate(glm::mat4(1), move);
         
         
         float a =getLen(dir);
@@ -170,7 +163,7 @@ public:
             center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
             center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
             
-            if(getDis(getPos(), center)<.2){
+            if(getDis(getPos(), center)<.7){
                 //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
                 
                 //setV(glm::vec3(0));
