@@ -1,4 +1,4 @@
-﻿Build started 11/9/2013 10:16:47 PM.
+﻿Build started 11/9/2013 10:42:32 PM.
      1>Project "C:\Users\finnelhn\Desktop\JeopardyCar\trunk\main\program5.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\finnelhn\Desktop\JeopardyCar\trunk\main\\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt program5.cpp
@@ -27,8 +27,12 @@
                  c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
      1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\spritemesh.h(97): warning C4305: '=' : truncation from 'double' to 'float'
      1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\spritemesh.h(100): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(39): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(56): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(51): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(68): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(90): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(93): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(94): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\carsprite.h(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\trackball.h(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\trackball.h(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\finnelhn\desktop\jeopardycar\trunk\main\trackball.h(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -44,9 +48,10 @@
          Debug\obj_parser.obj
          Debug\string_extra.obj
          Debug\program5.obj
+     1>glew.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
          program5.vcxproj -> C:\Users\finnelhn\Desktop\JeopardyCar\trunk\main\Debug\program5.exe
      1>Done Building Project "C:\Users\finnelhn\Desktop\JeopardyCar\trunk\main\program5.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.23
+Time Elapsed 00:00:03.38
