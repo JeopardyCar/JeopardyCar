@@ -144,7 +144,14 @@ public:
     
     
     void hitAndTurn(glm::vec3 norm){
-        
+        glm::vec3 dir = getDirection();
+        glm::vec3 newdir;
+        newdir = dir - 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
+        printf("new dir: %f,%f,%f\n",newdir.x,newdir.y,newdir.z);
+        setDirection(newdir);
+        float a =getLen(dir);
+        float b =getLen(newdir);
+        float cos = (glm::dot(dir, newdir))/(a*b);
     }
     
     
