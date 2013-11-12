@@ -77,14 +77,15 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         updateCamera();
-        
+        glm::vec3 carpos = car.getPos();
         vector<SpriteMesh*> roadsvec = roads.getRoads();
         glm::vec3 colnorm = glm::vec3(0,0,1);
-        for(int i=0;i<roadsvec.size();i++){
+        //for(int i=0;i<roadsvec.size();i++){
             if(car.getPos().z<0){
+                car.setPos(carpos.x, carpos.y, .1);
                 car.hitAndTurn(colnorm);
             }
-        }
+        //}
         
         /*
         glm::vec3 colnorm =car.testCollision(boxmesh);
@@ -101,19 +102,41 @@ public:
         
         */
         
-        glm::vec3 carpos = car.getPos();
+        
         
         
         for(int i=0;i<obstacles.size();i++){
             glm::vec3 obspos=obstacles[i].getPos();
-            if(obspos.y<carpos.y+60){
+            obstacles[i].show(P, C, M);
+            
+            
+            
+            
+            
+            
+            
+            glm::vec3 norm = car.testCollision(obstacles[i],2);
+            if(getLen(norm)>0){
+                car.hitAndTurn(norm);
+                printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
+                printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
+                printf("hit!\n");
+            }
+            
+            
+            
+            
+            
+            if(obspos.y<carpos.y+10){
                 continue;
             }
-            int rand1 = (rand() % 1000000 + 1)/100000-5;
-            int rand2 = (rand() % 1000000 + 1)/100000-5;
+            
+            
+            int rand1 = (rand() % 1000000 + 1)/25000-20;
+            int rand2 = (rand() % 1000000 + 1)/25000-20;
             //printf("%f\n",obspos.y);
-            obstacles[i].setPosM(glm::vec3(carpos.x, carpos.y,2.));
-            obstacles[i].show(P, C, M);
+            obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-40,0.5));
+            
         }
         
 
@@ -344,8 +367,9 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        for(int i=0;i<10;i++){
+        for(int i=0;i<1;i++){
             SpriteMesh obs = SpriteMesh("Model/box.obj",shaderProg);
+            obs.setPos(0, 0, 100);
             obstacles.push_back(obs);
         }
         

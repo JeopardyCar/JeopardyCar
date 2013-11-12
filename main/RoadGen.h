@@ -19,7 +19,7 @@ public:
 	}
 	void init(GLuint shaderProg,char * filename ="Model/broad.obj")
 	{
-        for(int i= 0;i<6;i++){
+        for(int i= 0;i<8;i++){
            SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/road1_T.bmp",TexID);
             roads.push_back(road);
         }
@@ -28,8 +28,8 @@ public:
 	void update(glm::vec3 carPos){
         for(int i=0 ;i< roads.size();i++){
             SpriteMesh* road = roads[i];
-            printf("%f\n",road->getPos().y);
-            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+20,-1));
+            //printf("%f\n",road->getPos().y);
+            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,-1));
         }
     
 	}

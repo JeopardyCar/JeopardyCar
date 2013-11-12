@@ -32,13 +32,13 @@ public:
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
         SpriteMesh::show(P,C,M1);
     }
-    void up(float v=.005f){
-        if(getLen(velocity)>.05){
+    void up(float v=.01f){
+        if(getLen(velocity)>.5){
             return ;
         }
         velocity+= direction*v;
     }
-    void down(float v=.001f){
+    void down(float v=.002f){
         glm::vec3 vel = velocity;
         vel.z= 0;
         if(getLen(vel)<.005){
@@ -136,7 +136,7 @@ public:
         glm::vec3 move = newdir;
         move*=1.6;
         if(glm::dot(move, norm)<0){
-            norm*=.0005;
+            norm*=.0003;
             move+=norm;
         }
         baseTrans *= glm::translate(glm::mat4(1), move);
@@ -156,7 +156,7 @@ public:
         baseRot = rotMat;
     }
     
-    glm::vec3 testCollision(SpriteMesh sm){
+    glm::vec3 testCollision(SpriteMesh sm, float dis = 1){
         vector<VectorV> vertices = sm.getVertices();
         vector<Triangle> triangles = sm.getTriangles();
         vector<VectorV> normals = sm.getNormals();
@@ -166,11 +166,11 @@ public:
             center.x =vertices[tri.vertexIndex[0]].c[0]*.33+vertices[tri.vertexIndex[1]].c[0]*.33+vertices[tri.vertexIndex[2]].c[0]*.33;
             center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
             center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
-            
-            if(getDis(getPos(), center)<.7){
+            center+=sm.getPos();
+            //printf("center:%f,%f,%f\n",center.x,center.y,center.z);
+            if(getDis(getPos(), center)<dis){
                 //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
                 
-                //setV(glm::vec3(0));
                 return glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
             }
 

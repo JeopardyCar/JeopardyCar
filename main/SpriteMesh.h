@@ -117,6 +117,16 @@ public:
 
     void setPosM(glm::vec3 m){
         baseTrans = glm::translate(glm::mat4(1), m);
+        pos.x = (baseTrans)[3][0];
+        pos.y = (baseTrans)[3][1];
+        pos.z = (baseTrans)[3][2];
+    }
+    
+    void setPos(float x, float y, float z){
+        baseTrans = glm::translate(glm::mat4(1), glm::vec3(x,y,z));
+        pos.x = (baseTrans)[3][0];
+        pos.y = (baseTrans)[3][1];
+        pos.z = (baseTrans)[3][2];
     }
     
     glm::vec3 getPos(){
