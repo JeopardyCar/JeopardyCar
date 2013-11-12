@@ -67,46 +67,7 @@ public:
     
 	void display(Keyset keys ,bool pickingEnabled=false)
 	{
-        if(keys.W){
-            setCameraTransform("up", 1);
-        }
-        if(keys.S){
-            setCameraTransform("down", 1);
-        }
-        if(keys.A){
-            setCameraTransform("left", 1);
-        }
-        if(keys.D){
-            setCameraTransform("right",1);
-        }
-        if(keys.Q){
-            setCameraTransform("turn_left",3);
-        }
-        if(keys.E){
-            setCameraTransform("turn_right", 3);
-        }
-        if(keys.R){
-            setCameraTransform("turn_up", 3);
-        }
-        if(keys.F){
-            setCameraTransform("turn_down", 3);
-        }
-        if(keys.UP){
-            carGo("up");
-        }
-        if(keys.DOWN){
-            carGo("down");
-        }
-        if(keys.LEFT){
-            carGo("left");
-        }
-        if(keys.RIGHT){
-            carGo("right");
-        }
-        
-        
-        
-        
+        handleKeys(keys);
         
         GLfloat currentTime;
         currentTime = clk.GetElapsedTime();
@@ -115,37 +76,17 @@ public:
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-		glm::mat4 T =  P*C*M;
-        //show objects;
-        //car.show(P,C,M);
-        c = car.getPos();
-        e=c;
+        updateCamera();
         
-        if(getLen(targetDirection- normalize(car.getDirection()))>.03){
-            targetDirection = normalize(car.getDirection());
+        vector<SpriteMesh*> roadsvec = roads.getRoads();
+        glm::vec3 colnorm = glm::vec3(0,0,1);
+        for(int i=0;i<roadsvec.size();i++){
+            if(car.getPos().z<1){
+                car.hitAndTurn(colnorm);
+            }
         }
         
-        
-        if(getLen(oldDirection-targetDirection)>.03){
-            glm::vec3 tmp =targetDirection-oldDirection;
-            tmp*=.07;
-            oldDirection += tmp;
-            e.z+=3;//7*car.getDirection().z;
-            e.y-=7*oldDirection.y;
-            e.x-=7*oldDirection.x;
-        }else{
-            oldDirection = targetDirection;
-            e.z+=3;//7*car.getDirection().z;
-            e.y-=7*oldDirection.y;
-            e.x-=7*oldDirection.x;
-        }
-        
-        
-        
-        this->C = glm::lookAt(e, c, u);
-        //box2.show(T);
-        //maze.show(T);
-
+        /*
         glm::vec3 colnorm =car.testCollision(boxmesh);
         glm::vec3 v = car.getV();
         if(getLen(colnorm)!= 0){
@@ -158,33 +99,22 @@ public:
             car.hitAndTurn(colnorm2);
         }
         
-        
-        /*
-        glm::vec3 colnorm1 = glm::vec3(0,1,.2);
-        if(car.getPos().y<-6){
-            car.hitAndTurn(colnorm1);
-        }
-        
-        
-        colnorm1 = glm::vec3(0,-1,.2);
-        if(car.getPos().y>6){
-            car.hitAndTurn(colnorm1);
-        }
-        
-        colnorm1 = glm::vec3(1,0,-.2);
-        if(car.getPos().x<-6){
-            car.hitAndTurn(colnorm1);
-        }
-        
-        
-        colnorm1 = glm::vec3(-1,0,-.2);
-        if(car.getPos().x>6){
-            car.hitAndTurn(colnorm1);
-           // car.rotCar(90-glm::acos(cos), glm::vec3(0,0,1));
-        }
-        
         */
         
+        glm::vec3 carpos = car.getPos();
+        
+        
+        for(int i=0;i<obstacles.size();i++){
+            glm::vec3 obspos=obstacles[i].getPos();
+            if(obspos.y<carpos.y+60){
+                continue;
+            }
+            int rand1 = (rand() % 1000000 + 1)/100000-5;
+            int rand2 = (rand() % 1000000 + 1)/100000-5;
+            //printf("%f\n",obspos.y);
+            obstacles[i].setPosM(glm::vec3(carpos.x+rand1,((int)((carpos.y)/10))*10+rand2,2.));
+            obstacles[i].show(P, C, M);
+        }
         
 
 		if(gamestate == 0){//main menu
@@ -414,6 +344,11 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
+        for(int i=0;i<10;i++){
+            SpriteMesh obs = SpriteMesh("Model/box.obj",shaderProg);
+            obstacles.push_back(obs);
+        }
+        
         car = CarSprite(texShader);
         car.setPosM(glm::vec3(0,0,2));
         car.setAccelerate(glm::vec3(0,0,-.002));
@@ -425,7 +360,6 @@ public:
         maze.init(shaderProg, 10, 10, 1);
 
         boxmesh =SpriteMesh("Model/car.obj",shaderProg);
-//        boxmesh.setPosM(glm::vec3(1,1,0));
         boxmesh.setPosM(glm::vec3(0,0,0));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
@@ -467,6 +401,8 @@ private:
     glm::vec3 targetDirection;
     glm::vec3 oldDirection;
     Keyset keys;
+    
+    vector<SpriteMesh> obstacles;
 	void setupGlew()
 	{
 		glewExperimental = GL_TRUE;
@@ -478,6 +414,82 @@ private:
 		}
 		printf("Using GLEW %s\n", glewGetString(GLEW_VERSION));
 	}
+    
+    
+    
+    void handleKeys(Keyset keys){
+        if(keys.W){
+            setCameraTransform("up", 1);
+        }
+        if(keys.S){
+            setCameraTransform("down", 1);
+        }
+        if(keys.A){
+            setCameraTransform("left", 1);
+        }
+        if(keys.D){
+            setCameraTransform("right",1);
+        }
+        if(keys.Q){
+            setCameraTransform("turn_left",3);
+        }
+        if(keys.E){
+            setCameraTransform("turn_right", 3);
+        }
+        if(keys.R){
+            setCameraTransform("turn_up", 3);
+        }
+        if(keys.F){
+            setCameraTransform("turn_down", 3);
+        }
+        if(keys.UP){
+            carGo("up");
+        }
+        if(keys.DOWN){
+            carGo("down");
+        }
+        if(keys.LEFT){
+            carGo("left");
+        }
+        if(keys.RIGHT){
+            carGo("right");
+        }
+    }
+    
+    
+    void updateCamera(){
+        c = car.getPos();
+        e=c;
+        
+        if(getLen(targetDirection- normalize(car.getDirection()))>.03){
+            targetDirection = normalize(car.getDirection());
+        }
+        
+        
+        if(getLen(oldDirection-targetDirection)>.03){
+            glm::vec3 tmp =targetDirection-oldDirection;
+            tmp*=.07;
+            oldDirection += tmp;
+            e.z+=3;//7*car.getDirection().z;
+            e.y-=7*oldDirection.y;
+            e.x-=7*oldDirection.x;
+        }else{
+            oldDirection = targetDirection;
+            e.z+=3;//7*car.getDirection().z;
+            e.y-=7*oldDirection.y;
+            e.x-=7*oldDirection.x;
+        }
+        
+        this->C = glm::lookAt(e, c, u);
+
+    }
+    
+    
+    
+    
+    
+    
+    
     
 	void setupShader()
 	{

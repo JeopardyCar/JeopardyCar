@@ -13,28 +13,39 @@ public:
 	}
 	~RoadGen()
 	{
+        for(int i=0;i<roads.size();i++){
+            delete roads[i];
+        }
 	}
-	void init(GLuint shaderProg)
+	void init(GLuint shaderProg,char * filename ="Model/broad.obj")
 	{
-		road1 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
-		road2 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
-		road3 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
+        for(int i= 0;i<3;i++){
+           SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/road1_T.bmp",TexID);
+            roads.push_back(road);
+        }
 	}
+    
 	void update(glm::vec3 carPos){
-        printf("update road : %d\n", ((int)((carPos.y)/10))*10);
-		road1.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-10,-1));
-		road2.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10+0,-1));
-		road3.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10+10,-1));
+        for(int i=0 ;i< roads.size();i++){
+            SpriteMesh* road = roads[i];
+            printf("%f\n",road->getPos().y);
+            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10+i*10-20,-1));
+        }
+    
 	}
 	void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
-		road1.show(P,C,M);
-		road2.show(P,C,M);
-		road3.show(P,C,M);
+        for(int i=0;i<roads.size();i++){
+            roads[i]->show(P,C,M);
+        }
 	}
+    
+    vector<SpriteMesh*> getRoads(){
+        return roads;
+    }
+    
 private:
-	SpriteMesh road1;
-	SpriteMesh road2;
-	SpriteMesh road3;
+    
+    vector<SpriteMesh*> roads;
     GLuint TexID;
 };
 #endif

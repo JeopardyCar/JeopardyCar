@@ -25,6 +25,8 @@
 		CDAECF3A182CCBE00013DA12 /* simple.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFAA3CD817ECAA97008AC49C /* simple.frag */; };
 		CDAECF3B182CCBE00013DA12 /* simple.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF75F31F17E37252008CB713 /* simple.vert */; };
 		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
+		CDC83D3B1831DE6A003E8734 /* broad.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDC83D3A1831D94F003E8734 /* broad.obj */; };
+		CDC83D3C1831DE6E003E8734 /* box.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDC83D391831D0DF003E8734 /* box.obj */; };
 		F7F9686C1831C3D2001F7A2D /* tex.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968681831C3C1001F7A2D /* tex.vert */; };
 		F7F9686D1831C3D2001F7A2D /* tex.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968691831C3C1001F7A2D /* tex.frag */; };
 		F7F968791831C4DE001F7A2D /* car.bmp in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9686E1831C3EE001F7A2D /* car.bmp */; };
@@ -69,6 +71,8 @@
 			dstPath = Model;
 			dstSubfolderSpec = 16;
 			files = (
+				CDC83D3C1831DE6E003E8734 /* box.obj in Copy Files (4 items) */,
+				CDC83D3B1831DE6A003E8734 /* broad.obj in Copy Files (4 items) */,
 				F7F968791831C4DE001F7A2D /* car.bmp in Copy Files (4 items) */,
 				F7F9687A1831C4DE001F7A2D /* car.mtl in Copy Files (4 items) */,
 				F7F9687B1831C4DE001F7A2D /* Road1_T.bmp in Copy Files (4 items) */,
@@ -124,6 +128,8 @@
 		CDAECF1E182CC7CF0013DA12 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		CDAECF22182CC8D80013DA12 /* car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.obj; sourceTree = "<group>"; };
 		CDC83D381831CA88003E8734 /* RoadGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoadGen.h; sourceTree = SOURCE_ROOT; };
+		CDC83D391831D0DF003E8734 /* box.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
+		CDC83D3A1831D94F003E8734 /* broad.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = broad.obj; sourceTree = "<group>"; };
 		F7F968681831C3C1001F7A2D /* tex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.vert; sourceTree = "<group>"; };
 		F7F968691831C3C1001F7A2D /* tex.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.frag; sourceTree = "<group>"; };
 		F7F9686E1831C3EE001F7A2D /* car.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = car.bmp; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 		CDAECF1F182CC8D80013DA12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDC83D3A1831D94F003E8734 /* broad.obj */,
+				CDC83D391831D0DF003E8734 /* box.obj */,
 				F7F9686E1831C3EE001F7A2D /* car.bmp */,
 				F7F968771831C3EE001F7A2D /* car.mtl */,
 				CDAECF22182CC8D80013DA12 /* car.obj */,

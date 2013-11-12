@@ -20,12 +20,12 @@ public:
     CarSprite()
     {
         direction = glm::vec3(0,-1,0);
-        velocity = glm::vec3(0,0,0);
+        velocity = glm::vec3(0,-.001,0);
     }
     
     CarSprite(GLuint shaderProg):SpriteMesh("Model/car.obj", shaderProg,"Model/car.bmp",TexID){
         direction = glm::vec3(0,-1,0);
-        velocity = glm::vec3(0,0,0);
+        velocity = glm::vec3(0,-.001,0);
     }
     
     
@@ -33,7 +33,7 @@ public:
         SpriteMesh::show(P,C,M1);
     }
     void up(float v=.005f){
-        if(getLen(velocity)>1){
+        if(getLen(velocity)>.05){
             return ;
         }
         velocity+= direction*v;
@@ -41,7 +41,7 @@ public:
     void down(float v=.005f){
         glm::vec3 vel = velocity;
         vel.z= 0;
-        if(getLen(vel)<.05){
+        if(getLen(vel)<.001){
             //printf("no slow down\n");
             return ;
         }
@@ -108,7 +108,6 @@ public:
         baseRot=rot*baseRot;
         //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
-        
         glm::vec4 dir = glm::vec4(velocity.x,velocity.y, velocity.z, 1.);
         
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
@@ -135,7 +134,11 @@ public:
         newdir = dir - newdir;
         setV(newdir);
         glm::vec3 move = newdir;
-        move*=1.5;
+        move*=1.6;
+        if(glm::dot(move, norm)<0){
+            norm*=.001;
+            move+=norm;
+        }
         baseTrans *= glm::translate(glm::mat4(1), move);
         
         
