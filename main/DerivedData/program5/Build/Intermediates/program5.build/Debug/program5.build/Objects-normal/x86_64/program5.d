@@ -110,4 +110,5 @@ dependencies: /Users/tornado718/JeopardyCar/main/program5.cpp \
   /Users/tornado718/JeopardyCar/main/obj_loader/obj_parser.h \
   /Users/tornado718/JeopardyCar/main/obj_loader/list.h \
   /Users/tornado718/JeopardyCar/main/CarSprite.h \
+  /Users/tornado718/JeopardyCar/main/RoadGen.h \
   /Users/tornado718/JeopardyCar/main/TrackBall.h

@@ -218,11 +218,10 @@ public:
 				saveScore();
 			}
 			car.show(P,C,M);
-			//box2.show(P,C,M);
-			//maze.show(T);
             boxmesh.show(P,C,M);
 			roads.update(car.getPos());
 			roads.show(P,C,M);
+            //printf("pos: %f,%f,%f\n",car.getPos().x,car.getPos().y,car.getPos().z);
             
 		}
 		if(gamestate == 2){ //highscores screen
@@ -419,7 +418,7 @@ public:
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
-        boxmesh =SpriteMesh("Model/road2.obj",shaderProg);
+        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
 //        boxmesh.setPosM(glm::vec3(1,1,0));
         boxmesh.setPosM(glm::vec3(0,0,0));
 		e = glm::vec3(0,0,.5);

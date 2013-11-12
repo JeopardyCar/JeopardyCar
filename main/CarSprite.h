@@ -30,12 +30,11 @@ public:
     }
     
     
-    
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
         SpriteMesh::show(P,C,M1);
     }
     void up(float v=.005f){
-        if(getLen(velocity)>2){
+        if(getLen(velocity)>1){
             return ;
         }
         velocity+= direction*v;
@@ -44,7 +43,7 @@ public:
         glm::vec3 vel = velocity;
         vel.z= 0;
         if(getLen(vel)<.05){
-            printf("no slow down\n");
+            //printf("no slow down\n");
             return ;
         }
         velocity-= direction*v;
@@ -57,34 +56,34 @@ public:
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
+        //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
         
         glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
-        printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
+        //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
         vel= rot*vel;
         velocity = glm::vec3(vel.x,vel.y,vel.z);
         
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
-        printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
+        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
         
     }
     void right(float v=5.){
         float angle = -v;
-        printf("angle:%f\n",angle);
+        //printf("angle:%f\n",angle);
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
         
         glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
-        printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
+        //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
         vel= rot*vel;
         velocity = glm::vec3(vel.x,vel.y,vel.z);
         
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
-        printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
+        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
     }
@@ -133,11 +132,11 @@ public:
         glm::vec3 dir = getDirection();
         glm::vec3 newdir;
         newdir = 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
-        newdir *=.9;
+        newdir *=.7;
         newdir = dir - newdir;
         setV(newdir);
         glm::vec3 move = newdir;
-        move*=1.4;
+        move*=1.5;
         baseTrans *= glm::translate(glm::mat4(1), move);
         
         

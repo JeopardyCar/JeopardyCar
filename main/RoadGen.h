@@ -21,9 +21,10 @@ public:
 		road3 = SpriteMesh("Model/road1.obj",shaderProg);
 	}
 	void update(glm::vec3 carPos){
-		road1.setPosM(glm::vec3(0,(int)(carPos.y)%10,-1));
-		road2.setPosM(glm::vec3(0,(int)(carPos.y)%10+10,-1));
-		road3.setPosM(glm::vec3(0,(int)(carPos.y)%10+20,-1));
+        printf("update road : %d\n", ((int)((carPos.y)/10))*10);
+		road1.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-10,-1));
+		road2.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10+0,-1));
+		road3.setPosM(glm::vec3(0,((int)((carPos.y)/10))*10+10,-1));
 	}
 	void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
 		road1.show(P,C,M);
