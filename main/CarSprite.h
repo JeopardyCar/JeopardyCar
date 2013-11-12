@@ -43,7 +43,7 @@ public:
     void down(float v=.005f){
         glm::vec3 vel = velocity;
         vel.z= 0;
-        if(getLen(vel)<.1){
+        if(getLen(vel)<.05){
             printf("no slow down\n");
             return ;
         }
@@ -150,6 +150,10 @@ public:
     void rotCar(float angle,glm::vec3 axis){
         glm::mat4 rot =glm::rotate(glm::mat4(1),-angle,axis);
         baseRot=rot*baseRot;
+    }
+    
+    void rotCar(glm::mat4 rotMat){
+        baseRot = rotMat;
     }
     
     glm::vec3 testCollision(SpriteMesh sm){

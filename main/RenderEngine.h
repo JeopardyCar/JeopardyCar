@@ -407,17 +407,17 @@ public:
 	void generateObjs(unsigned int const & seed = 1)
 	{
         car = CarSprite(boxShader);
-        car.setPosM(glm::vec3(0,0,3));
+        car.setPosM(glm::vec3(0,0,2));
         car.setAccelerate(glm::vec3(0,0,-.002));
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
-        
-        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
+
+        boxmesh =SpriteMesh("Model/road2.obj",shaderProg);
 //        boxmesh.setPosM(glm::vec3(1,1,0));
-        boxmesh.setPosM(glm::vec3(0,0,-.5));
+        boxmesh.setPosM(glm::vec3(0,0,0));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);
