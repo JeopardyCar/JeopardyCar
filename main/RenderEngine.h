@@ -13,7 +13,6 @@
 #include "Utilities.h"
 #include "SpriteMesh.h"
 #include "CarSprite.h"
-#include "RoadGen.h"
 #include <fstream>
 #include <string>
 
@@ -219,10 +218,8 @@ public:
 			}
 			car.show(P,C,M);
 			//box2.show(P,C,M);
-			//maze.show(T);
+			maze.show(T);
             boxmesh.show(P,C,M);
-			roads.update(car.getPos());
-			roads.show(P,C,M);
             
 		}
 		if(gamestate == 2){ //highscores screen
@@ -409,19 +406,18 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        car = CarSprite(boxShader);
-        car.setPosM(glm::vec3(0,0,2));
+        car = CarSprite(texShader);
+        car.setPosM(glm::vec3(0,0,1));
         car.setAccelerate(glm::vec3(0,0,-.002));
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
-		roads.init(shaderProg);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
-
-        boxmesh =SpriteMesh("Model/road2.obj",shaderProg);
+        
+        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
 //        boxmesh.setPosM(glm::vec3(1,1,0));
-        boxmesh.setPosM(glm::vec3(0,0,0));
+        boxmesh.setPosM(glm::vec3(0,0,-.5));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);
@@ -445,13 +441,12 @@ private:
     BoxSprite2 box2;
     MazeSprite maze;
     SpriteMesh boxmesh;
-    RoadGen roads; 
-
-
+    
     sf::Clock clk;
     
 	GLuint shaderProg;
     GLuint boxShader;
+    GLuint texShader;
 	
     glm::mat4 P;
     glm::mat4 C;
@@ -482,6 +477,10 @@ private:
         char const * vertBox = "Shaders/boxshader.vert";
 		char const * fragBox = "Shaders/boxfrag.frag";
         boxShader = ShaderManager::shaderFromFile(&vertBox, &fragBox, 1, 1);
+        
+        char const * vertTex = "Shaders/tex.vert";
+		char const * fragTex = "Shaders/tex.frag";
+        texShader = ShaderManager::shaderFromFile(&vertTex, &fragTex, 1, 1);
 	}
     
     

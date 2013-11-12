@@ -15,7 +15,8 @@ class Triangle
 {
 public:
 	int vertexIndex[3];
-	int normalIndex[3];;
+	int normalIndex[3];
+    int uvIndex[3];
 };
 
 class Mesh
@@ -24,6 +25,7 @@ public:
 	std::vector<VectorV> vertices;
 	std::vector<VectorV> normals;
 	std::vector<Triangle> triangles;
+    std::vector<VectorV> UV;
 	
 	VectorV getCenter()
 	{
@@ -37,30 +39,7 @@ public:
 		return center;
 	}
     
-    void draw(){
-        glBegin(GL_TRIANGLES);
-		
-		for(int t=0; t<triangles.size(); t++)
-		{
-			Triangle &tri = triangles[t];
-            
-			for(int v=0; v<3; v++)
-			{
-				int vertexIndex = tri.vertexIndex[v];
-				int normalIndex = tri.normalIndex[v];
-				VectorV vertex = vertices[vertexIndex];
-				if(normalIndex > -1)
-				{
-					VectorV normal = normals[normalIndex];
-					glNormal3fv( normal.c );
-				}
-				glVertex3fv( vertex.c );
-			}
-		}
-		
-		glEnd();
-    }
-	
+    	
 	VectorV getMinBound()
 	{
 		VectorV bound;
@@ -102,6 +81,10 @@ public:
 		
 		return bound;
 	}
+    
+    vector<VectorV> getUV(){
+        return UV;
+    }
 };
 
 #endif

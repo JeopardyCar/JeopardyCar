@@ -31,18 +31,36 @@ public:
 				v.c[c] = oV->e[c];
 			m.normals.push_back(v);
 		}
+        
+        for(int i=0; i<objScene.vertex_texture_count; i++)
+        {
+            VectorV v;
+			obj_vector * oV = objScene.vertex_texture_list[i];
+			for(int c=0; c<2; c++){
+				v.c[0] = oV->e[1];
+                v.c[1] = oV->e[0];
+            }
+            v.c[2] = 0;
+            m.UV.push_back(v);
+			
+        }
 		
 		for(int i=0; i<objScene.face_count; i++)
 		{
 			bool needsNormal = false;
+            bool needsUV = false;
 			Triangle t;
 			obj_face * oF = objScene.face_list[i];
 			for(int v=0; v<3; v++)
 			{
 				t.vertexIndex[v] = oF->vertex_index[v];
 				t.normalIndex[v] = oF->normal_index[v];
+                t.uvIndex[v] = oF->texture_index[v];
+                
 				if(t.normalIndex[v] == -1)
 					needsNormal = true;
+                if (t.uvIndex[v] == -1)
+                    needsUV = true;
 			}
 			
 			if(needsNormal)
