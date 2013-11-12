@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,13 +18,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -38,7 +38,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
@@ -107,6 +107,8 @@
     <None Include="Shaders\boxshader.vert" />
     <None Include="Shaders\simple.frag" />
     <None Include="Shaders\simple.vert" />
+    <None Include="Shaders\tex.frag" />
+    <None Include="Shaders\tex.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glew\glew.c" />
@@ -129,6 +131,7 @@
     <ClInclude Include="MazeModel.h" />
     <ClInclude Include="MazeModel3D.h" />
     <ClInclude Include="MazeSprite.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="obj_loader\FilePath.h" />
@@ -137,12 +140,22 @@
     <ClInclude Include="obj_loader\obj_parser.h" />
     <ClInclude Include="obj_loader\string_extra.h" />
     <ClInclude Include="RenderEngine.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="RoadGen.h" />
     <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteMesh.h" />
     <ClInclude Include="TrackBall.h" />
     <ClInclude Include="Utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="program5.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="About.PNG" />
+    <Image Include="HighScores.PNG" />
+    <Image Include="Play.png" />
+    <Image Include="Tutorial.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
