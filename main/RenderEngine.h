@@ -81,7 +81,7 @@ public:
         vector<SpriteMesh*> roadsvec = roads.getRoads();
         glm::vec3 colnorm = glm::vec3(0,0,1);
         for(int i=0;i<roadsvec.size();i++){
-            if(car.getPos().z<1){
+            if(car.getPos().z<0){
                 car.hitAndTurn(colnorm);
             }
         }
@@ -112,7 +112,7 @@ public:
             int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/100000-5;
             //printf("%f\n",obspos.y);
-            obstacles[i].setPosM(glm::vec3(carpos.x+rand1,((int)((carpos.y)/10))*10+rand2,2.));
+            obstacles[i].setPosM(glm::vec3(carpos.x, carpos.y,2.));
             obstacles[i].show(P, C, M);
         }
         
@@ -350,12 +350,12 @@ public:
         }
         
         car = CarSprite(texShader);
-        car.setPosM(glm::vec3(0,0,2));
+        car.setPosM(glm::vec3(0,0,1));
         car.setAccelerate(glm::vec3(0,0,-.002));
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
-		roads.init(shaderProg);
+		roads.init(texShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
@@ -471,13 +471,13 @@ private:
             tmp*=.07;
             oldDirection += tmp;
             e.z+=3;//7*car.getDirection().z;
-            e.y-=7*oldDirection.y;
-            e.x-=7*oldDirection.x;
+            e.y-=10*oldDirection.y;
+            e.x-=10*oldDirection.x;
         }else{
             oldDirection = targetDirection;
             e.z+=3;//7*car.getDirection().z;
-            e.y-=7*oldDirection.y;
-            e.x-=7*oldDirection.x;
+            e.y-=10*oldDirection.y;
+            e.x-=10*oldDirection.x;
         }
         
         this->C = glm::lookAt(e, c, u);

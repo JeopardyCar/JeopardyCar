@@ -38,10 +38,10 @@ public:
         }
         velocity+= direction*v;
     }
-    void down(float v=.005f){
+    void down(float v=.001f){
         glm::vec3 vel = velocity;
         vel.z= 0;
-        if(getLen(vel)<.001){
+        if(getLen(vel)<.005){
             //printf("no slow down\n");
             return ;
         }
@@ -50,7 +50,7 @@ public:
 
     
     
-    void left(float v=5.){
+    void left(float v=2.){
         float angle = v;
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
@@ -69,7 +69,7 @@ public:
         direction = glm::vec3(dir.x,dir.y,dir.z);
         
     }
-    void right(float v=5.){
+    void right(float v=2.){
         float angle = -v;
         //printf("angle:%f\n",angle);
         glm::vec3 axis= glm::vec3(0,0,1);
@@ -136,11 +136,10 @@ public:
         glm::vec3 move = newdir;
         move*=1.6;
         if(glm::dot(move, norm)<0){
-            norm*=.001;
+            norm*=.0005;
             move+=norm;
         }
         baseTrans *= glm::translate(glm::mat4(1), move);
-        
         
         float a =getLen(dir);
         float b =getLen(newdir);
