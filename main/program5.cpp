@@ -15,6 +15,7 @@
 #include "MazeModel.h"
 #include "TrackBall.h"
 
+
 #define RESOLUTION 512
 #define TARGET_FPS 30                // controls spin update rate
 #define TIME_WINDOW 3                // number of frames motion is valid after release

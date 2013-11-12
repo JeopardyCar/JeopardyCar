@@ -6,10 +6,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Glew">
-      <UniqueIdentifier>{5cf52b0c-f456-41f8-8919-c78f8e7177da}</UniqueIdentifier>
+      <UniqueIdentifier>{a33b57e7-4d11-45a5-96b0-4c3e03ab0fb0}</UniqueIdentifier>
     </Filter>
     <Filter Include="obj_loader">
-      <UniqueIdentifier>{bd9e587c-f5e3-4028-81b5-d83a26999f49}</UniqueIdentifier>
+      <UniqueIdentifier>{bddf82f2-b78d-46ba-8652-053e8e03d569}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +26,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\simple.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\tex.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\tex.vert">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
@@ -68,6 +74,7 @@
     <ClInclude Include="MazeSprite.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="RoadGen.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteMesh.h" />
     <ClInclude Include="TrackBall.h" />
@@ -87,6 +94,18 @@
     <ClInclude Include="obj_loader\string_extra.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
-    <ClInclude Include="RoadGen.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="program5.rc">
+      <Filter>Shaders</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="About.PNG" />
+    <Image Include="HighScores.PNG" />
+    <Image Include="Play.png" />
+    <Image Include="Tutorial.png" />
   </ItemGroup>
 </Project>
