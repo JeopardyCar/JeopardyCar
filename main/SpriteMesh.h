@@ -14,6 +14,7 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "Mesh.h"
+#include "Utilities.h"
 #include "obj_loader/OBJMeshConvert.h"
 
 class SpriteMesh{
@@ -30,7 +31,7 @@ public:
     
     
     
-    SpriteMesh(char * meshfile, GLuint shaderProg){
+    SpriteMesh(char * meshfile, GLuint shaderProg, char * texfile = NULL, GLsizei n = -1){
         //velocity =0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
@@ -38,6 +39,8 @@ public:
         acc = glm::vec3(0);
         pos = glm::vec3(0);
         M = glm::mat4(1);
+        
+        TextUnit = n;
         
         FILE *file = NULL;
 		file = fopen(meshfile, "rb");
@@ -52,6 +55,12 @@ public:
             printf("cant read file\n");
         }
         
+        if (texfile!=NULL && n!=-1){
+            GLuint Texture = loadBMP(texfile,&TexID);
+            if (Texture == 0)
+                printf("Cannot load texture");
+        }
+        
         this->shaderProg = shaderProg;
         
         //positionSlot = glGetAttribLocation(shaderProg, "pos");
@@ -60,8 +69,11 @@ public:
         matSlot = glGetUniformLocation(shaderProg, "M");
         pSlot = glGetUniformLocation(shaderProg, "P");
         cSlot = glGetUniformLocation(shaderProg, "C");
+        SamplerSlot = glGetUniformLocation(shaderProg, "Sampler");
+        
         
     }
+    
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
@@ -89,12 +101,17 @@ public:
         pos.x = (M*baseTrans)[3][0];
         pos.y = (M*baseTrans)[3][1];
         pos.z = (M*baseTrans)[3][2];
+        
         //printf("x:%f,y:%f,z:%f\n", M[3][0],M[3][1],M[3][2]);
         glUseProgram(shaderProg);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, TexID);
+        glUniform1i(SamplerSlot, 0);
         glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
         glUniformMatrix4fv(pSlot, 1, GL_FALSE, &P[0][0]);
         glUniformMatrix4fv(cSlot, 1, GL_FALSE, &C[0][0]);
-        me.draw();
+        
+        draw();
         glUseProgram(0);
     }
 
@@ -142,24 +159,67 @@ public:
     vector<Triangle> getTriangles(){
         return me.triangles;
     }
+    vector<VectorV> getUV(){
+        return me.UV;
+    }
     
+    void draw(){
+        
+        glBindTexture(GL_TEXTURE_2D, TexID);
+        glBegin(GL_TRIANGLES);
+		
+		for(int t=0; t<me.triangles.size(); t++)
+		{
+			Triangle &tri = me.triangles[t];
+            
+			for(int v=0; v<3; v++)
+			{
+				int vertexIndex = tri.vertexIndex[v];
+				int normalIndex = tri.normalIndex[v];
+                int uvIndex = tri.uvIndex[v];
+				VectorV vertex = me.vertices[vertexIndex];
+                
+				if(normalIndex > -1)
+				{
+					VectorV normal = me.normals[normalIndex];
+					glNormal3fv( normal.c );
+				}
+                if (me.UV.size()!=0){
+                    VectorV UVcord = me.UV[uvIndex];
+                    //printf("UV: %f %f \n",UVcord.c[0],UVcord.c[1]);
+                    glTexCoord2f( UVcord.c[1],UVcord.c[0] );
+                }
+                
+				glVertex3fv( vertex.c );
+			}
+		}
+		
+		glEnd();
+        
+    }
+
     
 protected:
     GLuint shaderProg;
-    GLuint positionBuffer;
-    GLuint elementBuffer;
+    GLuint vertexUVBuffer;
     //GLint positionSlot;
     GLint normalSlot;
     GLint matSlot;
     GLint pSlot;
     GLint cSlot;
+    GLint vertexUVSlot;
+    GLint SamplerSlot;
+    GLuint TexID;
     Mesh * mesh;
     Mesh me;
+    
+    GLint TextUnit;
     
     float friction;
     glm::mat4 posM;
     glm::vec3 pos;
     glm::mat4 M ;
+    vector<glm::vec2> UV;
     
     //float velocity;
     glm::vec3 acc;
