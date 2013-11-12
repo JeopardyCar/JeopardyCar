@@ -13,6 +13,7 @@
 #include "Utilities.h"
 #include "SpriteMesh.h"
 #include "CarSprite.h"
+#include "RoadGen.h"
 #include <fstream>
 #include <string>
 
@@ -218,8 +219,10 @@ public:
 			}
 			car.show(P,C,M);
 			//box2.show(P,C,M);
-			maze.show(T);
+			//maze.show(T);
             boxmesh.show(P,C,M);
+			roads.update(car.getPos());
+			roads.show(P,C,M);
             
 		}
 		if(gamestate == 2){ //highscores screen
@@ -412,6 +415,7 @@ public:
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
+		roads.init(shaderProg);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
         
@@ -441,7 +445,9 @@ private:
     BoxSprite2 box2;
     MazeSprite maze;
     SpriteMesh boxmesh;
-    
+    RoadGen roads; 
+
+
     sf::Clock clk;
     
 	GLuint shaderProg;
