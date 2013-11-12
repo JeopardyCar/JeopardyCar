@@ -80,6 +80,10 @@ public:
         glm::vec3 carpos = car.getPos();
         vector<SpriteMesh*> roadsvec = roads.getRoads();
         glm::vec3 colnorm = glm::vec3(0,0,1);
+
+
+		
+
         //for(int i=0;i<roadsvec.size();i++){
             if(car.getPos().z<0){
                 //car.setPos(carpos.x, carpos.y, .1);
@@ -88,20 +92,7 @@ public:
             }
         //}
         
-        /*
-        glm::vec3 colnorm =car.testCollision(boxmesh);
-        glm::vec3 v = car.getV();
-        if(getLen(colnorm)!= 0){
-            printf("hit box mesh");
-            car.hitAndTurn(colnorm);
-        }
         
-        glm::vec3 colnorm2= glm::vec3(0,0,1);
-        if(car.getPos().z<0){
-            car.hitAndTurn(colnorm2);
-        }
-        
-        */
         glm::vec3 norm = car.testCollision(boxmesh,3);
         if(getLen(norm)>0){
             car.hitAndTurn(norm);
@@ -137,11 +128,12 @@ public:
             int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/25000-20;
             //printf("%f\n",obspos.y);
-            obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-40,0.5));
+           
+				obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-40,0.5));
             
         }
         
-
+		
 		if(gamestate == 0){//main menu
 			if(first){
 				first = false;
@@ -168,8 +160,8 @@ public:
 			score+=1; 
 			if(checkCollision())
 			{
-				//printf("crashed!");
-				gamestate = 0;
+				printf("crashed!");
+				gamestate = 2;
 				saveScore();
 			}
 			car.show(P,C,M);
@@ -185,11 +177,22 @@ public:
 			for(int x=0; x<3; x++)
 			{
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
+				//scores.show()?
 			}
+			car.showNoMove(P,C,M);
+            bg.showNoMove(P, C, M);
+            boxmesh.showNoMove(P,C,M);
+			roads.update(car.getPos());
+			roads.show(P,C,M);
 
-			int somePickingValue = 1;//whatever button the user clicks on
-			if(somePickingValue == 1){ //main menu button
-				gamestate = 0;
+			gamestate = 2;
+			int somePickingValue = 0;
+			if(somePickingValue == 1){ //start button
+				gamestate = 1;
+				score = 0;
+			}
+			if(somePickingValue == 2){ //highscores button
+				exit(EXIT_SUCCESS);
 			}
 		}
 	}
@@ -197,7 +200,7 @@ public:
 	bool checkCollision(){
         if(car.getPos().x >5){
             return true;
-        }else if(car.getPos().x<5){
+        }else if(car.getPos().x<-5){
             return true;
         }
         

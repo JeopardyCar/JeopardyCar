@@ -29,7 +29,7 @@ public:
         for(int i=0 ;i< roads.size();i++){
             SpriteMesh* road = roads[i];
             //printf("%f\n",road->getPos().y);
-            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,-1));
+            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,0));
         }
     
 	}

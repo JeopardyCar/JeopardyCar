@@ -6,10 +6,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Glew">
-      <UniqueIdentifier>{a33b57e7-4d11-45a5-96b0-4c3e03ab0fb0}</UniqueIdentifier>
+      <UniqueIdentifier>{c01bf4b1-ea7c-417c-afd7-a51fafab9329}</UniqueIdentifier>
     </Filter>
     <Filter Include="obj_loader">
-      <UniqueIdentifier>{bddf82f2-b78d-46ba-8652-053e8e03d569}</UniqueIdentifier>
+      <UniqueIdentifier>{4da3e035-8c9a-4af0-a9a8-c4d39c9d2df1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,20 +65,6 @@
     <ClInclude Include="MazeModel.h" />
     <ClInclude Include="RenderEngine.h" />
     <ClInclude Include="ShaderManager.h" />
-    <ClInclude Include="BoxSprite.h" />
-    <ClInclude Include="BoxSprite2.h" />
-    <ClInclude Include="CarSprite.h" />
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="Cube2.h" />
-    <ClInclude Include="MazeModel3D.h" />
-    <ClInclude Include="MazeSprite.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="RoadGen.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="SpriteMesh.h" />
-    <ClInclude Include="TrackBall.h" />
-    <ClInclude Include="Utilities.h" />
     <ClInclude Include="obj_loader\FilePath.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
@@ -94,18 +80,19 @@
     <ClInclude Include="obj_loader\string_extra.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Menu.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="program5.rc">
-      <Filter>Shaders</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="About.PNG" />
-    <Image Include="HighScores.PNG" />
-    <Image Include="Play.png" />
-    <Image Include="Tutorial.png" />
+    <ClInclude Include="BoxSprite.h" />
+    <ClInclude Include="BoxSprite2.h" />
+    <ClInclude Include="CarSprite.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="Cube2.h" />
+    <ClInclude Include="MazeModel3D.h" />
+    <ClInclude Include="MazeSprite.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="RoadGen.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteMesh.h" />
+    <ClInclude Include="TrackBall.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
 </Project>
