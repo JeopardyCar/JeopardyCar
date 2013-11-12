@@ -39,7 +39,7 @@ GLuint loadBMP(const char * imagepath, GLuint *textureID){
     // Open the file
     FILE * file = fopen(imagepath,"rb");
     if (!file){
-        printf("Image could not be opened\n"); return 0;
+        printf("Image could not be opened %s \n",imagepath); return 0;
     }
     if ( fread(header, 1, 54, file)!=54 ){ // If not 54 bytes read : problem
         printf("Not a correct BMP file\n");

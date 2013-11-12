@@ -23,7 +23,8 @@ public:
         velocity = glm::vec3(0,-.001,0);
     }
     
-    CarSprite(GLuint shaderProg):SpriteMesh("Model/car.obj", shaderProg,"Model/car.bmp",TexID){
+    CarSprite(char* modelpath ,GLuint shaderProg, char* texpath, GLuint TexID):
+        SpriteMesh(modelpath, shaderProg,texpath,TexID){
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
     }

@@ -84,6 +84,7 @@ public:
             if(car.getPos().z<0){
                 //car.setPos(carpos.x, carpos.y, .1);
                 car.hitAndTurn(colnorm);
+                bg.hitAndTurn(colnorm);
             }
         //}
         
@@ -104,6 +105,7 @@ public:
         glm::vec3 norm = car.testCollision(boxmesh,3);
         if(getLen(norm)>0){
             car.hitAndTurn(norm);
+            bg.hitAndTurn(norm);
         }
         
         
@@ -117,6 +119,7 @@ public:
             glm::vec3 norm = car.testCollision(obstacles[i],1);
             if(getLen(norm)>0){
                 car.hitAndTurn(norm);
+                bg.hitAndTurn(norm);
                 printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
                 printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
                 printf("hit!\n");
@@ -170,6 +173,7 @@ public:
 				saveScore();
 			}
 			car.show(P,C,M);
+            bg.show(P, C, M);
             boxmesh.show(P,C,M);
 			roads.update(car.getPos());
 			roads.show(P,C,M);
@@ -272,12 +276,16 @@ public:
     void carGo(string key){
         if(key=="up"){
             car.up();
+            bg.up();
         }else if(key == "down"){
             car.down();
+            bg.down();
         }else if(key == "left"){
             car.left();
+            bg.left();
         }else if(key == "right"){
             car.right();
+            bg.right();
         }
     }
     
@@ -378,17 +386,22 @@ public:
             obstacles.push_back(obs);
         }
         
-        car = CarSprite(texShader);
-        car.setPosM(glm::vec3(0,0,15));
+        car = CarSprite("Model/car.obj",texShader,"Model/car.bmp",TexID);
+        //car.setPosM(glm::vec3(0,0,15));
         car.setAccelerate(glm::vec3(0,0,-0.002));
+        
+        bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
+        bg.setAccelerate(glm::vec3(0,0,-0.002));
+        
         box2 = BoxSprite2();
         box2.init(shaderProg);
+        
         
 		roads.init(texShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
-        boxmesh =SpriteMesh("Model/map.obj",shaderProg);
+        boxmesh =SpriteMesh("",shaderProg);
         boxmesh.setPosM(glm::vec3(0,0,10));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
@@ -413,7 +426,9 @@ private:
     BoxSprite2 box2;
     MazeSprite maze;
     SpriteMesh boxmesh;
-    RoadGen roads; 
+    CarSprite bg;
+    RoadGen roads;
+    GLuint TexID;
 
 
     sf::Clock clk;

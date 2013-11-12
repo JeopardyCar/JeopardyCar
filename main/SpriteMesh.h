@@ -31,7 +31,7 @@ public:
     
     
     
-    SpriteMesh(char * meshfile, GLuint shaderProg, char * texfile = NULL, GLsizei n = -1){
+    SpriteMesh(char * meshfile, GLuint shaderProg, char * texfile = NULL, GLuint n = -1){
         //velocity =0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
@@ -52,7 +52,7 @@ public:
 			me = objConvert.loadOBJ(meshfile);
             this->mesh = &me;
         }else{
-            printf("cant read file\n");
+            printf("cant read file %s\n",meshfile);
         }
         
         if (texfile!=NULL && n!=-1){

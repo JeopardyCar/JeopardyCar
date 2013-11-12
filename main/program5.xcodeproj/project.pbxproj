@@ -30,10 +30,12 @@
 		F7F9686C1831C3D2001F7A2D /* tex.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968681831C3C1001F7A2D /* tex.vert */; };
 		F7F9686D1831C3D2001F7A2D /* tex.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968691831C3C1001F7A2D /* tex.frag */; };
 		F7F968791831C4DE001F7A2D /* car.bmp in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9686E1831C3EE001F7A2D /* car.bmp */; };
-		F7F9687A1831C4DE001F7A2D /* car.mtl in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968771831C3EE001F7A2D /* car.mtl */; };
 		F7F9687B1831C4DE001F7A2D /* Road1_T.bmp in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */; };
 		F7F9687C1831C4DE001F7A2D /* road2.mtl in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968781831C3EE001F7A2D /* road2.mtl */; };
 		F7F9687D1831C4DE001F7A2D /* road2.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968721831C3EE001F7A2D /* road2.obj */; };
+		F7F968801832A506001F7A2D /* bg.bmp in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9687E1832A502001F7A2D /* bg.bmp */; };
+		F7F968811832A506001F7A2D /* bg.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9687F1832A502001F7A2D /* bg.obj */; };
+		F7F968841832AC55001F7A2D /* map.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968831832AC49001F7A2D /* map.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,10 +73,12 @@
 			dstPath = Model;
 			dstSubfolderSpec = 16;
 			files = (
+				F7F968841832AC55001F7A2D /* map.obj in Copy Files (4 items) */,
+				F7F968801832A506001F7A2D /* bg.bmp in Copy Files (4 items) */,
+				F7F968811832A506001F7A2D /* bg.obj in Copy Files (4 items) */,
 				CDC83D3C1831DE6E003E8734 /* box.obj in Copy Files (4 items) */,
 				CDC83D3B1831DE6A003E8734 /* broad.obj in Copy Files (4 items) */,
 				F7F968791831C4DE001F7A2D /* car.bmp in Copy Files (4 items) */,
-				F7F9687A1831C4DE001F7A2D /* car.mtl in Copy Files (4 items) */,
 				F7F9687B1831C4DE001F7A2D /* Road1_T.bmp in Copy Files (4 items) */,
 				F7F9687C1831C4DE001F7A2D /* road2.mtl in Copy Files (4 items) */,
 				F7F9687D1831C4DE001F7A2D /* road2.obj in Copy Files (4 items) */,
@@ -136,8 +140,11 @@
 		F7F9686E1831C3EE001F7A2D /* car.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = car.bmp; sourceTree = "<group>"; };
 		F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Road1_T.bmp; sourceTree = "<group>"; };
 		F7F968721831C3EE001F7A2D /* road2.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = road2.obj; sourceTree = "<group>"; };
-		F7F968771831C3EE001F7A2D /* car.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = car.mtl; sourceTree = "<group>"; };
 		F7F968781831C3EE001F7A2D /* road2.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = road2.mtl; sourceTree = "<group>"; };
+		F7F9687E1832A502001F7A2D /* bg.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = bg.bmp; sourceTree = "<group>"; };
+		F7F9687F1832A502001F7A2D /* bg.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = bg.obj; sourceTree = "<group>"; };
+		F7F968821832AAB3001F7A2D /* RoadGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoadGen.h; sourceTree = "<group>"; };
+		F7F968831832AC49001F7A2D /* map.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = map.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +165,12 @@
 		A01FB69A0F07CF63000AAC7B = {
 			isa = PBXGroup;
 			children = (
+				A01FB6B00F07CF75000AAC7B /* Frameworks */,
 				CDAECF1F182CC8D80013DA12 /* Model */,
 				CDAECF12182CC76E0013DA12 /* obj_loader */,
-				A01FB6B20F07CF80000AAC7B /* Sources */,
-				A01FB6B10F07CF7C000AAC7B /* Resources */,
-				A01FB6B00F07CF75000AAC7B /* Frameworks */,
 				A01FB6AA0F07CF6E000AAC7B /* Products */,
+				A01FB6B10F07CF7C000AAC7B /* Resources */,
+				A01FB6B20F07CF80000AAC7B /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +216,7 @@
 				AFB5FC5217FD2E0600350926 /* MazeModel.h */,
 				CDAECF0B182CC6630013DA12 /* MazeSprite.h */,
 				CDAECF0C182CC6630013DA12 /* Model.h */,
+				F7F968821832AAB3001F7A2D /* RoadGen.h */,
 				AF75F26C17E36AC9008CB713 /* program5.cpp */,
 				CDAECF0D182CC6630013DA12 /* RenderEngine.h */,
 				AFA2C248145D9DB800478DF8 /* ShaderManager.h */,
@@ -264,10 +272,12 @@
 		CDAECF1F182CC8D80013DA12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7F9687E1832A502001F7A2D /* bg.bmp */,
+				F7F9687F1832A502001F7A2D /* bg.obj */,
+				F7F968831832AC49001F7A2D /* map.obj */,
 				CDC83D3A1831D94F003E8734 /* broad.obj */,
 				CDC83D391831D0DF003E8734 /* box.obj */,
 				F7F9686E1831C3EE001F7A2D /* car.bmp */,
-				F7F968771831C3EE001F7A2D /* car.mtl */,
 				CDAECF22182CC8D80013DA12 /* car.obj */,
 				F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */,
 				F7F968781831C3EE001F7A2D /* road2.mtl */,
