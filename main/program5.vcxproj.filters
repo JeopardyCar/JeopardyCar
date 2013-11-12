@@ -6,13 +6,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Glew">
-      <UniqueIdentifier>{82a3e07e-134a-4b25-84e7-247a8d3b6919}</UniqueIdentifier>
+      <UniqueIdentifier>{5cf52b0c-f456-41f8-8919-c78f8e7177da}</UniqueIdentifier>
     </Filter>
     <Filter Include="obj_loader">
-      <UniqueIdentifier>{da92709b-25ec-4555-803f-bb034196d356}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Model">
-      <UniqueIdentifier>{3ae91414-89b9-47eb-bb64-4121d2a8fc7c}</UniqueIdentifier>
+      <UniqueIdentifier>{bd9e587c-f5e3-4028-81b5-d83a26999f49}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,15 +61,17 @@
     <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="BoxSprite.h" />
     <ClInclude Include="BoxSprite2.h" />
+    <ClInclude Include="CarSprite.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Cube2.h" />
-    <ClInclude Include="Geometry.h" />
     <ClInclude Include="MazeModel3D.h" />
     <ClInclude Include="MazeSprite.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteMesh.h" />
     <ClInclude Include="TrackBall.h" />
+    <ClInclude Include="Utilities.h" />
     <ClInclude Include="obj_loader\FilePath.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
@@ -88,6 +87,6 @@
     <ClInclude Include="obj_loader\string_extra.h">
       <Filter>obj_loader</Filter>
     </ClInclude>
-    <ClInclude Include="WelcomeScreen.h" />
+    <ClInclude Include="RoadGen.h" />
   </ItemGroup>
 </Project>
