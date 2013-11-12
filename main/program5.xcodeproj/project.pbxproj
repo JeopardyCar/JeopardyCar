@@ -17,7 +17,6 @@
 		CD1DEDD81828181D002A7C13 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
 		CD1DEDD91828181D002A7C13 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
 		CD1DEDDA1828181D002A7C13 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
-		CD8B26A3182DA64300401CAF /* 1.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CD37B5C9182DA52A00552050 /* 1.obj */; };
 		CDAECF1B182CC76E0013DA12 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDAECF14182CC76E0013DA12 /* list.cpp */; };
 		CDAECF1C182CC76E0013DA12 /* obj_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDAECF16182CC76E0013DA12 /* obj_parser.cpp */; };
 		CDAECF1D182CC76E0013DA12 /* string_extra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDAECF19182CC76E0013DA12 /* string_extra.cpp */; };
@@ -25,7 +24,6 @@
 		CDAECF39182CCBE00013DA12 /* boxshader.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD8CC89D1826B040006F9B78 /* boxshader.vert */; };
 		CDAECF3A182CCBE00013DA12 /* simple.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFAA3CD817ECAA97008AC49C /* simple.frag */; };
 		CDAECF3B182CCBE00013DA12 /* simple.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF75F31F17E37252008CB713 /* simple.vert */; };
-		CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF20182CC8D80013DA12 /* 0.obj */; };
 		CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = CDAECF22182CC8D80013DA12 /* car.obj */; };
 		F7F9686C1831C3D2001F7A2D /* tex.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968681831C3C1001F7A2D /* tex.vert */; };
 		F7F9686D1831C3D2001F7A2D /* tex.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7F968691831C3C1001F7A2D /* tex.frag */; };
@@ -34,7 +32,6 @@
 		F7F9687B1831C4DE001F7A2D /* Road1_T.bmp in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */; };
 		F7F9687C1831C4DE001F7A2D /* road2.mtl in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968781831C3EE001F7A2D /* road2.mtl */; };
 		F7F9687D1831C4DE001F7A2D /* road2.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7F968721831C3EE001F7A2D /* road2.obj */; };
-		F7FA8E6B183009260095ED8A /* edge.obj in Copy Files (4 items) */ = {isa = PBXBuildFile; fileRef = F7FA8E6A183009220095ED8A /* edge.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,14 +69,11 @@
 			dstPath = Model;
 			dstSubfolderSpec = 16;
 			files = (
-				CDAECF3D182CCBF20013DA12 /* 0.obj in Copy Files (4 items) */,
 				F7F968791831C4DE001F7A2D /* car.bmp in Copy Files (4 items) */,
 				F7F9687A1831C4DE001F7A2D /* car.mtl in Copy Files (4 items) */,
-				F7FA8E6B183009260095ED8A /* edge.obj in Copy Files (4 items) */,
 				F7F9687B1831C4DE001F7A2D /* Road1_T.bmp in Copy Files (4 items) */,
 				F7F9687C1831C4DE001F7A2D /* road2.mtl in Copy Files (4 items) */,
 				F7F9687D1831C4DE001F7A2D /* road2.obj in Copy Files (4 items) */,
-				CD8B26A3182DA64300401CAF /* 1.obj in Copy Files (4 items) */,
 				CDAECF3F182CCBF20013DA12 /* car.obj in Copy Files (4 items) */,
 			);
 			name = "Copy Files (4 items)";
@@ -107,7 +101,6 @@
 		AFB5FC1417FD1CBA00350926 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		AFB5FC5217FD2E0600350926 /* MazeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeModel.h; sourceTree = "<group>"; };
 		CD37B5C8182D65D100552050 /* CarSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarSprite.h; sourceTree = "<group>"; };
-		CD37B5C9182DA52A00552050 /* 1.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1.obj; sourceTree = "<group>"; };
 		CD8CC89C1826B040006F9B78 /* boxfrag.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxfrag.frag; sourceTree = "<group>"; };
 		CD8CC89D1826B040006F9B78 /* boxshader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = boxshader.vert; sourceTree = "<group>"; };
 		CDAECF07182CC6630013DA12 /* BoxSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxSprite.h; sourceTree = "<group>"; };
@@ -129,18 +122,15 @@
 		CDAECF19182CC76E0013DA12 /* string_extra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_extra.cpp; sourceTree = "<group>"; };
 		CDAECF1A182CC76E0013DA12 /* string_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_extra.h; sourceTree = "<group>"; };
 		CDAECF1E182CC7CF0013DA12 /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
-		CDAECF20182CC8D80013DA12 /* 0.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.obj; sourceTree = "<group>"; };
 		CDAECF22182CC8D80013DA12 /* car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.obj; sourceTree = "<group>"; };
+		CDC83D381831CA88003E8734 /* RoadGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoadGen.h; sourceTree = SOURCE_ROOT; };
 		F7F968681831C3C1001F7A2D /* tex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.vert; sourceTree = "<group>"; };
 		F7F968691831C3C1001F7A2D /* tex.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.frag; sourceTree = "<group>"; };
 		F7F9686E1831C3EE001F7A2D /* car.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = car.bmp; sourceTree = "<group>"; };
 		F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Road1_T.bmp; sourceTree = "<group>"; };
 		F7F968721831C3EE001F7A2D /* road2.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = road2.obj; sourceTree = "<group>"; };
-		F7F968741831C3EE001F7A2D /* 0.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = 0.obj; sourceTree = "<group>"; };
-		F7F968751831C3EE001F7A2D /* edge.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge.obj; sourceTree = "<group>"; };
 		F7F968771831C3EE001F7A2D /* car.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = car.mtl; sourceTree = "<group>"; };
 		F7F968781831C3EE001F7A2D /* road2.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = road2.mtl; sourceTree = "<group>"; };
-		F7FA8E6A183009220095ED8A /* edge.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = edge.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +241,7 @@
 		CDAECF12182CC76E0013DA12 /* obj_loader */ = {
 			isa = PBXGroup;
 			children = (
+				CDC83D381831CA88003E8734 /* RoadGen.h */,
 				CDAECF13182CC76E0013DA12 /* FilePath.h */,
 				CDAECF14182CC76E0013DA12 /* list.cpp */,
 				CDAECF15182CC76E0013DA12 /* list.h */,
@@ -266,18 +257,12 @@
 		CDAECF1F182CC8D80013DA12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F7F968741831C3EE001F7A2D /* 0.obj */,
-				CD37B5C9182DA52A00552050 /* 1.obj */,
 				F7F9686E1831C3EE001F7A2D /* car.bmp */,
 				F7F968771831C3EE001F7A2D /* car.mtl */,
 				CDAECF22182CC8D80013DA12 /* car.obj */,
-				F7F968751831C3EE001F7A2D /* edge.obj */,
 				F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */,
 				F7F968781831C3EE001F7A2D /* road2.mtl */,
 				F7F968721831C3EE001F7A2D /* road2.obj */,
-				CDAECF20182CC8D80013DA12 /* 0.obj */,
-				CD37B5C9182DA52A00552050 /* 1.obj */,
-				F7FA8E6A183009220095ED8A /* edge.obj */,
 			);
 			path = Model;
 			sourceTree = "<group>";

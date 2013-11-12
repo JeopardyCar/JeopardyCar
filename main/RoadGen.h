@@ -16,9 +16,9 @@ public:
 	}
 	void init(GLuint shaderProg)
 	{
-		road1 = SpriteMesh("Model/road1.obj",shaderProg);
-		road2 = SpriteMesh("Model/road1.obj",shaderProg);
-		road3 = SpriteMesh("Model/road1.obj",shaderProg);
+		road1 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
+		road2 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
+		road3 = SpriteMesh("Model/road1.obj",shaderProg,"Model/road1_T.bmp",TexID);
 	}
 	void update(glm::vec3 carPos){
         printf("update road : %d\n", ((int)((carPos.y)/10))*10);
@@ -35,5 +35,6 @@ private:
 	SpriteMesh road1;
 	SpriteMesh road2;
 	SpriteMesh road3;
+    GLuint TexID;
 };
 #endif

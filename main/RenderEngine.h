@@ -239,7 +239,13 @@ public:
 	}
     
 	bool checkCollision(){
-        return true;//false;
+        if(car.getPos().x >5){
+            return true;
+        }else if(car.getPos().x<5){
+            return true;
+        }
+        
+        return false;//false;
 	}
 
 	void saveScore()
@@ -408,7 +414,7 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        car = CarSprite(boxShader);
+        car = CarSprite(texShader);
         car.setPosM(glm::vec3(0,0,2));
         car.setAccelerate(glm::vec3(0,0,-.002));
         box2 = BoxSprite2();
@@ -451,6 +457,7 @@ private:
     
 	GLuint shaderProg;
     GLuint boxShader;
+    GLuint texShader;
 	
     glm::mat4 P;
     glm::mat4 C;
@@ -481,6 +488,10 @@ private:
         char const * vertBox = "Shaders/boxshader.vert";
 		char const * fragBox = "Shaders/boxfrag.frag";
         boxShader = ShaderManager::shaderFromFile(&vertBox, &fragBox, 1, 1);
+        
+        char const * vertTex = "Shaders/tex.vert";
+		char const * fragTex = "Shaders/tex.frag";
+        texShader = ShaderManager::shaderFromFile(&vertTex, &fragTex, 1, 1);
 	}
     
     
