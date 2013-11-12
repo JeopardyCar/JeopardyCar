@@ -130,6 +130,7 @@
 		CDC83D381831CA88003E8734 /* RoadGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoadGen.h; sourceTree = SOURCE_ROOT; };
 		CDC83D391831D0DF003E8734 /* box.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
 		CDC83D3A1831D94F003E8734 /* broad.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = broad.obj; sourceTree = "<group>"; };
+		CDC83D3D1831FC11003E8734 /* tongroad.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = tongroad.obj; sourceTree = "<group>"; };
 		F7F968681831C3C1001F7A2D /* tex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.vert; sourceTree = "<group>"; };
 		F7F968691831C3C1001F7A2D /* tex.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tex.frag; sourceTree = "<group>"; };
 		F7F9686E1831C3EE001F7A2D /* car.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = car.bmp; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 				CDAECF22182CC8D80013DA12 /* car.obj */,
 				F7F9686F1831C3EE001F7A2D /* Road1_T.bmp */,
 				F7F968781831C3EE001F7A2D /* road2.mtl */,
+				CDC83D3D1831FC11003E8734 /* tongroad.obj */,
 				F7F968721831C3EE001F7A2D /* road2.obj */,
 			);
 			path = Model;

@@ -73,7 +73,7 @@ public:
         currentTime = clk.GetElapsedTime();
         
 		glEnable(GL_DEPTH_TEST);
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(1.,  1., 1., 1.);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         updateCamera();
@@ -82,7 +82,7 @@ public:
         glm::vec3 colnorm = glm::vec3(0,0,1);
         //for(int i=0;i<roadsvec.size();i++){
             if(car.getPos().z<0){
-                car.setPos(carpos.x, carpos.y, .1);
+                //car.setPos(carpos.x, carpos.y, .1);
                 car.hitAndTurn(colnorm);
             }
         //}
@@ -101,6 +101,11 @@ public:
         }
         
         */
+        glm::vec3 norm = car.testCollision(boxmesh,3);
+        if(getLen(norm)>0){
+            car.hitAndTurn(norm);
+        }
+        
         
         
         
@@ -109,13 +114,7 @@ public:
             glm::vec3 obspos=obstacles[i].getPos();
             obstacles[i].show(P, C, M);
             
-            
-            
-            
-            
-            
-            
-            glm::vec3 norm = car.testCollision(obstacles[i],2);
+            glm::vec3 norm = car.testCollision(obstacles[i],1);
             if(getLen(norm)>0){
                 car.hitAndTurn(norm);
                 printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
@@ -132,7 +131,7 @@ public:
             }
             
             
-            int rand1 = (rand() % 1000000 + 1)/25000-20;
+            int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/25000-20;
             //printf("%f\n",obspos.y);
             obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-40,0.5));
@@ -367,15 +366,21 @@ public:
 	
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        for(int i=0;i<1;i++){
+        
+        
+        int numobs =10;
+        
+        
+        
+        for(int i=0;i<numobs;i++){
             SpriteMesh obs = SpriteMesh("Model/box.obj",shaderProg);
             obs.setPos(0, 0, 100);
             obstacles.push_back(obs);
         }
         
         car = CarSprite(texShader);
-        car.setPosM(glm::vec3(0,0,1));
-        car.setAccelerate(glm::vec3(0,0,-.002));
+        car.setPosM(glm::vec3(0,0,15));
+        car.setAccelerate(glm::vec3(0,0,-0.002));
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
@@ -383,8 +388,8 @@ public:
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
-        boxmesh =SpriteMesh("Model/car.obj",shaderProg);
-        boxmesh.setPosM(glm::vec3(0,0,0));
+        boxmesh =SpriteMesh("Model/map.obj",shaderProg);
+        boxmesh.setPosM(glm::vec3(0,0,10));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);

@@ -117,7 +117,7 @@ public:
     
     
     glm::vec3 getDirection(){
-        return velocity;
+        return direction;
     }
     
 
@@ -127,23 +127,39 @@ public:
     
     
     void hitAndTurn(glm::vec3 norm){
-        glm::vec3 dir = getDirection();
-        glm::vec3 newdir;
-        newdir = 2*glm::dot(dir, norm)/getLen(norm)*norm/getLen(norm);
-        newdir *=.7;
-        newdir = dir - newdir;
-        setV(newdir);
-        glm::vec3 move = newdir;
-        move*=1.6;
-        if(glm::dot(move, norm)<0){
-            norm*=.0003;
-            move+=norm;
-        }
-        baseTrans *= glm::translate(glm::mat4(1), move);
+        glm::vec3 v =getV();
+        glm::vec3 newv;
+        newv =2*glm::dot(v, norm)/getLen(norm)*norm/getLen(norm);
+        newv*=.7;
+        newv = v- newv;
+        setV(newv);
         
-        float a =getLen(dir);
-        float b =getLen(newdir);
-        float cos = (glm::dot(dir, newdir))/(a*b);
+        
+        norm = normalize(norm);
+        norm *= .01;
+        while(glm::dot(direction, norm)<0){
+            direction+=norm;
+            normalize(direction);
+        }
+        
+        glm::vec3 move = norm;
+        move= normalize(move);
+        move*=.3;
+        while(glm::dot(newv,norm)<0){
+            printf("we\n");
+            newv+= move;
+            baseTrans *= glm::translate(glm::mat4(1), move);
+            pos.x = (baseTrans)[3][0];
+            pos.y = (baseTrans)[3][1];
+            pos.z = (baseTrans)[3][2];
+        }
+        
+        glm::vec3 newdir = direction;
+        newdir.z=0;
+        glm::mat4 rot= glm::rotate(glm::mat4(1), -glm::atan(newdir.x, newdir.y), glm::vec3(0,0,1));
+//        float a =getLen(dir);
+//        float b =getLen(newdir);
+//        float cos = (glm::dot(dir, newdir))/(a*b);
     }
     
     
@@ -156,28 +172,32 @@ public:
         baseRot = rotMat;
     }
     
-    glm::vec3 testCollision(SpriteMesh sm, float dis = 1){
+    glm::vec3 testCollision(SpriteMesh sm, float dis = 1, bool pushback = true){
         vector<VectorV> vertices = sm.getVertices();
         vector<Triangle> triangles = sm.getTriangles();
         vector<VectorV> normals = sm.getNormals();
         for(int i = 0;i< triangles.size();i++){
             Triangle tri = triangles[i];
             glm::vec3 center= glm::vec3(0);
+            
             center.x =vertices[tri.vertexIndex[0]].c[0]*.33+vertices[tri.vertexIndex[1]].c[0]*.33+vertices[tri.vertexIndex[2]].c[0]*.33;
             center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
             center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
             center+=sm.getPos();
             //printf("center:%f,%f,%f\n",center.x,center.y,center.z);
-            if(getDis(getPos(), center)<dis){
+            float distance =getDis(getPos(), center);
+            if(distance<dis){
+                glm::vec3 norm= glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
+                if(pushback){
+                    setPosM(getPos()+normalize(norm)*(dis-distance));
+                }
                 //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
-                
-                return glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
+                return norm;
             }
-
         }
-        
         return glm::vec3(0);
     }
+    
 private:
     glm::vec3 direction;
     
