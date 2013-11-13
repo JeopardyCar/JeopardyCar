@@ -91,7 +91,7 @@ public:
             printf("flying left: %f\n", flyingleft);
             if(flyingleft<0){
                 flying = false;
-                car.rebuildSprite("Model/blue.obj","Model/texture.bmp",TexID);
+                car.rebuildSprite("Model/blue.obj","Model/bluemap.bmp",TexID);
             }
         }
 
@@ -262,6 +262,12 @@ public:
 
             if(obspos.y<carpos.y+10){
                 continue;
+            }
+            
+            if(getDis(carpos,flys[i].getPos())<1){
+                glm::vec3 v = car.getV();
+                v*=.5;
+                car.setV(v);
             }
             
             
@@ -540,18 +546,18 @@ public:
         
         
         
-        car = CarSprite("Model/blue.obj",texShader,"Model/texture.bmp",TexID);
+        car = CarSprite("Model/blue.obj",texShader,"Model/bluemap.bmp",TexID);
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",boxShader,"Model/bg.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
         keepScore.init(texShader);
-		roads.init(texShader);
+		roads.init(boxShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
