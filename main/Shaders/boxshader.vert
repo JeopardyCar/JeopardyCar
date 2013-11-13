@@ -17,11 +17,11 @@ void main()
 	vec4 p = vec4(pos, 1);
 	gl_Position = M*p;
     if(pos.z > 0.){
-        smoothColor = vec4(0.1, 0.6, 0.8, 1.0);
+        smoothColor = vec4(1, 1, 1, 1.0);
     }
     else
     {
-        smoothColor = vec4(0.1, 0.6, 0.8, 1.0);
+        smoothColor = vec4(.9, .9, .9, 1.0);
     }
 
 

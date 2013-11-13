@@ -88,6 +88,8 @@ public:
             car.setPos(carpos.x, carpos.y, 1);
         }
         
+        
+        
         /*
         glm::vec3 norm = car.testCollision(boxmesh,3);
         if(getLen(norm)>0){
@@ -95,6 +97,24 @@ public:
         }*/
         
         bg.setPosM(car.getPos());
+        
+        
+        
+        
+        
+        for(int i=0;i<roads.getEdges().size();i++){
+            SpriteMesh * edge = roads.getEdges()[i];
+            
+            glm::vec3 norm =car.testCollision(*edge,3);
+            //printf("edgexyz: %f,%f,%f\n", edge->getPos().x,edge->getPos().y,edge->getPos().z);
+            //printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
+            printf("normpos: %f,%f,%f\n", norm.x,norm.y,norm.z);
+            if(getLen(norm)>0){
+                printf("collision edge\n");
+            }
+        }
+        
+        
         
         
         
@@ -386,18 +406,20 @@ public:
             obstacles.push_back(obs);
         }
         
+        
+        
         car = CarSprite("Model/car.obj",texShader,"Model/texture.bmp",TexID);
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",texShader,"Model/whiteshadow.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",boxShader,"Model/whiteshadow.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
         
-		roads.init(texShader);
+		roads.init(boxShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 

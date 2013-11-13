@@ -17,25 +17,29 @@ public:
             delete roads[i];
         }
 	}
-	void init(GLuint shaderProg,char * filename ="Model/broad.obj")
+	void init(GLuint shaderProg,char * filename ="Model/broad.obj",char * edgefilename = "Model/broad_edge.obj")
 	{
         for(int i= 0;i<8;i++){
-           SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/whiteshadow.bmp",TexID);
+            SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/Road1_T1.bmp",TexID);
+            SpriteMesh* edge =new SpriteMesh(edgefilename,shaderProg,"",TexID);
             roads.push_back(road);
+            edges.push_back(edge);
         }
 	}
     
 	void update(glm::vec3 carPos){
         for(int i=0 ;i< roads.size();i++){
             SpriteMesh* road = roads[i];
+            SpriteMesh* edge = edges[i];
             //printf("%f\n",road->getPos().y);
             road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,0));
+            edge->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,0));
         }
-    
 	}
 	void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         for(int i=0;i<roads.size();i++){
             roads[i]->show(P,C,M);
+            edges[i]->show(P,C,M);
         }
 	}
     
@@ -43,9 +47,16 @@ public:
         return roads;
     }
     
-private:
+    vector<SpriteMesh*> getEdges(){
+        return edges;
+    }
     
+private:
+    vector<SpriteMesh*> edges;
     vector<SpriteMesh*> roads;
+    
+    
+    
     GLuint TexID;
 };
 #endif

@@ -211,6 +211,31 @@ public:
         baseRot = rotMat;
     }
     
+    
+    bool testCol(SpriteMesh sm, float dis =1 ){
+        vector<VectorV> vertices = sm.getVertices();
+        vector<Triangle> triangles = sm.getTriangles();
+        vector<VectorV> normals = sm.getNormals();
+        for(int i = 0;i< triangles.size();i++){
+            Triangle tri = triangles[i];
+            glm::vec3 center= glm::vec3(0);
+            
+            center.x =vertices[tri.vertexIndex[0]].c[0]*.33+vertices[tri.vertexIndex[1]].c[0]*.33+vertices[tri.vertexIndex[2]].c[0]*.33;
+            center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
+            center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
+            center+=sm.getPos();
+            //printf("center:%f,%f,%f\n",center.x,center.y,center.z);
+            float distance =getDis(getPos(), center);
+            if(distance<dis){
+                return true;
+                //glm::vec3 norm= glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
+                //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
+                //return norm;
+            }
+        }
+        return false;
+    }
+    
     glm::vec3 testCollision(SpriteMesh sm, float dis = 1, bool pushback = true){
         vector<VectorV> vertices = sm.getVertices();
         vector<Triangle> triangles = sm.getTriangles();
@@ -228,7 +253,7 @@ public:
             if(distance<dis){
                 glm::vec3 norm= glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
                 if(pushback){
-                    setPosM(getPos()+normalize(norm)*(dis-distance));
+                    //setPosM(getPos()+normalize(norm)*(dis-distance));
                 }
                 //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
                 return norm;
