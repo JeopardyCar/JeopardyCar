@@ -163,6 +163,8 @@ public:
 			if(somePickingValue == 1){ //start button
 				gamestate = 1;
 				score = 0;
+				subscore = 0;
+
 			}
 			if(somePickingValue == 2){ //highscores button
 				gamestate = 2;
@@ -173,7 +175,12 @@ public:
 			
 		}
 		if(gamestate == 1){//game screen
-			score+=1; 
+			subscore++;
+			if(subscore == 10)
+			{
+				subscore = 0;
+				score+=1; 
+			}
 			keepScore.update(score,texShader);
 			keepScore.show();
 			if(checkCollision())
@@ -211,6 +218,7 @@ public:
 			if(somePickingValue == 1){ //start button
 				gamestate = 1;
 				score = 0;
+				subscore = 0;
 			}
 			if(somePickingValue == 2){ //highscores button
 				exit(EXIT_SUCCESS);
@@ -446,7 +454,7 @@ public:
 private:
     int gamestate;
 	bool first;
-	int score;
+	int score,subscore;
 	int highscores[3];
 
     CarSprite car;
