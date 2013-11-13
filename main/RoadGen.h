@@ -5,6 +5,12 @@
 #include "SpriteMesh.h"
 using namespace std; //makes using vectors easy
 
+
+
+
+#define 
+
+
 class RoadGen
 {
 public:
@@ -16,9 +22,11 @@ public:
         for(int i=0;i<roads.size();i++){
             delete roads[i];
         }
+        
 	}
 	void init(GLuint shaderProg,char * filename ="Model/broad.obj",char * edgefilename = "Model/broad_edge.obj")
 	{
+        direction = 0;
         for(int i= 0;i<8;i++){
             SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/Road1_T1.bmp",TexID);
             SpriteMesh* edge =new SpriteMesh(edgefilename,shaderProg,"",TexID);
@@ -51,10 +59,23 @@ public:
         return edges;
     }
     
+    
 private:
+    
+    int direction;
+    
+    
+    
     vector<SpriteMesh*> edges;
     vector<SpriteMesh*> roads;
-    
+    vector<SpriteMesh*> strightroads;
+    vector<SpriteMesh*> strightroadedges;
+    vector<SpriteMesh*> rightturns;
+    vector<SpriteMesh*> rightturnedges;
+    vector<SpriteMesh*> leftturns;
+    vector<SpriteMesh*> leftturnedges;
+    vector<SpriteMesh*> horizontals;
+    vector<SpriteMesh*> horizontaledges;
     
     
     GLuint TexID;
