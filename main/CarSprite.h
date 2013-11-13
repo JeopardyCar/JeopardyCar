@@ -22,7 +22,7 @@ public:
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
         topspeed = .5;
-        lowspeed = 0.005;
+        lowspeed = 0.003;
     }
     
     CarSprite(char* modelpath ,GLuint shaderProg, char* texpath, GLuint TexID):
@@ -30,7 +30,7 @@ public:
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
         topspeed = 1;
-        lowspeed = 0.005;
+        lowspeed = 0.003;
     }
     
     
@@ -41,7 +41,7 @@ public:
         //velocity += direction;
         glm::vec3 target= normalize((velocity + direction))*getLen(velocity);
         glm::vec3 change =target - velocity;
-        change *= .03;
+        change *= .3;
         velocity += change;
         
         baseTrans*=glm::translate(glm::mat4(1), velocity);

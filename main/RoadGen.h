@@ -41,7 +41,7 @@ public:
         for(int i=0 ;i< roads.size();i++){
             float r = ((float) rand() / (RAND_MAX));
             orgX= 0;
-            orgY=((int)((carPos.y)/20))*20+10;
+            orgY=((int)((carPos.y)/10))*10+10;
             if(r<.01){
                 printf("make a turn%f\n",r);
                 if(r<.005){

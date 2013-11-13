@@ -68,6 +68,7 @@ public:
     
 	void display(Keyset keys ,bool pickingEnabled=false)
 	{
+        numframes++;
         handleKeys(keys);
         
         GLfloat currentTime;
@@ -89,7 +90,7 @@ public:
             car.setPos(carpos.x, carpos.y, 1);
         }
         
-        
+        updateFlys();
         
         /*
         glm::vec3 norm = car.testCollision(boxmesh,3);
@@ -119,35 +120,7 @@ public:
         
         
         
-        for(int i=0;i<obstacles.size();i++){
-            glm::vec3 obspos=obstacles[i].getPos();
-            obstacles[i].show(P, C, M);
-            
-            glm::vec3 norm = car.testCollision(obstacles[i],1);
-            if(getLen(norm)>0){
-                //car.hitAndTurn(norm);
-                //bg.hitAndTurn(norm);
-                printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
-                printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
-                printf("hit!\n");
-            }
-            
-            
-            
-            
-            
-            if(obspos.y<carpos.y+10){
-                continue;
-            }
-            
-            
-            int rand1 = (rand() % 1000000 + 1)/100000-5;
-            int rand2 = (rand() % 1000000 + 1)/25000-20;
-            //printf("%f\n",obspos.y);
-           
-				obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-40,0.5));
-            
-        }
+        
         
 		
 		if(gamestate == 0){//main menu
@@ -206,7 +179,7 @@ public:
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
 				//scores.show()?
 			}
-            car.setAccelerate(glm::vec3(0,0,-.5));
+            
             car.show(P,C,M);
             bg.setPosM(car.getPos());
             bg.show(P, C, M);
@@ -226,10 +199,74 @@ public:
 		}
 	}
     
+    
+    
+    void updateFlys(){
+        glm::vec3 carpos = car.getPos();
+        for(int i=0;i<flys.size();i++){
+            
+            glm::vec3 obspos=flys[i].getPos();
+            flys[i].show(P, C, M);
+
+            if(obspos.y<carpos.y+10){
+                continue;
+            }
+            
+            
+            int rand1 = (rand() % 1000000 + 1)/100000-5;
+            int rand2 = (rand() % 1000000 + 1)/12500-40;
+            //printf("%f\n",obspos.y);
+            
+            flys[i].setPosM(glm::vec3(carpos.x+rand1*4, carpos.y-rand2-90,rand1*2));
+            
+        }
+    }
+    
+    
 	bool checkCollision(){
         
         
+        
+        glm::vec3 carpos = car.getPos();
+        for(int i=0;i<numframes/200+1;i++){
+            if(i>obstacles.size()){
+                return ;
+            }
+            glm::vec3 obspos=obstacles[i].getPos();
+            obstacles[i].show(P, C, M);
+            
+            glm::vec3 norm = car.testCollision(obstacles[i],1);
+            if(getLen(norm)>0){
+                //car.hitAndTurn(norm);
+                //bg.hitAndTurn(norm);
+                printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
+                printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
+                printf("hit!\n");
+                
+                return true;
+            }
+            
+            if(obspos.y<carpos.y+10){
+                continue;
+            }
+            
+            
+            int rand1 = (rand() % 1000000 + 1)/100000-5;
+            int rand2 = (rand() % 1000000 + 1)/12500-40;
+            //printf("%f\n",obspos.y);
+            
+            obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-90,0.5));
+            
+        }
+        
+        
+        
+        
+        
+        
+        
         if(roads.testOut(car)){
+            car.setAccelerate(glm::vec3(0,0,-.5));
             return true;
         }
         return false;
@@ -417,14 +454,20 @@ public:
 	{
         
         
-        int numobs =1;
-        
-        
+        int numobs =10;
         
         for(int i=0;i<numobs;i++){
             SpriteMesh obs = SpriteMesh("Model/box.obj",shaderProg);
             obs.setPos(0, 0, 100);
             obstacles.push_back(obs);
+        }
+        
+        int numflys =20;
+        
+        for(int i=0;i<numflys;i++){
+            SpriteMesh obs = SpriteMesh("Model/box.obj",texShader);
+            obs.setPos(0, 0, 100);
+            flys.push_back(obs);
         }
         
         
@@ -433,7 +476,7 @@ public:
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",boxShader,"Model/whiteshadow.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",boxShader,"Model/bg.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
@@ -473,6 +516,8 @@ private:
     RoadGen roads;
     GLuint TexID;
 	Score keepScore;
+    
+    int numframes;
 
     sf::Clock clk;
     
@@ -490,6 +535,7 @@ private:
     Keyset keys;
     
     vector<SpriteMesh> obstacles;
+    vector<SpriteMesh> flys;
 	void setupGlew()
 	{
 		glewExperimental = GL_TRUE;
