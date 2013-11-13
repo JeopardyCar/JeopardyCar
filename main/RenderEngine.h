@@ -152,7 +152,7 @@ public:
 			if(subscore == 10)
 			{
 				subscore = 0;
-				score+=1; 
+				score+=abs(car.getV().y*10); 
 			}
 			keepScore.update(score,texShader);
 			keepScore.show();
