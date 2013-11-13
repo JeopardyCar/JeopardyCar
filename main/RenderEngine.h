@@ -390,7 +390,7 @@ public:
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",texShader,"Model/whiteshadow.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();

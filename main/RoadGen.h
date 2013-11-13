@@ -20,7 +20,7 @@ public:
 	void init(GLuint shaderProg,char * filename ="Model/broad.obj")
 	{
         for(int i= 0;i<8;i++){
-           SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/road1_T.bmp",TexID);
+           SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/whiteshadow.bmp",TexID);
             roads.push_back(road);
         }
 	}
