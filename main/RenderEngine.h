@@ -260,15 +260,21 @@ public:
             glm::vec3 obspos=flys[i].getPos();
             flys[i].show(P, C, M);
 
+            
+            if(car.testCol(flys[i])){
+                printf("hit black\n");
+                glm::vec3 v = car.getV();
+                v*=.85;
+                car.setV(v);
+            }
+            
+            
+            
             if(obspos.y<carpos.y+10){
                 continue;
             }
             
-            if(getDis(carpos,flys[i].getPos())<1){
-                glm::vec3 v = car.getV();
-                v*=.5;
-                car.setV(v);
-            }
+            
             
             
             int rand1 = (rand() % 1000000 + 1)/100000-5;
