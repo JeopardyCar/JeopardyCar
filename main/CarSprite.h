@@ -201,6 +201,9 @@ public:
 //        float cos = (glm::dot(dir, newdir))/(a*b);
     }
     
+    void setDir(glm::vec3 dir){
+        direction = dir;
+    }
     
     void rotCar(float angle,glm::vec3 axis){
         glm::mat4 rot =glm::rotate(glm::mat4(1),-angle,axis);

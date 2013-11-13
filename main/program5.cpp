@@ -26,7 +26,7 @@ class Program4
 public:
 	Program4()
 	{
-        App = new sf::Window(sf::VideoMode(RESOLUTION, RESOLUTION, 32), "program5");
+        App = new sf::Window(sf::VideoMode(RESOLUTION*2, RESOLUTION, 32), "program5");
         
 		render.init();
 		step = 2;
@@ -36,7 +36,7 @@ public:
 		buttonDown[0]=false; buttonDown[1]=false; buttonDown[2]=false;
 		trackball.setSize(RESOLUTION, RESOLUTION);
         
-        glm::mat4 P = glm::perspective(60.0f, (float)RESOLUTION/(float)RESOLUTION, 0.1f, 100.0f);
+        glm::mat4 P = glm::perspective(60.0f, (float)RESOLUTION*2/(float)RESOLUTION, 0.1f, 100.0f);
 		render.setProjectionTransform(P);
 		
 		while (App->IsOpened())

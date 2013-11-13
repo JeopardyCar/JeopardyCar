@@ -74,6 +74,35 @@ public:
         
     }
     
+    
+    
+    void rebuildSprite(char * meshfile, char * texfile = NULL, GLuint n = -1){
+        TextUnit = n;
+        
+        FILE *file = NULL;
+		file = fopen(meshfile, "rb");
+		
+		if(file)
+		{
+			fclose(file);
+			OBJMeshConvert objConvert;
+			me = objConvert.loadOBJ(meshfile);
+            this->mesh = &me;
+        }else{
+            printf("cant read file %s\n",meshfile);
+        }
+        
+        if (texfile!=NULL && n!=-1){
+            GLuint Texture = loadBMP(texfile,&TexID);
+            if (Texture == 0)
+                printf("Cannot load texture");
+        }
+
+
+    }
+    
+    
+    
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
