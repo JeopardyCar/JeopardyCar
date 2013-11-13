@@ -14,6 +14,7 @@
 #include "SpriteMesh.h"
 #include "CarSprite.h"
 #include "RoadGen.h"
+#include "Score.h"
 #include <fstream>
 #include <string>
 
@@ -162,6 +163,8 @@ public:
 			if(somePickingValue == 1){ //start button
 				gamestate = 1;
 				score = 0;
+				subscore = 0;
+
 			}
 			if(somePickingValue == 2){ //highscores button
 				gamestate = 2;
@@ -172,7 +175,14 @@ public:
 			
 		}
 		if(gamestate == 1){//game screen
-			score+=1; 
+			subscore++;
+			if(subscore == 10)
+			{
+				subscore = 0;
+				score+=1; 
+			}
+			keepScore.update(score,texShader);
+			keepScore.show();
 			if(checkCollision())
 			{
 				printf("crashed!");
@@ -189,6 +199,8 @@ public:
 		}
 		if(gamestate == 2){ //highscores screen
 			//display highscores
+			keepScore.update(score,texShader);
+			keepScore.show();
 			for(int x=0; x<3; x++)
 			{
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
@@ -206,6 +218,7 @@ public:
 			if(somePickingValue == 1){ //start button
 				gamestate = 1;
 				score = 0;
+				subscore = 0;
 			}
 			if(somePickingValue == 2){ //highscores button
 				exit(EXIT_SUCCESS);
@@ -426,7 +439,7 @@ public:
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
-        
+        keepScore.init(texShader);
 		roads.init(boxShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
@@ -449,7 +462,7 @@ public:
 private:
     int gamestate;
 	bool first;
-	int score;
+	int score,subscore;
 	int highscores[3];
 
     CarSprite car;
@@ -459,7 +472,7 @@ private:
     CarSprite bg;
     RoadGen roads;
     GLuint TexID;
-
+	Score keepScore;
 
     sf::Clock clk;
     
