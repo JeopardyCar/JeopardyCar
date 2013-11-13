@@ -140,6 +140,7 @@
     <ClInclude Include="obj_loader\string_extra.h" />
     <ClInclude Include="RenderEngine.h" />
     <ClInclude Include="RoadGen.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteMesh.h" />

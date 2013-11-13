@@ -134,7 +134,48 @@ public:
         glUseProgram(0);
 	}
 
-    void setPosM(glm::vec3 m){
+  	void showStatic(glm::vec3 posNum){
+		 
+		glm::mat4 C = glm::lookAt(glm::vec3(posNum.x,0,posNum.z), glm::vec3(posNum.x,1,posNum.z), glm::vec3(0,0,posNum.z+1));
+		glm::mat4 P = glm::mat4(
+						1,0,0,0,
+						0,1,0,0,
+						0,0,1,0,
+						0,0,0,1
+						);
+		glm::mat4 M = glm::mat4(
+						1,0,0,0,
+						0,1,0,0,
+						0,0,1,0,
+						0,0,0,1
+						);
+		glm::mat4 T= C*M;
+		
+
+		baseTrans=glm::translate(glm::mat4(1), glm::vec3(0,0,0));
+        T*=baseTrans;
+        P*=baseTrans;
+        C*=baseTrans;
+        
+        
+
+		pos.x = (M*baseTrans)[3][0];
+        pos.y = (M*baseTrans)[3][1];
+        pos.z = (M*baseTrans)[3][2];
+
+
+		glUseProgram(shaderProg);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, TexID);
+        glUniform1i(SamplerSlot, 0);
+        glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
+        glUniformMatrix4fv(pSlot, 1, GL_FALSE, &P[0][0]);
+        glUniformMatrix4fv(cSlot, 1, GL_FALSE, &C[0][0]);
+		draw();
+        glUseProgram(0);
+	}
+
+	void setPosM(glm::vec3 m){
         baseTrans = glm::translate(glm::mat4(1), m);
         pos.x = (baseTrans)[3][0];
         pos.y = (baseTrans)[3][1];

@@ -94,5 +94,6 @@
     <ClInclude Include="SpriteMesh.h" />
     <ClInclude Include="TrackBall.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Score.h" />
   </ItemGroup>
 </Project>
