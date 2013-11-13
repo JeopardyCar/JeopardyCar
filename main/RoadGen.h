@@ -8,7 +8,6 @@ using namespace std; //makes using vectors easy
 
 
 
-#define 
 
 
 class RoadGen

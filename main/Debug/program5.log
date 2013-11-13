@@ -1,4 +1,4 @@
-﻿Build started 11/12/2013 9:36:34 PM.
+﻿Build started 11/12/2013 9:46:53 PM.
      1>Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\hallowlt\JeopardyCar\main\\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt program5.cpp
@@ -39,9 +39,9 @@
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(247): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(248): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(249): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(16): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(31): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(21): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(47): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\renderengine.h(106): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\renderengine.h(122): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -65,4 +65,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.24
+Time Elapsed 00:00:02.67

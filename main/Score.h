@@ -82,10 +82,10 @@ public:
 		
 	}
 	void show(){
-        digit1.showStatic(glm::vec3(.9,0,-.8));
-		digit2.showStatic(glm::vec3(.7,0,-.8));
-		digit3.showStatic(glm::vec3(.5,0,-.8));
-		digit4.showStatic(glm::vec3(.3,0,-.8));
+        digit1.showStatic(glm::vec3(-.9,0,-.8));
+		digit2.showStatic(glm::vec3(-.7,0,-.8));
+		digit3.showStatic(glm::vec3(-.5,0,-.8));
+		digit4.showStatic(glm::vec3(-.3,0,-.8));
 	}
     
     

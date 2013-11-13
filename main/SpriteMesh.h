@@ -136,7 +136,7 @@ public:
 
   	void showStatic(glm::vec3 posNum){
 		 
-		glm::mat4 C = glm::lookAt(glm::vec3(posNum.x,-1,posNum.z), glm::vec3(posNum.x,0,posNum.z), glm::vec3(0,0,posNum.z+1));
+		glm::mat4 C = glm::lookAt(glm::vec3(posNum.x,1,posNum.z), glm::vec3(posNum.x,0,posNum.z), glm::vec3(0,0,posNum.z+1));
 		glm::mat4 P = glm::mat4(
 						1,0,0,0,
 						0,1,0,0,
