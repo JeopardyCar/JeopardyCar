@@ -21,20 +21,57 @@ public:
     {
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
+        topspeed = .5;
+        lowspeed = 0.005;
     }
     
     CarSprite(char* modelpath ,GLuint shaderProg, char* texpath, GLuint TexID):
         SpriteMesh(modelpath, shaderProg,texpath,TexID){
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
+        topspeed = 1;
+        lowspeed = 0.005;
     }
     
     
-    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M1){
-        SpriteMesh::show(P,C,M1);
+    void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
+        glm::mat4 T= P*C*M;
+        
+        velocity += acc;
+        //velocity += direction;
+        glm::vec3 target= normalize((velocity + direction))*getLen(velocity);
+        glm::vec3 change =target - velocity;
+        change *= .03;
+        velocity += change;
+        
+        baseTrans*=glm::translate(glm::mat4(1), velocity);
+        T*=baseTrans;
+        P*=baseTrans;
+        C*=baseTrans;
+        
+        T*=baseRot;
+        P*=baseRot;
+        C*=baseRot;
+        
+        
+        pos.x = (M*baseTrans)[3][0];
+        pos.y = (M*baseTrans)[3][1];
+        pos.z = (M*baseTrans)[3][2];
+        
+        //printf("x:%f,y:%f,z:%f\n", M[3][0],M[3][1],M[3][2]);
+        glUseProgram(shaderProg);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, TexID);
+        glUniform1i(SamplerSlot, 0);
+        glUniformMatrix4fv(matSlot, 1, GL_FALSE, &T[0][0]);
+        glUniformMatrix4fv(pSlot, 1, GL_FALSE, &P[0][0]);
+        glUniformMatrix4fv(cSlot, 1, GL_FALSE, &C[0][0]);
+        
+        draw();
+        glUseProgram(0);
     }
     void up(float v=.01f){
-        if(getLen(velocity)>.5){
+        if(getLen(velocity)>topspeed){
             return ;
         }
         velocity+= direction*v;
@@ -42,7 +79,7 @@ public:
     void down(float v=.002f){
         glm::vec3 vel = velocity;
         vel.z= 0;
-        if(getLen(vel)<.005){
+        if(getLen(vel)<lowspeed){
             //printf("no slow down\n");
             return ;
         }
@@ -58,11 +95,12 @@ public:
         baseRot=rot*baseRot;
         //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
         
-        
+        /*
         glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
         //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
         vel= rot*vel;
         velocity = glm::vec3(vel.x,vel.y,vel.z);
+        */
         
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
@@ -76,12 +114,12 @@ public:
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        
+        /*
         glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
         //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
         vel= rot*vel;
         velocity = glm::vec3(vel.x,vel.y,vel.z);
-        
+        */
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
         //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
@@ -198,10 +236,10 @@ public:
         }
         return glm::vec3(0);
     }
-    
+    float topspeed;
+    float lowspeed;
 private:
     glm::vec3 direction;
-    
 };
 
 

@@ -82,24 +82,19 @@ public:
         glm::vec3 colnorm = glm::vec3(0,0,1);
 
 
-		
+		bool onroad = true;
 
-        //for(int i=0;i<roadsvec.size();i++){
-            if(car.getPos().z<0){
-                //car.setPos(carpos.x, carpos.y, .1);
-                car.hitAndTurn(colnorm);
-                bg.hitAndTurn(colnorm);
-            }
-        //}
+        if(onroad&&car.getPos().z<1){
+            car.setPos(carpos.x, carpos.y, 1);
+        }
         
-        
+        /*
         glm::vec3 norm = car.testCollision(boxmesh,3);
         if(getLen(norm)>0){
             car.hitAndTurn(norm);
-            bg.hitAndTurn(norm);
-        }
+        }*/
         
-        
+        bg.setPosM(car.getPos());
         
         
         
@@ -109,8 +104,8 @@ public:
             
             glm::vec3 norm = car.testCollision(obstacles[i],1);
             if(getLen(norm)>0){
-                car.hitAndTurn(norm);
-                bg.hitAndTurn(norm);
+                //car.hitAndTurn(norm);
+                //bg.hitAndTurn(norm);
                 printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
                 printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
                 printf("hit!\n");
@@ -166,7 +161,7 @@ public:
 			}
 			car.show(P,C,M);
             bg.show(P, C, M);
-            boxmesh.show(P,C,M);
+            //boxmesh.show(P,C,M);
 			roads.update(car.getPos());
 			roads.show(P,C,M);
             //printf("pos: %f,%f,%f\n",car.getPos().x,car.getPos().y,car.getPos().z);
@@ -179,9 +174,10 @@ public:
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
 				//scores.show()?
 			}
-			car.showNoMove(P,C,M);
-            bg.showNoMove(P, C, M);
-            boxmesh.showNoMove(P,C,M);
+            car.setAccelerate(glm::vec3(0,0,-.5));
+            car.show(P,C,M);
+            bg.setPosM(car.getPos());
+            bg.show(P, C, M);
 			roads.update(car.getPos());
 			roads.show(P,C,M);
 
@@ -203,7 +199,6 @@ public:
         }else if(car.getPos().x<-5){
             return true;
         }
-        
         return false;//false;
 	}
 
@@ -279,17 +274,19 @@ public:
     void carGo(string key){
         if(key=="up"){
             car.up();
-            bg.up();
+            //bg.up();
         }else if(key == "down"){
             car.down();
-            bg.down();
+            //bg.down();
         }else if(key == "left"){
             car.left();
-            bg.left();
+            //bg.left();
         }else if(key == "right"){
             car.right();
-            bg.right();
+            //bg.right();
         }
+        
+        
     }
     
     
@@ -379,7 +376,7 @@ public:
 	{
         
         
-        int numobs =10;
+        int numobs =1;
         
         
         
@@ -389,12 +386,12 @@ public:
             obstacles.push_back(obs);
         }
         
-        car = CarSprite("Model/car.obj",texShader,"Model/car.bmp",TexID);
-        //car.setPosM(glm::vec3(0,0,15));
-        car.setAccelerate(glm::vec3(0,0,-0.002));
+        car = CarSprite("Model/car.obj",texShader,"Model/texture.bmp",TexID);
+        car.setPosM(glm::vec3(0,0,1));
+        //car.setAccelerate(glm::vec3(0,0,-0.002));
         
         bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
-        bg.setAccelerate(glm::vec3(0,0,-0.002));
+        //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
@@ -404,8 +401,8 @@ public:
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
-        boxmesh =SpriteMesh("",shaderProg);
-        boxmesh.setPosM(glm::vec3(0,0,10));
+        //boxmesh =SpriteMesh("",shaderProg);
+        //boxmesh.setPosM(glm::vec3(0,0,10));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);
@@ -428,7 +425,7 @@ private:
     CarSprite car;
     BoxSprite2 box2;
     MazeSprite maze;
-    SpriteMesh boxmesh;
+    //SpriteMesh boxmesh;
     CarSprite bg;
     RoadGen roads;
     GLuint TexID;

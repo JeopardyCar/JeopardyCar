@@ -77,15 +77,6 @@ public:
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
-        
-        //glm::vec3 newdir = velocity+acc;
-        //velocity*= (glm::dot(velocity,acc)/getLen(velocity) + getLen(velocity))/getLen(velocity);
-        //direction = normalize(newdir);
-        
-        /*glm::vec3 truev =velocity*direction;
-        truev+=acc;
-        velocity = getLen(truev);*/
-        
         velocity += acc;
         
         baseTrans*=glm::translate(glm::mat4(1), velocity);

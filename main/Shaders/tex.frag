@@ -14,5 +14,5 @@ void main()
 	vec4 aColor = smoothColor*.2 ;
 	vec4 dColor = d * smoothColor;
 	vec4 sColor = s*white;
-	gl_FragColor = aColor+dColor+sColor;
+	gl_FragColor = aColor+dColor;//+sColor;
 }
