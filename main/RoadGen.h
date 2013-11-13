@@ -8,8 +8,10 @@ using namespace std; //makes using vectors easy
 
 
 
-#define 
-
+#define R_UP 0
+#define R_RIGHT 1
+#define R_DOWN 2
+#define R_LEFT 3
 
 class RoadGen
 {
@@ -26,7 +28,7 @@ public:
 	}
 	void init(GLuint shaderProg,char * filename ="Model/broad.obj",char * edgefilename = "Model/broad_edge.obj")
 	{
-        direction = 0;
+        direction = R_UP;
         for(int i= 0;i<8;i++){
             SpriteMesh* road =new SpriteMesh(filename,shaderProg,"Model/Road1_T1.bmp",TexID);
             SpriteMesh* edge =new SpriteMesh(edgefilename,shaderProg,"",TexID);
@@ -37,11 +39,38 @@ public:
     
 	void update(glm::vec3 carPos){
         for(int i=0 ;i< roads.size();i++){
-            SpriteMesh* road = roads[i];
-            SpriteMesh* edge = edges[i];
-            //printf("%f\n",road->getPos().y);
-            road->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,0));
-            edge->setPosM(glm::vec3(0,((int)((carPos.y)/10))*10-i*10+10,0));
+            float r = ((float) rand() / (RAND_MAX));
+            orgX= 0;
+            orgY=((int)((carPos.y)/20))*20+10;
+            if(r<.01){
+                printf("make a turn%f\n",r);
+                if(r<.005){
+                    //(++direction)%=4;
+                    
+                }else{
+                    //(--direction)%=4;
+                    
+                }
+                
+            }
+            
+            
+            
+            if(direction == R_UP){
+                SpriteMesh* road = roads[i];
+                SpriteMesh* edge = edges[i];
+                //printf("%f\n",road->getPos().y);
+                road->setPosM(glm::vec3(0, orgY-i*10,0));
+                edge->setPosM(glm::vec3(0, orgY-i*10,0));
+            }else if(direction == R_RIGHT){
+                
+            }else if(direction == R_DOWN){
+                
+            }else if(direction == R_LEFT){
+                
+            }
+            
+            
         }
 	}
 	void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
@@ -59,12 +88,22 @@ public:
         return edges;
     }
     
+    bool testOut(CarSprite car){
+        for(int i=0;i<edges.size();i++){
+            SpriteMesh* edge = edges[i];
+            if(car.testCol(*edge,1)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    
     
 private:
-    
     int direction;
-    
-    
+    float orgX;
+    float orgY;
     
     vector<SpriteMesh*> edges;
     vector<SpriteMesh*> roads;

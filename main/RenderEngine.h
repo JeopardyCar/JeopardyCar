@@ -101,19 +101,19 @@ public:
         
         
         
-        
+        /*
         for(int i=0;i<roads.getEdges().size();i++){
             SpriteMesh * edge = roads.getEdges()[i];
             
             glm::vec3 norm =car.testCollision(*edge,3);
             //printf("edgexyz: %f,%f,%f\n", edge->getPos().x,edge->getPos().y,edge->getPos().z);
             //printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
-            printf("normpos: %f,%f,%f\n", norm.x,norm.y,norm.z);
+            //printf("normpos: %f,%f,%f\n", norm.x,norm.y,norm.z);
             if(getLen(norm)>0){
                 printf("collision edge\n");
             }
         }
-        
+        */
         
         
         
@@ -214,12 +214,20 @@ public:
 	}
     
 	bool checkCollision(){
+        
+        
+        if(roads.testOut(car)){
+            return true;
+        }
+        return false;
+        /*
         if(car.getPos().x >5){
             return true;
         }else if(car.getPos().x<-5){
             return true;
         }
         return false;//false;
+         */
 	}
 
 	void saveScore()
