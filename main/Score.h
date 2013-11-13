@@ -117,9 +117,22 @@ public:
 		digit5.showStatic(glm::vec3(-.55,0,-.9));
 		digit6.showStatic(glm::vec3(-.45,0,-.9));
 	}
-    
-    
-    
+    void showHighScores(int highscore, int numscore, GLuint shaderProg)
+	{
+		SpriteMesh hsLabel =SpriteMesh("Model/highscore.obj",shaderProg,"Model/highscore.bmp",TexID); 
+		update(highscore,shaderProg);
+		showVec(glm::vec3(-.25,0,-.2+numscore*.3));
+		hsLabel.showStatic(glm::vec3(0,0,-.5));
+	}
+    void showVec(glm::vec3 vIn){
+        digit1.showStatic(glm::vec3(vIn.x,vIn.y,vIn.z));
+		digit2.showStatic(glm::vec3(vIn.x+.1,vIn.y,vIn.z));
+		digit3.showStatic(glm::vec3(vIn.x+.2,vIn.y,vIn.z));
+		digit4.showStatic(glm::vec3(vIn.x+.3,vIn.y,vIn.z));
+		digit5.showStatic(glm::vec3(vIn.x+.4,vIn.y,vIn.z));
+		digit6.showStatic(glm::vec3(vIn.x+.5,vIn.y,vIn.z));
+	}
+
 private:
     
     SpriteMesh digit1, digit2, digit3, digit4, digit5, digit6;
