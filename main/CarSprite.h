@@ -30,7 +30,7 @@ public:
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
         topspeed = 1;
-        lowspeed = 0.005;
+        lowspeed = 0.1;
     }
     
     
