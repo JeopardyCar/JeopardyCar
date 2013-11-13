@@ -1,4 +1,4 @@
-﻿Build started 11/12/2013 9:16:10 PM.
+﻿Build started 11/12/2013 9:36:34 PM.
      1>Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\hallowlt\JeopardyCar\main\\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt program5.cpp
@@ -31,14 +31,19 @@
      1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(241): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(25): warning C4305: '=' : truncation from 'double' to 'float'
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(33): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(218): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(222): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(219): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(223): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(224): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(225): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(243): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(247): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(248): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(249): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\roadgen.h(16): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(29): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(37): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(102): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(31): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(40): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(106): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(122): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -60,4 +65,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.71
+Time Elapsed 00:00:03.24
