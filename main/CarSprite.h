@@ -21,7 +21,7 @@ public:
     {
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
-        topspeed = .5;
+        topspeed = 2;
         lowspeed = 0.003;
     }
     
@@ -29,7 +29,7 @@ public:
         SpriteMesh(modelpath, shaderProg,texpath,TexID){
         direction = glm::vec3(0,-1,0);
         velocity = glm::vec3(0,-.001,0);
-        topspeed = 1;
+        topspeed = 2;
         lowspeed = 0.003;
     }
     

@@ -215,9 +215,10 @@ public:
             
             int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/12500-40;
+            int rand3 = (rand() % 1000000 + 1)/100000-5;
             //printf("%f\n",obspos.y);
             
-            flys[i].setPosM(glm::vec3(carpos.x+rand1*4, carpos.y-rand2-90,rand1*2));
+            flys[i].setPosM(glm::vec3(carpos.x+rand1*4, carpos.y-rand2-90,rand3*5));
             
         }
     }
@@ -462,10 +463,15 @@ public:
             obstacles.push_back(obs);
         }
         
-        int numflys =20;
+        int numflys =60;
         
-        for(int i=0;i<numflys;i++){
-            SpriteMesh obs = SpriteMesh("Model/box.obj",texShader);
+        for(int i=0;i<numflys/2;i++){
+            SpriteMesh obs = SpriteMesh("Model/box2.obj",texShader);
+            obs.setPos(0, 0, 100);
+            flys.push_back(obs);
+        }
+        for(int i=0;i<numflys/2;i++){
+            SpriteMesh obs = SpriteMesh("Model/box3.obj",texShader);
             obs.setPos(0, 0, 100);
             flys.push_back(obs);
         }
