@@ -170,6 +170,7 @@ public:
 			if(checkCollision())
 			{
 				printf("crashed!");
+				counter = 0;
 				gamestate = 2;
 				saveScore();
 			}
@@ -190,7 +191,13 @@ public:
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
 				//scores.show()?
 			}
-            
+            counter++;
+			if(counter>20)
+				keepScore.showHighScores(highscores[2],2,texShader);
+			if(counter>40)
+				keepScore.showHighScores(highscores[1],1,texShader);
+			if(counter>60)
+				keepScore.showHighScores(highscores[0],0,texShader);
             car.show(P,C,M);
             bg.setPosM(c);
             bg.show(P, C, M);
@@ -273,7 +280,7 @@ public:
         glm::vec3 carpos = car.getPos();
         for(int i=0;i<numframes/200+1;i++){
             if(i>obstacles.size()){
-                return ;
+                return true;
             }
             glm::vec3 obspos=obstacles[i].getPos();
             obstacles[i].show(P, C, M);
@@ -537,14 +544,14 @@ public:
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",boxShader,"Model/bg.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
         keepScore.init(texShader);
-		roads.init(boxShader);
+		roads.init(texShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
 
@@ -566,7 +573,7 @@ public:
 private:
     int gamestate;
 	bool first;
-	int score,subscore;
+	int score,subscore,counter;
 	int highscores[3];
 
     CarSprite car;
