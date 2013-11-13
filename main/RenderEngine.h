@@ -86,9 +86,11 @@ public:
 
         
         if(flying){
+			
             GLfloat curTime = clk.GetElapsedTime();
             flyingleft = totalFlyTime-(curTime - flyingstart);
             printf("flying left: %f\n", flyingleft);
+			keepScore.showFlyCounter((int)flyingleft+1,texShader);
             if(flyingleft<0){
                 flying = false;
                 car.rebuildSprite("Model/blue.obj","Model/bluemap.bmp",TexID);
@@ -165,6 +167,7 @@ public:
 				subscore = 0;
 				score+=abs(car.getV().y*10); 
 			}
+			keepScore.showFlyCounter(10-(subscore/30)%10,texShader);
 			keepScore.update(score,texShader);
 			keepScore.show();
 			if(checkCollision())

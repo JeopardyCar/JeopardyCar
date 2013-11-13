@@ -132,6 +132,11 @@ public:
 		digit5.showStatic(glm::vec3(vIn.x+.4,vIn.y,vIn.z));
 		digit6.showStatic(glm::vec3(vIn.x+.5,vIn.y,vIn.z));
 	}
+	void showFlyCounter(int time, GLuint shaderProg)
+	{
+		update(time, shaderProg);
+		digit6.showStatic(glm::vec3(.95,0,-.9));
+	}
 
 private:
     
