@@ -14,6 +14,7 @@
 #include "SpriteMesh.h"
 #include "CarSprite.h"
 #include "RoadGen.h"
+#include "Score.h"
 #include <fstream>
 #include <string>
 
@@ -153,6 +154,8 @@ public:
 		}
 		if(gamestate == 1){//game screen
 			score+=1; 
+			keepScore.update(score);
+			keepScore.show();
 			if(checkCollision())
 			{
 				printf("crashed!");
@@ -169,6 +172,10 @@ public:
 		}
 		if(gamestate == 2){ //highscores screen
 			//display highscores
+
+			keepScore.update(score);
+			keepScore.show();
+
 			for(int x=0; x<3; x++)
 			{
 				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
@@ -386,17 +393,18 @@ public:
             obstacles.push_back(obs);
         }
         
-        car = CarSprite("Model/car.obj",texShader,"Model/texture.bmp",TexID);
+        car = CarSprite("Model/car.obj",texShader,"Model/car.bmp",TexID);
         car.setPosM(glm::vec3(0,0,1));
         //car.setAccelerate(glm::vec3(0,0,-0.002));
         
-        bg = CarSprite("Model/bg.obj",texShader,"Model/whiteshadow.bmp",TexID);
+        bg = CarSprite("Model/bg.obj",texShader,"Model/bg.bmp",TexID);
         //bg.setAccelerate(glm::vec3(0,0,-0.002));
         
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
-        
+        keepScore.init(texShader);
+
 		roads.init(texShader);
         maze= MazeSprite();
         maze.init(shaderProg, 10, 10, 1);
@@ -429,7 +437,7 @@ private:
     CarSprite bg;
     RoadGen roads;
     GLuint TexID;
-
+	Score keepScore;
 
     sf::Clock clk;
     
