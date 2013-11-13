@@ -264,7 +264,8 @@ public:
             flys[i].show(P, C, M);
 
             
-            if(car.testCol(flys[i])){
+//            if(car.testCol(flys[i])){
+            if(getDis(carpos, flys[i].getPos())<2){
                 printf("hit black\n");
                 glm::vec3 v = car.getV();
                 v*=.85;
