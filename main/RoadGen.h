@@ -26,6 +26,8 @@ public:
         }
         
 	}
+
+	//Initializes the roads
 	void init(GLuint shaderProg,char * filename ="Model/broad.obj",char * edgefilename = "Model/broad_edge.obj")
 	{
         direction = R_UP;
@@ -37,42 +39,25 @@ public:
         }
 	}
     
+	//Updates the roads so they follow the car's position
 	void update(glm::vec3 carPos){
         for(int i=0 ;i< roads.size();i++){
             float r = ((float) rand() / (RAND_MAX));
             orgX= 0;
             orgY=((int)((carPos.y)/10))*10+10;
             if(r<.01){
-                printf("make a turn%f\n",r);
-                if(r<.005){
-                    //(++direction)%=4;
-                    
-                }else{
-                    //(--direction)%=4;
-                    
-                }
-                
+                printf("make a turn%f\n",r);                
             }
-            
-            
-            
             if(direction == R_UP){
                 SpriteMesh* road = roads[i];
                 SpriteMesh* edge = edges[i];
-                //printf("%f\n",road->getPos().y);
                 road->setPosM(glm::vec3(0, orgY-i*10,0));
                 edge->setPosM(glm::vec3(0, orgY-i*10,0));
-            }else if(direction == R_RIGHT){
-                
-            }else if(direction == R_DOWN){
-                
-            }else if(direction == R_LEFT){
-                
-            }
-            
-            
+            }      
         }
 	}
+
+	//Displays the roads
 	void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         for(int i=0;i<roads.size();i++){
             roads[i]->show(P,C,M);

@@ -33,12 +33,11 @@ public:
         lowspeed = 0.003;
     }
     
-    
+    //Displays the car after updating the velocity
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
         velocity += acc;
-        //velocity += direction;
         glm::vec3 target= normalize((velocity + direction))*getLen(velocity);
         glm::vec3 change =target - velocity;
         change *= .3;
@@ -58,7 +57,6 @@ public:
         pos.y = (M*baseTrans)[3][1];
         pos.z = (M*baseTrans)[3][2];
         
-        //printf("x:%f,y:%f,z:%f\n", M[3][0],M[3][1],M[3][2]);
         glUseProgram(shaderProg);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, TexID);
@@ -80,7 +78,6 @@ public:
         glm::vec3 vel = velocity;
         vel.z= 0;
         if(getLen(vel)<lowspeed){
-            //printf("no slow down\n");
             return ;
         }
         velocity-= direction*v;
@@ -93,35 +90,17 @@ public:
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
-        
-        /*
-        glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
-        //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
-        vel= rot*vel;
-        velocity = glm::vec3(vel.x,vel.y,vel.z);
-        */
-        
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
         
     }
     void right(float v=2.){
         float angle = -v;
-        //printf("angle:%f\n",angle);
         glm::vec3 axis= glm::vec3(0,0,1);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        /*
-        glm::vec4 vel = glm::vec4(velocity.x,velocity.y, velocity.z, 0);
-        //printf("dir: %f,%f,%f\n",vel.x,vel.y,vel.z);
-        vel= rot*vel;
-        velocity = glm::vec3(vel.x,vel.y,vel.z);
-        */
         glm::vec4 dir = glm::vec4(direction.x,direction.y, direction.z, 0);
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         direction = glm::vec3(dir.x,dir.y,dir.z);
     }
@@ -131,25 +110,16 @@ public:
         glm::vec3 axis= glm::vec3(1,0,0);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
-        
-        
         glm::vec4 dir = glm::vec4(velocity.x,velocity.y, velocity.z, 1.);
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         velocity = glm::vec3(dir.x,dir.y,dir.z);
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
     }
     void turnDown(float v=5.){
         float angle = v;
         glm::vec3 axis= glm::vec3(1,0,0);
         glm::mat4 rot =glm::rotate(glm::mat4(1),angle,axis);
         baseRot=rot*baseRot;
-        //printf("rot:%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n,%f,%f,%f,%f\n",rot[0][0],rot[0][1],rot[0][2],rot[0][3],rot[1][0],rot[1][1],rot[1][2],rot[1][3],rot[2][0],rot[2][1],rot[2][2],rot[2][3],rot[3][0],rot[3][1],rot[3][2],rot[3][3]);
-        
         glm::vec4 dir = glm::vec4(velocity.x,velocity.y, velocity.z, 1.);
-        
-        //printf("dir: %f,%f,%f\n",dir.x,dir.y,dir.z);
         dir= rot*dir;
         velocity = glm::vec3(dir.x,dir.y,dir.z);
     }
@@ -185,7 +155,6 @@ public:
         move= normalize(move);
         move*=.3;
         while(glm::dot(newv,norm)<0){
-            printf("we\n");
             newv+= move;
             baseTrans *= glm::translate(glm::mat4(1), move);
             pos.x = (baseTrans)[3][0];
@@ -196,9 +165,6 @@ public:
         glm::vec3 newdir = direction;
         newdir.z=0;
         glm::mat4 rot= glm::rotate(glm::mat4(1), -glm::atan(newdir.x, newdir.y), glm::vec3(0,0,1));
-//        float a =getLen(dir);
-//        float b =getLen(newdir);
-//        float cos = (glm::dot(dir, newdir))/(a*b);
     }
     
     void setDir(glm::vec3 dir){
@@ -227,13 +193,9 @@ public:
             center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
             center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
             center+=sm.getPos();
-            //printf("center:%f,%f,%f\n",center.x,center.y,center.z);
             float distance =getDis(getPos(), center);
             if(distance<dis){
                 return true;
-                //glm::vec3 norm= glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
-                //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
-                //return norm;
             }
         }
         return false;
@@ -251,14 +213,9 @@ public:
             center.y =vertices[tri.vertexIndex[0]].c[1]*.33+vertices[tri.vertexIndex[1]].c[1]*.33+vertices[tri.vertexIndex[2]].c[1]*.33;
             center.z =vertices[tri.vertexIndex[0]].c[2]*.33+vertices[tri.vertexIndex[1]].c[2]*.33+vertices[tri.vertexIndex[2]].c[2]*.33;
             center+=sm.getPos();
-            //printf("center:%f,%f,%f\n",center.x,center.y,center.z);
             float distance =getDis(getPos(), center);
             if(distance<dis){
                 glm::vec3 norm= glm::vec3(normals[tri.normalIndex[0]].c[0],normals[tri.normalIndex[0]].c[1],normals[tri.normalIndex[0]].c[2]);
-                if(pushback){
-                    //setPosM(getPos()+normalize(norm)*(dis-distance));
-                }
-                //printf("collision center:%f,%f,%f\n",center.x,center.y,center.z);
                 return norm;
             }
         }

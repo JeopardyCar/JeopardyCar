@@ -102,7 +102,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Shaders\alwaysRed.frag" />
     <None Include="Shaders\boxfrag.frag" />
     <None Include="Shaders\boxshader.vert" />
     <None Include="Shaders\simple.frag" />
@@ -127,10 +126,6 @@
     <ClInclude Include="glew\glxew.h" />
     <ClInclude Include="glew\wglew.h" />
     <ClInclude Include="GLHelper.h" />
-    <ClInclude Include="Maze.h" />
-    <ClInclude Include="MazeModel.h" />
-    <ClInclude Include="MazeModel3D.h" />
-    <ClInclude Include="MazeSprite.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="obj_loader\FilePath.h" />
