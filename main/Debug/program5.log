@@ -1,4 +1,4 @@
-﻿Build started 11/13/2013 4:17:29 PM.
+﻿Build started 11/15/2013 4:11:53 PM.
      1>Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\hallowlt\JeopardyCar\main\\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt program5.cpp
@@ -9,10 +9,6 @@
                  c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
      1>c:\users\hallowlt\jeopardycar\main\shadermanager.h(156): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(25): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(34): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(186): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\mazemodel3d.h(238): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\cube.h(42): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\cube.h(43): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\cube.h(105): warning C4018: '<' : signed/unsigned mismatch
@@ -24,32 +20,32 @@
      1>c:\users\hallowlt\jeopardycar\main\mesh.h(37): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\mesh.h(52): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\mesh.h(73): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(46): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(42): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(83): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(74): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(235): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(238): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(270): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(220): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(223): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\hallowlt\jeopardycar\main\spritemesh.h(255): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(25): warning C4305: '=' : truncation from 'double' to 'float'
      1>c:\users\hallowlt\jeopardycar\main\carsprite.h(33): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(222): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(226): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(227): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(228): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(246): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(250): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(251): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(252): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(188): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(192): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(193): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(194): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(208): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(212): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(213): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\carsprite.h(214): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\roadgen.h(24): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(41): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(44): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(44): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(47): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(62): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\roadgen.h(77): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\roadgen.h(92): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(168): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(234): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(261): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(291): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(117): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(164): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(190): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\hallowlt\jeopardycar\main\renderengine.h(212): warning C4018: '>' : signed/unsigned mismatch
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -57,7 +53,7 @@
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(70): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\hallowlt\jeopardycar\main\trackball.h(94): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\hallowlt\jeopardycar\main\program5.cpp(158): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\hallowlt\jeopardycar\main\program5.cpp(151): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
      1>c:\users\hallowlt\jeopardycar\main\utilities.h(84): warning C4715: 'loadBMP' : not all control paths return a value
        Link:
@@ -66,6 +62,7 @@
          Debug\obj_parser.obj
          Debug\string_extra.obj
          Debug\program5.obj
+     1>glew.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
          program5.vcxproj -> C:\Users\hallowlt\JeopardyCar\main\Debug\program5.exe
      1>Done Building Project "C:\Users\hallowlt\JeopardyCar\main\program5.vcxproj" (Build target(s)).
 

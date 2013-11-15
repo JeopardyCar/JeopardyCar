@@ -20,7 +20,6 @@
 class SpriteMesh{
 public:
     SpriteMesh(){
-        //velocity = 0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
         posM = glm::mat4(1);
@@ -29,10 +28,7 @@ public:
         M = glm::mat4(1);
     }
     
-    
-    
     SpriteMesh(char * meshfile, GLuint shaderProg, char * texfile = NULL, GLuint n = -1){
-        //velocity =0;
         baseTrans= glm::mat4(1);
         baseRot =glm::mat4(1);
         posM = glm::mat4(1);
@@ -57,13 +53,9 @@ public:
         
         if (texfile!=NULL && n!=-1){
             GLuint Texture = loadBMP(texfile,&TexID);
-            if (Texture == 0)
-                printf("Cannot load texture");
         }
         
         this->shaderProg = shaderProg;
-        
-        //positionSlot = glGetAttribLocation(shaderProg, "pos");
         normalSlot = glGetAttribLocation(shaderProg, "norm");
         
         matSlot = glGetUniformLocation(shaderProg, "M");
@@ -74,8 +66,7 @@ public:
         
     }
     
-    
-    
+    //Rebuilds the object with a new model   
     void rebuildSprite(char * meshfile, char * texfile = NULL, GLuint n = -1){
         TextUnit = n;
         
@@ -94,15 +85,12 @@ public:
         
         if (texfile!=NULL && n!=-1){
             GLuint Texture = loadBMP(texfile,&TexID);
-            if (Texture == 0)
-                printf("Cannot load texture");
         }
 
 
     }
     
-    
-    
+    //Updates the object based on its velocity and acceleration and displays it
     void show(glm::mat4 P, glm::mat4 C, glm::mat4 M){
         glm::mat4 T= P*C*M;
         
@@ -122,7 +110,6 @@ public:
         pos.y = (M*baseTrans)[3][1];
         pos.z = (M*baseTrans)[3][2];
         
-        //printf("x:%f,y:%f,z:%f\n", M[3][0],M[3][1],M[3][2]);
         glUseProgram(shaderProg);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, TexID);
@@ -134,11 +121,10 @@ public:
         draw();
         glUseProgram(0);
     }
+
+	//Displays the object without accounting for its velocity
 	void showNoMove(glm::mat4 P, glm::mat4 C, glm::mat4 M){
-		 glm::mat4 T= P*C*M;
-
-
-		 // baseTrans*=glm::translate(glm::mat4(1), velocity);
+		glm::mat4 T= P*C*M;
         T*=baseTrans;
         P*=baseTrans;
         C*=baseTrans;
@@ -163,6 +149,7 @@ public:
         glUseProgram(0);
 	}
 
+	//Displays the object in a static position on the screen
   	void showStatic(glm::vec3 posNum){
 		 
 		glm::mat4 C = glm::lookAt(glm::vec3(posNum.x,1,posNum.z), glm::vec3(posNum.x,0,posNum.z), glm::vec3(0,0,posNum.z+1));
@@ -185,8 +172,6 @@ public:
         T*=baseTrans;
         P*=baseTrans;
         C*=baseTrans;
-        
-        
 
 		pos.x = (M*baseTrans)[3][0];
         pos.y = (M*baseTrans)[3][1];
@@ -285,7 +270,6 @@ public:
 				}
                 if (me.UV.size()!=0){
                     VectorV UVcord = me.UV[uvIndex];
-                    //printf("UV: %f %f \n",UVcord.c[0],UVcord.c[1]);
                     glTexCoord2f( UVcord.c[1],UVcord.c[0] );
                 }
                 
@@ -300,8 +284,6 @@ public:
     
 protected:
     GLuint shaderProg;
-    GLuint vertexUVBuffer;
-    //GLint positionSlot;
     GLint normalSlot;
     GLint matSlot;
     GLint pSlot;
@@ -319,8 +301,7 @@ protected:
     glm::vec3 pos;
     glm::mat4 M ;
     vector<glm::vec2> UV;
-    
-    //float velocity;
+
     glm::vec3 acc;
     glm::mat4 baseTrans;
     glm::mat4 baseRot;

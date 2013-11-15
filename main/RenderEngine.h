@@ -4,12 +4,9 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "GLHelper.h"
-#include "MazeModel.h"
-#include "MazeModel3D.h"
 #include "Cube.h"
 #include "BoxSprite.h"
 #include "BoxSprite2.h"
-#include "MazeSprite.h"
 #include "Utilities.h"
 #include "SpriteMesh.h"
 #include "CarSprite.h"
@@ -39,8 +36,6 @@ struct Keyset{
     
 };
 
-
-
 class RenderEngine
 {
 public:
@@ -54,10 +49,10 @@ public:
 		
 	}
     
+	//Initializes the game
 	void init()
 	{
 		gamestate = 0; //main menu
-		first = true;
 		loadHighScores();
         totalFlyTime = 5;
         oldDirection = glm::vec3(1,1,1);
@@ -67,6 +62,7 @@ public:
 		generateObjs();
 	}
     
+	//Displays the game, called every frame
 	void display(Keyset keys ,bool pickingEnabled=false)
 	{
         numframes++;
@@ -84,13 +80,12 @@ public:
         vector<SpriteMesh*> roadsvec = roads.getRoads();
         glm::vec3 colnorm = glm::vec3(0,0,1);
 
-        
+        //If the car is in flying mode, then we update the time counter for seconds of flying left
         if(flying){
-			
             GLfloat curTime = clk.GetElapsedTime();
             flyingleft = totalFlyTime-(curTime - flyingstart);
-            printf("flying left: %f\n", flyingleft);
 			keepScore.showFlyCounter((int)flyingleft+1,texShader);
+			//If the car is out of time for flying mode, we revert to the standard model 
             if(flyingleft<0){
                 flying = false;
                 car.rebuildSprite("Model/blue.obj","Model/bluemap.bmp",TexID);
@@ -105,64 +100,18 @@ public:
         
         updateFlys();
         updateItems();
-        /*
-        glm::vec3 norm = car.testCollision(boxmesh,3);
-        if(getLen(norm)>0){
-            car.hitAndTurn(norm);
-        }*/
         
         bg.setPosM(c);
         
-        
-        
-        
-        /*
-        for(int i=0;i<roads.getEdges().size();i++){
-            SpriteMesh * edge = roads.getEdges()[i];
-            
-            glm::vec3 norm =car.testCollision(*edge,3);
-            //printf("edgexyz: %f,%f,%f\n", edge->getPos().x,edge->getPos().y,edge->getPos().z);
-            //printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
-            //printf("normpos: %f,%f,%f\n", norm.x,norm.y,norm.z);
-            if(getLen(norm)>0){
-                printf("collision edge\n");
-            }
-        }
-        */
-        
-        
-        
-        
-        
-        
-		
+		//Initially, we planned to have a main menu function, but we were not able to complete this
 		if(gamestate == 0){//main menu
-			if(first){
-				first = false;
-				printf("Press the button to continue\n");
-			}
-			//display buttons and title
-
-			//
-			int somePickingValue = 1;//whatever button the user clicks on
-			
-			if(somePickingValue == 1){ //start button
-				gamestate = 1;
-				score = 0;
-				subscore = 0;
-
-			}
-			if(somePickingValue == 2){ //highscores button
-				gamestate = 2;
-			}
-			if(somePickingValue == 3){ //exit button
-				exit(EXIT_SUCCESS);
-			}
-			
+			gamestate = 1;
+			score = 0;
+			subscore = 0;			
 		}
 		if(gamestate == 1){//game screen
 			subscore++;
-			if(subscore == 10)
+			if(subscore == 10) //the score is updated every 10 frames, based on the car's current velocity
 			{
 				subscore = 0;
 				score+=abs(car.getV().y*10); 
@@ -170,30 +119,21 @@ public:
 			keepScore.showFlyCounter(10-(subscore/30)%10,texShader);
 			keepScore.update(score,texShader);
 			keepScore.show();
-			if(checkCollision())
+			if(checkCollision())//If the car collides with an object, the game is over
 			{
-				printf("crashed!");
 				counter = 0;
 				gamestate = 2;
 				saveScore();
 			}
 			car.show(P,C,M);
             bg.show(P, C, M);
-            //boxmesh.show(P,C,M);
 			roads.update(car.getPos());
-			roads.show(P,C,M);
-            //printf("pos: %f,%f,%f\n",car.getPos().x,car.getPos().y,car.getPos().z);
-            
+			roads.show(P,C,M);            
 		}
 		if(gamestate == 2){ //highscores screen
 			//display highscores
 			keepScore.update(score,texShader);
 			keepScore.show();
-			for(int x=0; x<3; x++)
-			{
-				printf("HIGHSCORE #%i : %i\n", x+1, highscores[x]);
-				//scores.show()?
-			}
             counter++;
 			if(counter>20)
 				keepScore.showHighScores(highscores[2],2,texShader);
@@ -206,19 +146,9 @@ public:
             bg.show(P, C, M);
 			roads.update(car.getPos());
 			roads.show(P,C,M);
-
-			gamestate = 2;
-			int somePickingValue = 0;
-			if(somePickingValue == 1){ //start button
-				gamestate = 1;
-				score = 0;
-				subscore = 0;
-			}
-			if(somePickingValue == 2){ //highscores button
-				exit(EXIT_SUCCESS);
-			}
 		}
 	}
+	
     void flyingmode(){
         score+=50;
         car.rebuildSprite("Model/car.obj","Model/texture.bmp",TexID);
@@ -227,8 +157,8 @@ public:
         flyingstart = currentTime;
         flying=true;
         flyingleft = 10.;
-        printf("flying mode\n");
     }
+	
     void updateItems(){
         glm::vec3 carpos = car.getPos();
         for(int i=0;i<items.size();i++)
@@ -236,8 +166,7 @@ public:
             glm::vec3 itempos = items[i].getPos();
             items[i].show(P,C,M);
             glm::vec3 norm = car.testCollision(items[i],1);
-            printf("dis: %f\n", getDis(carpos, items[i].getPos()));
-            if(getDis(carpos, items[i].getPos())<3){
+            if(getDis(carpos, items[i].getPos())<3){ //Flying mode
                 flyingmode();
                 int rand1 = (rand() % 1000000 + 1)/100000-5;
                 int rand2 = (rand() % 1000000 + 1)/12500-40;
@@ -258,39 +187,24 @@ public:
     
     void updateFlys(){
         glm::vec3 carpos = car.getPos();
-        for(int i=0;i<flys.size();i++){
-            
+        for(int i=0;i<flys.size();i++){   
             glm::vec3 obspos=flys[i].getPos();
             flys[i].show(P, C, M);
-
-            
-//            if(car.testCol(flys[i])){
-            if(getDis(carpos, flys[i].getPos())<2){
-                printf("hit black\n");
+            if(getDis(carpos, flys[i].getPos())<2){//If the car hits a black box
                 glm::vec3 v = car.getV();
                 v*=.85;
                 car.setV(v);
-            }
-            
-            
-            
+            }  
             if(obspos.y<carpos.y+10){
                 continue;
             }
-            
-            
-            
-            
             int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/12500-40;
-            int rand3 = (rand() % 1000000 + 1)/100000-5;
-            //printf("%f\n",obspos.y);
-            
+            int rand3 = (rand() % 1000000 + 1)/100000-5;            
             flys[i].setPosM(glm::vec3(carpos.x+rand1*4, carpos.y-rand2-120,rand3*5));
             
         }
-    }
-    
+    } 
     
 	bool checkCollision(){
         glm::vec3 carpos = car.getPos();
@@ -300,43 +214,20 @@ public:
             }
             glm::vec3 obspos=obstacles[i].getPos();
             obstacles[i].show(P, C, M);
-            
             glm::vec3 norm = car.testCollision(obstacles[i],1);
-            if(getLen(norm)>0){
-                //car.hitAndTurn(norm);
-                //bg.hitAndTurn(norm);
-                printf("carpos: %f,%f,%f\n", carpos.x,carpos.y,carpos.z);
-                printf("obspos: %f,%f,%f\n", obspos.x,obspos.y,obspos.z);
-                printf("hit!\n");
+            if(getLen(norm)>0){//The car has collided with something
                 car.setAccelerate(glm::vec3(0,0,-.5));
                 return true;
             }
-            
             if(obspos.y<carpos.y+10){
                 continue;
             }
-            
-            
             int rand1 = (rand() % 1000000 + 1)/100000-5;
             int rand2 = (rand() % 1000000 + 1)/12500-40;
-            //printf("%f\n",obspos.y);
-            
             obstacles[i].setPosM(glm::vec3(carpos.x+rand1, carpos.y-rand2-90,0.5));
             
         }
-        
-        
-        
-        
-        
-        
-        /*
-        if(roads.testOut(car)){
-            car.setAccelerate(glm::vec3(0,0,-.5));
-            return true;
-        }
-        return false;*/
-        if(!flying){
+        if(!flying){ //If the car is not flying, check if it is off the track
             if(car.getPos().x >5.5){
                 car.setAccelerate(glm::vec3(0,0,-.5));
                 return true;
@@ -345,10 +236,11 @@ public:
                 return true;
             }
         }
-        return false;//false;
+        return false;
         
 	}
 
+	//Updates and saves the highscores to a text file
 	void saveScore()
 	{
 		if(score>highscores[0])
@@ -375,6 +267,8 @@ public:
 		}
 		fout.close();
 	}
+
+	//Retrieves the highscores from the text file
 	void loadHighScores(){
 		string line ;
 		int num = 0;
@@ -391,56 +285,23 @@ public:
 		}
 	}
 
-
-
-
     void setProjectionTransform(glm::mat4 const & transform)
 	{
 		this->P = transform;
 	}
-	
-    /*
-    void setModelTransform(glm::mat4 const & transform)
-	{
-		this->M = transform;
-	}
-    */
-    
-    /*
-    void setCameraTransform(glm::mat4 const & transform){
-        this->C = transform;
-    }
-    */
-    
-    
-    
-    
-    
-    
     
     void carGo(string key){
         if(key=="up"){
             car.up();
-            //bg.up();
         }else if(key == "down"){
             car.down();
-            //bg.down();
         }else if(key == "left"){
             car.left();
-            //bg.left();
         }else if(key == "right"){
             car.right();
-            //bg.right();
         }
-        
-        
     }
-    
-    
-    
-    
-    
-    
+
     void setCameraTransform(string key, float update){
         float velocity = 5;
         
@@ -509,22 +370,18 @@ public:
             glm::vec3 c3 = glm::vec3(c4.x,c4.y,c4.z);
             e = c+c3;
         }
-        
         this->C = glm::lookAt(e, c, u);
     }
-    
     
 	void reshape(int const & newWidth, int const & newHeight)
 	{
 		glViewport(0, 0, newWidth, newHeight);
 	}
 	
+	//Generates the obstacles on the track
 	void generateObjs(unsigned int const & seed = 1)
 	{
-        
-        
         int numobs =10;
-        
         for(int i=0;i<numobs;i++){
             SpriteMesh obs = SpriteMesh("Model/box.obj",texShader,"Model/red.bmp",TexID);
             obs.setPos(0, 0, 100);
@@ -543,8 +400,7 @@ public:
             obs.setPos(0, 0, 100);
             flys.push_back(obs);
         }
-        
-        
+
         int numItem = 1;
         
         for (int i=0;i<numItem;i++){
@@ -552,27 +408,18 @@ public:
             item.setPos(0,0,100);
             items.push_back(item);
         }
-        
-        
-        
-        
+
         car = CarSprite("Model/blue.obj",texShader,"Model/bluemap.bmp",TexID);
         car.setPosM(glm::vec3(0,0,1));
-        //car.setAccelerate(glm::vec3(0,0,-0.002));
         
         bg = CarSprite("Model/bg.obj",boxShader,"Model/bg.bmp",TexID);
-        //bg.setAccelerate(glm::vec3(0,0,-0.002));
-        
+
         box2 = BoxSprite2();
         box2.init(shaderProg);
         
         keepScore.init(texShader);
 		roads.init(boxShader);
-        maze= MazeSprite();
-        maze.init(shaderProg, 10, 10, 1);
 
-        //boxmesh =SpriteMesh("",shaderProg);
-        //boxmesh.setPosM(glm::vec3(0,0,10));
 		e = glm::vec3(0,0,.5);
 		c = glm::vec3(.2,0,.5);
 		u = glm::vec3(0,0,1);
@@ -582,20 +429,14 @@ public:
         setCameraTransform("left", 10);
         setCameraTransform("turn_right", 90);
 	}
-    
-    
-    
-    
+
 private:
     int gamestate;
-	bool first;
 	int score,subscore,counter;
 	int highscores[3];
 
     CarSprite car;
     BoxSprite2 box2;
-    MazeSprite maze;
-    //SpriteMesh boxmesh;
     CarSprite bg;
     RoadGen roads;
     GLuint TexID;
@@ -637,9 +478,7 @@ private:
 			exit(1);
 		}
 		printf("Using GLEW %s\n", glewGetString(GLEW_VERSION));
-	}
-    
-    
+	}  
     
     void handleKeys(Keyset keys){
         if(keys.W){
@@ -680,7 +519,6 @@ private:
         }
     }
     
-    
     void updateCamera(){
         c = car.getPos();
         e=c;
@@ -708,13 +546,6 @@ private:
 
     }
     
-    
-    
-    
-    
-    
-    
-    
 	void setupShader()
 	{
 		char const * vertPath = "Shaders/simple.vert";
@@ -729,9 +560,6 @@ private:
 		char const * fragTex = "Shaders/tex.frag";
         texShader = ShaderManager::shaderFromFile(&vertTex, &fragTex, 1, 1);
 	}
-    
-    
-	
 };
 
 #endif

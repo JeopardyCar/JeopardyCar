@@ -1,5 +1,5 @@
 //Replace with your usernames!
-#define printusers() printf("Program by Yiren_Lu+Zizhao_Wang+Xiaohan_Ding\n please use WSAD to move the camera,  QERF and mouse to change camera view angle  \n");
+#define printusers() printf("Program by Yiren_Lu+Zizhao_Wang+Logan_Hallowell+Heather_Finnell\n");
 
 #define GLEW_STATIC
 #include <stdio.h>
@@ -11,8 +11,6 @@
 #include "ShaderManager.h"
 #include "GLHelper.h"
 #include "RenderEngine.h"
-#include "Maze.h"
-#include "MazeModel.h"
 #include "TrackBall.h"
 
 
@@ -64,8 +62,6 @@ private:
     
     glm::ivec2 previousPos;
     bool buttonDown[3];
-    
-    int gameState; //0 = main menu, 1 = game, 2 = high scores
 	glm::mat4 translateFromInput;
 	glm::mat4 rotationFromInput;
 	glm::mat4 rotationSpinStep;
@@ -115,9 +111,7 @@ private:
         
         
         glm::mat4 t = glm::translate(glm::mat4(1.0f), glm::vec3((newPos.x-oldPos.x)*XY_SENSITIVITY, (oldPos.y-newPos.y)*XY_SENSITIVITY, 0));
-        //        render.transformCameraBack(t);
         translateFromInput = t*translateFromInput;
-        //render.setModelTransform(rotationFromInput*translateFromInput*ratioRescale);
         
 	}
 	
@@ -126,7 +120,6 @@ private:
 #define Z_SENSITIVITY 0.005f //may be helpful to reduce transform amount
 		glm::mat4 t = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, (oldPos.y-newPos.y)*XY_SENSITIVITY));
         translateFromInput = t*translateFromInput;
-        //render.setModelTransform(rotationFromInput*translateFromInput*ratioRescale);
 	}
     
     
@@ -165,12 +158,6 @@ private:
 			
 			if (Event.Type == sf::Event::Resized)
 			{ glViewport(0, 0, Event.Size.Width, Event.Size.Height); }
-			
-			if(Event.Type == sf::Event::KeyPressed && Event.Key.Code == sf::Key::Space)
-			{
-				//render.generateObjs(step);
-				//step++;
-			}
             
             
             if(Event.Type == sf::Event::KeyPressed && (Event.Key.Code == sf::Key::Up)){
@@ -274,7 +261,6 @@ private:
 				if(Event.MouseButton.Button == sf::Mouse::Left && !shiftDown)
 				{
 					buttonDown[0] = 1;
-                    //					spinning = false;
 				}
 				if(Event.MouseButton.Button == sf::Mouse::Right)
 					buttonDown[1] = true;
@@ -294,19 +280,12 @@ private:
 					buttonDown[2] = false;
 				if(Event.MouseButton.Button == sf::Mouse::Left && shiftDown)
 					buttonDown[2] = false;
-				
-                //				timeSinceMotion = motionClock.GetElapsedTime();
 				float maxTime = 1.0f/(float)TARGET_FPS * TIME_WINDOW;
-                //				if(timeSinceMotion < maxTime)
-                //					spinning = true;
 			}
 			
 			if (Event.Type == sf::Event::MouseMoved && (buttonDown[0] || buttonDown[1] || buttonDown[2]) )
 			{
 				glm::ivec2 newPos = glm::ivec2(Event.MouseMove.X, Event.MouseMove.Y);
-				
-                //				timeSinceMotion = motionClock.GetElapsedTime();
-                //				motionClock.Reset();
 				
 				if(buttonDown[0])
 					updateRotate(previousPos, newPos);

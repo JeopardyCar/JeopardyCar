@@ -3,11 +3,6 @@
 uniform mat4 M;
 
 attribute vec3 pos;
-//varying vec4 smoothColor;
-
-//attribute vec2 VertexUV;
-//varying vec2 UV;
-
 attribute vec3 norm;
 varying float s;
 varying float d;
@@ -33,7 +28,6 @@ void main()
 	vec4 n = vec4(norm,0.);  //normal vector, unchanged, so should still be normalized
 	n = C*R*n;
 	d = clamp(dot(l,n), 0., 1.);
-    //d = .2;
 	vec4 camPos = vec4(0);  //camera is always at origin in view coords!
 	vec4 v = normalize(camPos-p2);  //view vector goes to camera, normalized
 	vec4 r = reflect(-l,n);  //light vector points away from surface, but reflect() needs incident, so invert

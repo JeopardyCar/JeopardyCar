@@ -13,9 +13,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\alwaysRed.frag">
-      <Filter>Shaders</Filter>
-    </None>
     <None Include="Shaders\simple.vert">
       <Filter>Shaders</Filter>
     </None>
@@ -61,8 +58,6 @@
       <Filter>Glew</Filter>
     </ClInclude>
     <ClInclude Include="GLHelper.h" />
-    <ClInclude Include="Maze.h" />
-    <ClInclude Include="MazeModel.h" />
     <ClInclude Include="RenderEngine.h" />
     <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="obj_loader\FilePath.h">
@@ -85,8 +80,6 @@
     <ClInclude Include="CarSprite.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Cube2.h" />
-    <ClInclude Include="MazeModel3D.h" />
-    <ClInclude Include="MazeSprite.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="RoadGen.h" />

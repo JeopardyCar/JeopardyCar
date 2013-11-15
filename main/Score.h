@@ -15,6 +15,8 @@ public:
 	{
         
 	}
+
+	//Initializes the digits
 	void init(GLuint shaderProg,char * filename ="Model/num1.obj")
 	{
         digit1 =SpriteMesh(filename,shaderProg,"Model/num1.bmp",TexID);  
@@ -25,6 +27,7 @@ public:
 		digit6 =SpriteMesh(filename,shaderProg,"Model/num1.bmp",TexID);  
 	}
     
+	//Updates the individual digit models based on the number
 	void update(int currScore,GLuint shaderProg,char * filename ="Model/num1.obj"){
 		int a = currScore%10;
 		switch (a){
@@ -104,10 +107,7 @@ public:
 		case 7: digit1 =SpriteMesh(filename,shaderProg,"Model/num7.bmp",TexID); break;
 		case 8: digit1 =SpriteMesh(filename,shaderProg,"Model/num8.bmp",TexID); break;
 		case 9: digit1 =SpriteMesh(filename,shaderProg,"Model/num9.bmp",TexID); break;
-		}
-		//digit1.setPosM(glm::vec3(carPos.x,carPos.y,carPos.z));
-       //
-		
+		}		
 	}
 	void show(){
         digit1.showStatic(glm::vec3(-.95,0,-.9));
@@ -117,6 +117,8 @@ public:
 		digit5.showStatic(glm::vec3(-.55,0,-.9));
 		digit6.showStatic(glm::vec3(-.45,0,-.9));
 	}
+
+	//Displays one of the highscores as well as the highscore label
     void showHighScores(int highscore, int numscore, GLuint shaderProg)
 	{
 		SpriteMesh hsLabel =SpriteMesh("Model/highscore.obj",shaderProg,"Model/highscore.bmp",TexID); 
@@ -124,6 +126,8 @@ public:
 		showVec(glm::vec3(-.25,0,-.2+numscore*.3));
 		hsLabel.showStatic(glm::vec3(0,0,-.5));
 	}
+
+	//Displays the 6 digits in another location, given by vIn
     void showVec(glm::vec3 vIn){
         digit1.showStatic(glm::vec3(vIn.x,vIn.y,vIn.z));
 		digit2.showStatic(glm::vec3(vIn.x+.1,vIn.y,vIn.z));
@@ -132,6 +136,8 @@ public:
 		digit5.showStatic(glm::vec3(vIn.x+.4,vIn.y,vIn.z));
 		digit6.showStatic(glm::vec3(vIn.x+.5,vIn.y,vIn.z));
 	}
+
+	//Displays the fly mode counter
 	void showFlyCounter(int time, GLuint shaderProg)
 	{
 		update(time, shaderProg);
@@ -141,6 +147,7 @@ public:
 private:
     
     SpriteMesh digit1, digit2, digit3, digit4, digit5, digit6;
+	//digit6 is the 1s digit, digit5 i the 10s digit and so on
     GLuint TexID;
 };
 #endif
