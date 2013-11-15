@@ -16,7 +16,7 @@
 #include "TrackBall.h"
 
 
-#define RESOLUTION 512
+#define RESOLUTION 1000
 #define TARGET_FPS 30                // controls spin update rate
 #define TIME_WINDOW 3                // number of frames motion is valid after release
 
@@ -130,6 +130,35 @@ private:
 	}
     
     
+    
+    void replay(){
+        App = new sf::Window(sf::VideoMode(RESOLUTION*2, RESOLUTION, 32), "program5");
+        
+		render.init();
+		step = 2;
+        
+        
+        previousPos = glm::vec2(0);
+		buttonDown[0]=false; buttonDown[1]=false; buttonDown[2]=false;
+		trackball.setSize(RESOLUTION, RESOLUTION);
+        
+        glm::mat4 P = glm::perspective(60.0f, (float)RESOLUTION*2/(float)RESOLUTION, 0.1f, 100.0f);
+		render.setProjectionTransform(P);
+		
+		while (App->IsOpened())
+		{
+			App->SetActive();
+			float targetFrameTime = 1.0f/(float)TARGET_FPS;
+			float sleepTime = targetFrameTime - App->GetFrameTime();
+			if(sleepTime > 0){
+				sf::Sleep(sleepTime);
+            }
+			render.display(keys);
+			App->Display();
+			handleEvents();
+		}
+
+    }
     
     
 	void handleEvents()
@@ -258,6 +287,12 @@ private:
             }
             
             if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::F)){
+                keys.F = false;
+            }
+            
+            
+            if(Event.Type == sf::Event::KeyReleased && (Event.Key.Code == sf::Key::O)){
+                replay();
                 keys.F = false;
             }
            
